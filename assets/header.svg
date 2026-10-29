@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">Xu Huan — Gelatoni</title>
+  <desc id="desc">Web applications, data systems, and dependable delivery</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#132d3a"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="1200" height="280" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="280" rx="20" fill="url(#grid)"/>
+  <path d="M780 226 C870 213 927 147 982 91 S1092 36 1183 55" fill="none" stroke="#6ee7b7" stroke-width="4" opacity=".85"/>
+  <circle cx="982" cy="91" r="9" fill="#6ee7b7"/><circle cx="1121" cy="47" r="6" fill="#6ee7b7"/>
+  <text x="56" y="72" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">GELATONI / ENGINEERING</text>
+  <text x="56" y="146" fill="#ffffff" font-family="Arial, sans-serif" font-size="57" font-weight="700">Xu Huan</text>
+  <text x="58" y="192" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">From clear scope to working software.</text>
+  <text x="58" y="245" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" letter-spacing="2">BUILD  /  VERIFY  /  SHIP</text>
+</svg>
