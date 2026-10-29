@@ -1,6 +1,6 @@
 <p align="right"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
-![Xu Huan — building clarity into complex systems](assets/header.png)
+![Xu Huan — building clarity into complex systems](https://gelatoni-xh.github.io/gelatoni-xh/assets/header.svg)
 
 <div align="center">
   <p><strong>Backend engineering · Complex business workflows · Reliable change</strong></p>
@@ -34,7 +34,7 @@ At a cross-border payments company (2026), I worked on Payment Links, fee and bi
 
 ## How I work on a delivery
 
-![Delivery flow: clarify, design, verify, ship](assets/delivery-flow.png)
+![Delivery flow: clarify, design, verify, ship](https://gelatoni-xh.github.io/gelatoni-xh/assets/delivery-flow.svg)
 
 1. **Clarify the request.** Identify the user journey, existing behavior, data ownership, and unresolved decisions.
 2. **Control the scope.** Write down what this release includes, what it leaves for later, and which existing paths must remain compatible.
