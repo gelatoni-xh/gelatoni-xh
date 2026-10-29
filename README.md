@@ -1,58 +1,62 @@
 <p align="right"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
 <div align="center">
-  <img src="./assets/header.svg" alt="Xu Huan — web applications, data systems, and dependable delivery" width="100%" />
-
-  <p><strong>Web applications · Data workflows · Responsible automation</strong></p>
-  <p><a href="https://tasukikeifu.com/ja">Explore a live product</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">Browse code</a> · <a href="https://gelatoni.uk">Read my writing</a></p>
+  <img src="./assets/header.svg" alt="Xu Huan — enterprise systems, careful delivery, independent products" width="100%" />
+  <p><strong>Backend engineering · Complex business workflows · Reliable change</strong></p>
+  <p><a href="https://gelatoni.uk/articles">Writing</a> · <a href="https://tasukikeifu.com/ja">Live product</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">Code</a></p>
 </div>
 
-I’m **Xu Huan (Gelatoni)**. I turn loosely defined ideas into working software, with attention to scope, data quality, verification, and deployment. My independent projects focus on full-stack TypeScript products and the tools needed to operate them.
+I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise HR data systems and cross-border payment products. I work across requirements, domain boundaries, backend implementation, testing, and rollout. My public repositories show independent work; much of my enterprise work is represented here through the problems I handled and the way I approached them, rather than employer-owned source code.
 
-> **For prospective collaborators:** the projects below show real code and delivery decisions. Each case links to its repository; the live products are linked where available.
+## Where I can help
 
-## Start here
-
-| If you need… | See this work | What it demonstrates |
-| --- | --- | --- |
-| A data-rich web product | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) · [live site](https://tasukikeifu.com/ja) | Product scope, data modeling, imports, search, deployment |
-| Safer data automation | [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | Diagnosis flows, dry runs, risk holds, audit records |
-| A maintainable publishing site | [Personal site](https://github.com/gelatoni-xh/personal-site) · [live site](https://gelatoni.uk) | Markdown publishing, build checks, Docker deployment |
-
-## Featured case · Tasuki Keifu
-
-**The problem.** Japanese distance-running records span athletes, schools, organizations, and competitions. Connecting those records requires more than a set of pages: names, affiliations, results, and sources need a consistent model.
-
-**What I built.** A Next.js site backed by PostgreSQL and Prisma, with athlete, organization, and competition pages; race import and maintenance scripts; multilingual page foundations; and search discovery features. Product requirements and technical plans in the project documents track how the scope evolved.
-
-**How I checked and shipped it.** The repository’s GitHub Actions workflow installs dependencies, generates the Prisma client, runs type checks and linting, builds the app, deploys a Docker image, applies migrations, and checks the running site. Data imports are a separate operational path rather than a production seed step.
-
-**Inspect it:** [live product](https://tasukikeifu.com/ja) · [source repository](https://github.com/gelatoni-xh/tasuki-keifu) · [deployment notes](https://github.com/gelatoni-xh/tasuki-keifu/blob/main/deploy/README.md)
-
-> **Case study additions in progress:** annotated screenshots, a short walkthrough of one import, and a measured before/after example. No performance or traffic numbers are claimed yet.
-
-## Two related builds
-
-| Tasuki Keifu Agent | Personal site |
+| Need | Relevant experience |
 | --- | --- |
-| A companion service for diagnosing ambiguous or inconsistent records. LangGraph workflows produce findings and proposed actions. Batch runs default to a dry run; business-data writes require explicit settings, while high-risk cases can be held for review. The repo includes smoke checks for key graph paths and write actions. | A small publishing site for Markdown articles and a resume. Its workflow type-checks and builds the app, transfers a Docker image to an Ubuntu host, starts it with Compose, and checks the articles endpoint. |
-| [Read the code →](https://github.com/gelatoni-xh/tasuki-keifu-agent) | [Visit the site →](https://gelatoni.uk) · [Read the code →](https://github.com/gelatoni-xh/personal-site) |
+| Evolve a system without breaking existing users | HR master-data migration, compatibility layers, phased cutovers, and consistency checks |
+| Turn a broad business request into an implementable scope | Payment and billing designs that separate domain ownership, data flow, edge cases, and what is out of scope |
+| Make a change testable and operable | Validation against requirements, regression paths, observability, migration planning, and release checks |
+| Build a product and its supporting data workflows | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) and its [live site](https://tasukikeifu.com/ja) |
 
-## How I work
+## Enterprise delivery experience
 
-| Stage | Practice visible in these projects |
+### HR master data · migration and API evolution
+
+At Ant Group (2023–2025), I worked on backend systems serving employee and organization data. One major workstream involved migrating a legacy surface of more than 1,000 interfaces while maintaining compatibility for upstream consumers. The work called for staged routing, comparing old and new behavior and data, observing real traffic, and planning recovery when a cutover behaved differently than expected. I also worked on the move toward roughly 200 domain-level interfaces; that figure describes the consolidation target, not a claim that every old interface was retired.
+
+**What this demonstrates:** I consider callers, historical behavior, data consistency, and rollback before treating a migration as complete. The source code is employer-owned and is not published here.
+
+### Payments · scope, fees, and cross-system flows
+
+At a cross-border payments company (2026), I worked on Payment Links, fee and billing capabilities, and account-to-account payout flows. Implementation work visible in local history includes fee-record queries, payout fee allocation, and a merchant billing page. My design notes also trace money and account states across services, distinguish current behavior from proposed behavior, and specify scope, security, idempotency, monitoring, and regression cases.
+
+**What this demonstrates:** I can clarify a business flow across services and turn it into explicit decisions and verification points. Some documents describe plans, so I do not present every proposed component as a shipped result. Employer-owned code and internal designs are not reproduced here.
+
+## How I work on a delivery
+
+1. **Clarify the request.** Identify the user journey, existing behavior, data ownership, and unresolved decisions.
+2. **Control the scope.** Write down what this release includes, what it leaves for later, and which existing paths must remain compatible.
+3. **Design for failure as well as success.** Account for retries, partial completion, data consistency, rollback, and operational visibility.
+4. **Verify against the requirement.** Derive cases from the original request, then check implementation, regressions, and the running service.
+5. **Leave a handoff trail.** Document decisions, deployment steps, known limits, and follow-up work.
+
+I use AI tools in parts of this workflow, with explicit context and constraints. I keep the judgment on business semantics, data boundaries, and final verification with the engineer responsible for the change.
+
+## Writing and independent work
+
+My [writing archive](https://gelatoni.uk/articles) contains engineering notes on migration, stability, product scope, payments, and AI-assisted development. Two starting points are [AI-assisted development in practice](https://gelatoni.uk/articles/2026-06-26-AI辅助研发模式回顾) and [stability as a systems and business problem](https://gelatoni.uk/articles/2026-03-02-稳定性). Some older articles discuss employer systems; I am reviewing which of them should remain public and which should become anonymized case studies.
+
+| Public project | What you can inspect |
 | --- | --- |
-| **Define** | Write down version scope, data boundaries, and technical decisions before adding features. |
-| **Build** | Keep application code, data imports, migrations, and maintenance tasks distinct. |
-| **Verify** | Use type checks, linting, builds, focused smoke checks, and deployment checks where appropriate. |
-| **Operate** | Document deployment, preserve audit trails, and put explicit safeguards around automated writes. |
+| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) · [live](https://tasukikeifu.com/ja) | A Next.js and PostgreSQL running-data product, data imports, migrations, search, and deployment |
+| [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | Data-quality diagnosis, auditable actions, dry-run defaults, and safeguards around writes |
+| [Personal site](https://github.com/gelatoni-xh/personal-site) · [live](https://gelatoni.uk) | Markdown publishing, build checks, Docker deployment, and a post-deploy health check |
 
-**Working stack shown here:** TypeScript · Next.js · React · PostgreSQL · Prisma · Docker · GitHub Actions · LangGraph
+**Tools used in these projects:** TypeScript, Next.js, React, PostgreSQL, Prisma, Docker, GitHub Actions, and LangGraph. My enterprise backend experience also includes service integration and data modeling; the project details above are the more useful evidence than a long technology list.
 
-## What I’m building out next
+## Portfolio work in progress
 
-- **Visual case studies:** screenshots and concise decision logs for the three projects above.
-- **Evidence:** measurements and outcomes where they can be verified and disclosed.
-- **Collaboration details:** a direct contact route and a short description of the types of assignments I’m taking.
+- **Enterprise case studies:** concise, anonymized write-ups showing the starting problem, my exact role, decisions, validation, and what actually shipped.
+- **Evidence for independent products:** screenshots, walkthroughs, and measured outcomes where they can be verified.
+- **Contact and availability:** a direct route for relevant project inquiries and a clearer description of the assignments I take.
 
-Until then, [my repositories](https://github.com/gelatoni-xh?tab=repositories) and [personal site](https://gelatoni.uk) are the best places to explore the work.
+For now, you can [read the writing](https://gelatoni.uk/articles), [try the live product](https://tasukikeifu.com/ja), or [inspect the repositories](https://github.com/gelatoni-xh?tab=repositories).
