@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">徐涣 · 让复杂系统更清晰</title>
+  <desc id="desc">以中文展示澄清、构建、验证、上线的系统图。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#06121f"/><stop offset=".55" stop-color="#0d2034"/><stop offset="1" stop-color="#091728"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#46e1ca"/><stop offset="1" stop-color="#76a8ff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#1b6c86" stop-opacity=".58"/><stop offset="1" stop-color="#071525" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#88b1cf" stroke-opacity=".075"/></pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+  <rect width="1200" height="380" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="380" rx="24" fill="url(#grid)"/>
+  <ellipse cx="970" cy="175" rx="270" ry="200" fill="url(#glow)"/>
+  <path d="M0 355H1200M54 0V380" stroke="#71d7d4" stroke-opacity=".14"/>
+  <path d="M726 274L823 210L933 229L1034 121L1140 150M823 210L850 94L1034 121M933 229L1065 310L1140 150" fill="none" stroke="#49d8c7" stroke-width="18" stroke-opacity=".10" filter="url(#soft)"/>
+  <path d="M726 274L823 210L933 229L1034 121L1140 150M823 210L850 94L1034 121M933 229L1065 310L1140 150" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity=".75"/>
+  <g fill="#0b2033" stroke="#69e7d4" stroke-width="2"><circle cx="726" cy="274" r="7"/><circle cx="823" cy="210" r="9"/><circle cx="933" cy="229" r="6"/><circle cx="1034" cy="121" r="10"/><circle cx="1140" cy="150" r="6"/><circle cx="850" cy="94" r="6"/><circle cx="1065" cy="310" r="6"/></g>
+  <g font-family="Hiragino Sans GB, PingFang SC, sans-serif" fill="#7db6c8" font-size="12" letter-spacing="1"><text x="796" y="190">范围</text><text x="1051" y="102">系统</text><text x="905" y="255">验证</text><text x="1068" y="337">上线</text></g>
+  <rect x="54" y="40" width="216" height="28" rx="14" fill="#55dec7" fill-opacity=".12" stroke="#55dec7" stroke-opacity=".55"/>
+  <text x="69" y="59" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="12" letter-spacing="1" fill="#72f0da">GELATONI / 软件工程师</text>
+  <text x="54" y="144" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="66" font-weight="700" fill="#f2fbff">徐涣<tspan fill="#6ee7d0">.</tspan></text>
+  <text x="57" y="190" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="25" fill="#c9dce9">让复杂系统中的需求与交付更清晰。</text>
+  <path d="M57 217H625" stroke="url(#accent)" stroke-opacity=".6"/>
+  <text x="57" y="254" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="18" fill="#98b9ca" letter-spacing="1">后端工程  /  复杂业务流程  /  稳妥的系统变更</text>
+  <g font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="14" letter-spacing="1"><text x="57" y="325" fill="#6ee7d0">01 澄清</text><text x="194" y="325" fill="#779bb1">→</text><text x="226" y="325" fill="#6ee7d0">02 构建</text><text x="343" y="325" fill="#779bb1">→</text><text x="374" y="325" fill="#6ee7d0">03 验证</text><text x="511" y="325" fill="#779bb1">→</text><text x="542" y="325" fill="#6ee7d0">04 上线</text></g>
+  <path d="M57 342H631" stroke="#64d8c8" stroke-opacity=".3"/>
+</svg>

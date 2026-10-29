@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="248" viewBox="0 0 1200 248" role="img" aria-labelledby="title desc">
+  <title id="title">交付方法</title><desc id="desc">澄清、设计、验证、上线，每一步标注决策与检查点。</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1727"/><stop offset="1" stop-color="#11263c"/></linearGradient><linearGradient id="line"><stop stop-color="#65ebd0"/><stop offset="1" stop-color="#7fa9ff"/></linearGradient></defs>
+  <rect width="1200" height="248" rx="20" fill="url(#bg)"/>
+  <path d="M61 145H1139" stroke="url(#line)" stroke-width="2" stroke-opacity=".45"/>
+  <g font-family="Hiragino Sans GB, PingFang SC, sans-serif">
+    <g><rect x="40" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#3da990"/><text x="61" y="71" fill="#68e8cd" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="15">01 / 发现</text><text x="61" y="112" fill="#f2fbff" font-size="27" font-weight="700">澄清需求</text><text x="61" y="167" fill="#bdd5df" font-size="17">目标 · 现有行为</text><text x="61" y="190" fill="#bdd5df" font-size="17">约束 · 待确认问题</text></g>
+    <g><rect x="328" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#4eabb8"/><text x="349" y="71" fill="#7cdbdb" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="15">02 / 决策</text><text x="349" y="112" fill="#f2fbff" font-size="27" font-weight="700">确定方案</text><text x="349" y="167" fill="#bdd5df" font-size="17">范围 · 职责归属</text><text x="349" y="190" fill="#bdd5df" font-size="17">数据流 · 失败路径</text></g>
+    <g><rect x="616" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#618fcb"/><text x="637" y="71" fill="#a5c8ff" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="15">03 / 验证</text><text x="637" y="112" fill="#f2fbff" font-size="27" font-weight="700">验证结果</text><text x="637" y="167" fill="#bdd5df" font-size="17">用例 · 回归检查</text><text x="637" y="190" fill="#bdd5df" font-size="17">一致性 · 可观测性</text></g>
+    <g><rect x="904" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#887fcd"/><text x="925" y="71" fill="#b7adff" font-family="Hiragino Sans GB, PingFang SC, sans-serif" font-size="15">04 / 发布</text><text x="925" y="112" fill="#f2fbff" font-size="27" font-weight="700">部署上线</text><text x="925" y="167" fill="#bdd5df" font-size="17">发布 · 健康检查</text><text x="925" y="190" fill="#bdd5df" font-size="17">交接 · 后续工作</text></g>
+  </g>
+</svg>
