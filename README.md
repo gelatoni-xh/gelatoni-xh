@@ -1,7 +1,7 @@
 <p align="right"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
 <div align="center">
-  <img src="./assets/header.svg" alt="Xu Huan — enterprise systems, careful delivery, independent products" width="100%" />
+  <img src="https://github.com/gelatoni-xh/gelatoni-xh/raw/refs/heads/main/assets/header.png" alt="Xu Huan — enterprise systems, careful delivery, independent products" width="100%" />
   <p><strong>Backend engineering · Complex business workflows · Reliable change</strong></p>
   <p><a href="https://gelatoni.uk/articles">Writing</a> · <a href="https://tasukikeifu.com/ja">Live product</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">Code</a></p>
 </div>
