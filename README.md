@@ -1,9 +1,9 @@
 <p align="right"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/header.png" alt="Xu Huan — enterprise systems, careful delivery, independent products" width="100%" />
+  <img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/header.png" alt="Xu Huan — building clarity into complex systems" width="100%" />
   <p><strong>Backend engineering · Complex business workflows · Reliable change</strong></p>
-  <p><a href="https://gelatoni.uk/articles">Writing</a> · <a href="https://tasukikeifu.com/ja">Live product</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">Code</a></p>
+  <p><a href="https://gelatoni.uk/articles">✦ Engineering writing</a> · <a href="https://tasukikeifu.com/ja">↗ Live product</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ Code</a></p>
 </div>
 
 I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise HR data systems and cross-border payment products. I work across requirements, domain boundaries, backend implementation, testing, and rollout. My public repositories show independent work; much of my enterprise work is represented here through the problems I handled and the way I approached them, rather than employer-owned source code.
@@ -32,6 +32,8 @@ At a cross-border payments company (2026), I worked on Payment Links, fee and bi
 **What this demonstrates:** I can clarify a business flow across services and turn it into explicit decisions and verification points. Some documents describe plans, so I do not present every proposed component as a shipped result. Employer-owned code and internal designs are not reproduced here.
 
 ## How I work on a delivery
+
+<p align="center"><img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/delivery-flow.png" alt="Delivery flow: clarify, design, verify, ship" width="100%" /></p>
 
 1. **Clarify the request.** Identify the user journey, existing behavior, data ownership, and unresolved decisions.
 2. **Control the scope.** Write down what this release includes, what it leaves for later, and which existing paths must remain compatible.

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="248" viewBox="0 0 1200 248" role="img" aria-labelledby="title desc">
+  <title id="title">Delivery method</title><desc id="desc">Clarify, design, verify, and ship, with the decisions and checks at each stage.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1727"/><stop offset="1" stop-color="#11263c"/></linearGradient><linearGradient id="line"><stop stop-color="#65ebd0"/><stop offset="1" stop-color="#7fa9ff"/></linearGradient></defs>
+  <rect width="1200" height="248" rx="20" fill="url(#bg)"/>
+  <path d="M61 145H1139" stroke="url(#line)" stroke-width="2" stroke-opacity=".45"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g><rect x="40" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#3da990"/><text x="61" y="71" fill="#68e8cd" font-family="Menlo, monospace" font-size="15">01 / DISCOVER</text><text x="61" y="112" fill="#f2fbff" font-size="27" font-weight="700">Clarify</text><text x="61" y="167" fill="#bdd5df" font-size="17">Goals · existing behavior</text><text x="61" y="190" fill="#bdd5df" font-size="17">Constraints · open questions</text></g>
+    <g><rect x="328" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#4eabb8"/><text x="349" y="71" fill="#7cdbdb" font-family="Menlo, monospace" font-size="15">02 / DECIDE</text><text x="349" y="112" fill="#f2fbff" font-size="27" font-weight="700">Design</text><text x="349" y="167" fill="#bdd5df" font-size="17">Scope · ownership</text><text x="349" y="190" fill="#bdd5df" font-size="17">Data flow · failure paths</text></g>
+    <g><rect x="616" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#618fcb"/><text x="637" y="71" fill="#a5c8ff" font-family="Menlo, monospace" font-size="15">03 / PROVE</text><text x="637" y="112" fill="#f2fbff" font-size="27" font-weight="700">Verify</text><text x="637" y="167" fill="#bdd5df" font-size="17">Cases · regressions</text><text x="637" y="190" fill="#bdd5df" font-size="17">Consistency · observability</text></g>
+    <g><rect x="904" y="36" width="255" height="176" rx="14" fill="#142e40" stroke="#887fcd"/><text x="925" y="71" fill="#b7adff" font-family="Menlo, monospace" font-size="15">04 / RELEASE</text><text x="925" y="112" fill="#f2fbff" font-size="27" font-weight="700">Ship</text><text x="925" y="167" fill="#bdd5df" font-size="17">Rollout · health checks</text><text x="925" y="190" fill="#bdd5df" font-size="17">Handoff · next steps</text></g>
+  </g>
+</svg>

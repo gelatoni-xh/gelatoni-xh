@@ -1,9 +1,9 @@
 <p align="right"><a href="./README.md">English</a> · <strong>简体中文</strong></p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/header.png" alt="徐涣：企业系统、审慎交付与独立产品" width="100%" />
+  <img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/header.png" alt="徐涣：让复杂系统中的需求与交付更清晰" width="100%" />
   <p><strong>后端工程 · 复杂业务流程 · 稳妥的系统变更</strong></p>
-  <p><a href="https://gelatoni.uk/articles">技术文章</a> · <a href="https://tasukikeifu.com/ja">线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">代码仓库</a></p>
+  <p><a href="https://gelatoni.uk/articles">✦ 技术文章</a> · <a href="https://tasukikeifu.com/ja">↗ 线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ 代码仓库</a></p>
 </div>
 
 我是**徐涣（Gelatoni）**，有企业人事主数据系统和跨境支付产品的开发经历。我会从需求、领域边界、后端实现、测试验证一直考虑到上线。公开仓库展示的是我的独立项目；企业工作更多通过我处理过的问题和工作方式来说明，而不是公开原公司的代码。
@@ -32,6 +32,8 @@
 **体现的能力：**把跨服务业务流程澄清为明确的设计决策和验证点。部分文档记录的是方案，因此我不会把每个规划中的组件都写成已经上线的成果。这里不复制原公司代码和内部方案。
 
 ## 我怎样推进交付
+
+<p align="center"><img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/delivery-flow.png" alt="交付流程：澄清、设计、验证、上线" width="100%" /></p>
 
 1. **澄清需求。** 找到用户流程、既有行为、数据归属和待确认决策。
 2. **控制范围。** 写明本期包含什么、后续再做什么、哪些旧链路必须保持兼容。
