@@ -1,7 +1,7 @@
 <p align="right"><a href="./README.md">English</a> · <strong>简体中文</strong></p>
 
 <div align="center">
-  <img src="https://github.com/gelatoni-xh/gelatoni-xh/raw/refs/heads/main/assets/header.png" alt="徐涣：企业系统、审慎交付与独立产品" width="100%" />
+  <img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/header.png" alt="徐涣：企业系统、审慎交付与独立产品" width="100%" />
   <p><strong>后端工程 · 复杂业务流程 · 稳妥的系统变更</strong></p>
   <p><a href="https://gelatoni.uk/articles">技术文章</a> · <a href="https://tasukikeifu.com/ja">线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">代码仓库</a></p>
 </div>
