@@ -1,7 +1,8 @@
 <p align="right"><a href="./README.md">English</a> · <strong>简体中文</strong></p>
 
+![徐涣：让复杂系统中的需求与交付更清晰](assets/header.png)
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/header.png" alt="徐涣：让复杂系统中的需求与交付更清晰" width="100%" />
   <p><strong>后端工程 · 复杂业务流程 · 稳妥的系统变更</strong></p>
   <p><a href="https://gelatoni.uk/articles">✦ 技术文章</a> · <a href="https://tasukikeifu.com/ja">↗ 线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ 代码仓库</a></p>
 </div>
@@ -33,7 +34,7 @@
 
 ## 我怎样推进交付
 
-<p align="center"><img src="https://raw.githubusercontent.com/gelatoni-xh/gelatoni-xh/main/assets/delivery-flow.png" alt="交付流程：澄清、设计、验证、上线" width="100%" /></p>
+![交付流程：澄清、设计、验证、上线](assets/delivery-flow.png)
 
 1. **澄清需求。** 找到用户流程、既有行为、数据归属和待确认决策。
 2. **控制范围。** 写明本期包含什么、后续再做什么、哪些旧链路必须保持兼容。
