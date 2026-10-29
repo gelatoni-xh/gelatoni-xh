@@ -13,18 +13,23 @@ I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise 
 
 | Need | Relevant experience |
 | --- | --- |
-| Evolve a system without breaking existing users | HR master-data migration, compatibility layers, phased cutovers, and consistency checks |
+| Evolve a system without breaking existing users | HR master-data migration, API consolidation, employment-model changes, and phased cutovers |
 | Turn a broad business request into an implementable scope | Payment and billing designs that separate domain ownership, data flow, edge cases, and what is out of scope |
 | Make a change testable and operable | Validation against requirements, regression paths, observability, migration planning, and release checks |
 | Build a product and its supporting data workflows | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) and its [live site](https://tasukikeifu.com/ja) |
 
 ## Enterprise delivery experience
 
-### HR master data · migration and API evolution
+### Ant Group · recruitment and HR systems (2023–2025)
 
-At Ant Group (2023–2025), I worked on backend systems serving employee and organization data. One major workstream involved migrating a legacy surface of more than 1,000 interfaces while maintaining compatibility for upstream consumers. The work called for staged routing, comparing old and new behavior and data, observing real traffic, and planning recovery when a cutover behaved differently than expected. I also worked on the move toward roughly 200 domain-level interfaces; that figure describes the consolidation target, not a claim that every old interface was retired.
+I worked as a backend engineer across recruitment workflows and HR master data. The work covered business rules, data models, service boundaries, and changes to systems with many existing consumers:
 
-**What this demonstrates:** I consider callers, historical behavior, data consistency, and rollback before treating a migration as complete. The source code is employer-owned and is not published here.
+- **Campus recruitment:** worked on configurable resume-assignment rules, including department hierarchy, rule priority, overlapping conditions, and conflict handling. Other work included interview scheduling model changes, batch scheduling, and adapting flows shared by campus and experienced hiring.
+- **HR master-data migration and APIs:** worked on a staged migration involving more than 1,000 legacy interfaces. Compatibility routing, old/new behavior and data comparisons, traffic observation, and recovery planning helped protect upstream callers. I also worked on consolidating overlapping APIs toward roughly 200 domain-level interfaces; that number was a target, not a claim that every old API was retired.
+- **Employment-plan decoupling:** worked on separating business-system input from master-data semantics. This involved tracing how multiple upstream systems generated employment plans and designing the boundaries for timeline calculation, conflict resolution, historical changes, and organization-structure derivation. The source notes include proposals as well as implementation work, so these design areas are not all claims of completed rollout.
+- **Architecture and reliability:** worked on clearer domain, application, and infrastructure boundaries, alongside governance of service dependencies, messaging, scheduled jobs, caching, monitoring, and change safety. These were parts of a broader team program, not a claim that I personally delivered every item in the program.
+
+This experience is most relevant when a client needs to change an established system: understand existing behavior, define ownership and scope, verify the new path, and plan a controlled release. The source code is employer-owned and is not published here.
 
 ### Payments · scope, fees, and cross-system flows
 
@@ -54,7 +59,17 @@ My [writing archive](https://gelatoni.uk/articles) contains engineering notes on
 | [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | Data-quality diagnosis, auditable actions, dry-run defaults, and safeguards around writes |
 | [Personal site](https://github.com/gelatoni-xh/personal-site) · [live](https://gelatoni.uk) | Markdown publishing, build checks, Docker deployment, and a post-deploy health check |
 
-**Tools used in these projects:** TypeScript, Next.js, React, PostgreSQL, Prisma, Docker, GitHub Actions, and LangGraph. My enterprise backend experience also includes service integration and data modeling; the project details above are the more useful evidence than a long technology list.
+## Technology stack
+
+| Area | Technologies and experience |
+| --- | --- |
+| Enterprise backend | **Java, Spring Boot**; service APIs, domain modeling, and integration across existing systems |
+| Data and asynchronous workflows | Relational databases, SQL, RPC, message queues, caching, and scheduled jobs in enterprise systems |
+| Independent products | **TypeScript, Next.js, React, PostgreSQL, Prisma**; data imports and application workflows |
+| Delivery and operations | **Docker, GitHub Actions**; build checks, deployment, health checks, and observability |
+| Agent workflows | **LangGraph** in [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) |
+
+The enterprise systems used company-specific infrastructure. I describe those tools by their general function; the table does not imply that a named open-source equivalent was used there.
 
 ## Portfolio work in progress
 
