@@ -10,20 +10,45 @@ import urllib.error
 import urllib.request
 
 
+def change(current, previous):
+    delta = current - previous
+    percent = ('0%' if current == 0 else '前天为 0') if previous == 0 else f'{delta / previous * 100:+.1f}%'
+    return f'{delta:+g} ({percent})'
+
+
 def build_message(stats):
     day = stats['sites']['personal']['previousDay']['startDate']
+    before_day = stats['sites']['personal']['dayBeforePrevious']['startDate']
     start = stats['sites']['personal']['last30Days']['startDate']
-    subject = f'网站访问日报 · {day}'
-    lines = [f'网站访问日报：{day}', '统计时区：北京时间，前一天 00:00–24:00',
+    bot = stats['businesses']['jobRadar']
+    if bot['previousDay']['date'] != day or bot['dayBeforePrevious']['date'] != before_day:
+        raise ValueError('Telegram and website report dates differ')
+    subject = f'服务使用日报 · {day}'
+    lines = [f'服务使用日报：{day}', '统计时区：北京时间，昨日与前天均为完整自然日 00:00–24:00',
+             f'昨日：{day}；前天：{before_day}',
              f'近 30 天：{start} 至 {day}', '']
     for key, name in [('personal', '个人站'), ('running', '跑步数据站')]:
         site = stats['sites'][key]
-        previous, month = site['previousDay'], site['last30Days']
+        previous, before, month = site['previousDay'], site['dayBeforePrevious'], site['last30Days']
         lines.extend([
             f'{name}（{site["domain"]}）',
-            f'  前一天：{previous["pageViews"]} 次浏览 / {previous["visits"]} 次访问',
+            f'  前天：{before["pageViews"]} 次浏览 / {before["visits"]} 次访问',
+            f'  昨日：{previous["pageViews"]} 次浏览 / {previous["visits"]} 次访问',
+            f'  昨日较前天：浏览 {change(previous["pageViews"], before["pageViews"])} / 访问 {change(previous["visits"], before["visits"])}',
             f'  近 30 天：{month["pageViews"]} 次浏览 / {month["visits"]} 次访问', '',
         ])
+    previous, before, week, totals = bot['previousDay'], bot['dayBeforePrevious'], bot['last7Days'], bot['totals']
+    lines.extend([
+        'Remote Job Radar（Telegram）',
+        f'  前天：新增 {before["newUsers"]} 人 / 活跃 {before["activeUsers"]} 人 / 交互 {before["interactions"]} 次',
+        f'  昨日：新增 {previous["newUsers"]} 人 / 活跃 {previous["activeUsers"]} 人 / 交互 {previous["interactions"]} 次',
+        f'  昨日较前天：新增 {change(previous["newUsers"], before["newUsers"])} / 活跃 {change(previous["activeUsers"], before["activeUsers"])} / 交互 {change(previous["interactions"], before["interactions"])}',
+        f'  近 7 天（{week["startDate"]} 至 {day}）：新增 {week["newUsers"]} 人 / 活跃 {week["activeUsers"]} 人 / 交互 {week["interactions"]} 次',
+        f'  当前：注册 {totals["registeredUsers"]} 人 / 启用提醒 {totals["enabledAlertUsers"]} 人',
+        f'  快照更新时间：{bot["generatedAt"]}（UTC）',
+        '  已排除管理员；活跃人数按区间去重；交互排除 Telegram 重试；自动推送不计活跃。',
+        '  删除账号会影响历史数字。Telegram 用户量与网站浏览量分别统计。', '',
+    ])
     lines.extend([
         '来源：Cloudflare Web Analytics。可能包含采样估算；访问次数不等于独立用户数。',
         '公开统计：https://github.com/gelatoni-xh/gelatoni-xh',

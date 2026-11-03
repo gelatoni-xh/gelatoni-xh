@@ -1,3 +1,4 @@
+import { fetchTelegramStats, telegramMarkdown, compareMetrics, formatChange } from './telegram-stats.mjs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const token = process.env.CLOUDFLARE_API_TOKEN?.trim();
@@ -74,6 +75,7 @@ for (let index = 30; index > 0; index -= 3) {
   daily.push(...await Promise.all([index, index - 1, index - 2].map((days) => fetchDay(end - days * dayMs))));
 }
 const previousDay = daily.at(-1);
+const dayBeforePrevious = daily.at(-2);
 const result = {
   generatedAt: now.toISOString(),
   source: 'Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups',
@@ -88,6 +90,8 @@ for (const site of sites) {
   result.sites[site.key] = {
     domain: site.domain,
     previousDay: { startDate: previousDay.date, endDateExclusive: localDate(end), ...previousDay.sites[site.key] },
+    dayBeforePrevious: { startDate: dayBeforePrevious.date, endDateExclusive: previousDay.date, ...dayBeforePrevious.sites[site.key] },
+    comparison: compareMetrics(previousDay.sites[site.key], dayBeforePrevious.sites[site.key], ['pageViews', 'visits']),
     last30Days: {
       startDate: daily[0].date, endDateExclusive: localDate(end),
       pageViews: daily.reduce((sum, day) => sum + day.sites[site.key].pageViews, 0),
@@ -97,23 +101,27 @@ for (const site of sites) {
   };
 }
 
+result.businesses = { jobRadar: await fetchTelegramStats(previousDay.date) };
+
 const begin = '<!-- TRAFFIC:START -->';
 const finish = '<!-- TRAFFIC:END -->';
 const readmes = [];
 for (const [filename, chinese] of [['README.md', false], ['README.zh-CN.md', true]]) {
   const lines = [begin,
-    chinese ? '## 网站访问记录' : '## Website traffic', '',
+    chinese ? '## 服务使用记录' : '## Service usage', '',
     chinese ? `前一天：**${previousDay.date}**（北京时间 00:00–24:00）；近 30 天：${daily[0].date} 至 ${previousDay.date}。` :
       `Previous day: **${previousDay.date}**, 00:00–24:00 Asia/Shanghai. Last 30 days: ${daily[0].date} through ${previousDay.date}.`, '',
-    chinese ? '| 站点 | 前一天浏览量 | 前一天访问次数 | 近 30 天浏览量 | 近 30 天访问次数 |' :
-      '| Site | Previous day views | Previous day visits | 30-day views | 30-day visits |',
+    chinese ? `| 站点 / 指标 | 前天 ${dayBeforePrevious.date} | 昨日 ${previousDay.date} | 昨日较前天 | 近 30 天 |` :
+      `| Site / metric | Prior day ${dayBeforePrevious.date} | Yesterday ${previousDay.date} | Yesterday vs prior day | Last 30 days |`,
     '| --- | ---: | ---: | ---: | ---: |',
-    ...sites.map((site) => {
-      const { previousDay: day, last30Days: month } = result.sites[site.key];
-      return `| [${chinese ? site.zh : site.en}](https://${site.domain}) | ${day.pageViews} | ${day.visits} | ${month.pageViews} | ${month.visits} |`;
+    ...sites.flatMap((site) => {
+      const { previousDay: day, dayBeforePrevious: before, comparison, last30Days: month } = result.sites[site.key];
+      return [['pageViews', '浏览量', 'Views'], ['visits', '访问次数', 'Visits']].map(([key, zh, en]) =>
+        `| [${chinese ? site.zh : site.en}](https://${site.domain}) / ${chinese ? zh : en} | ${before[key]} | ${day[key]} | ${formatChange(comparison[key], chinese)} | ${month[key]} |`);
     }), '',
     chinese ? '来源：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户数。每天北京时间 08:00 自动更新（GitHub 调度可能延迟）。[统计口径与历史](./analytics/README.md)。' :
       'Source: Cloudflare Web Analytics; figures may include sampling estimates. Visits are not unique users. Updated daily at 08:00 Asia/Shanghai (GitHub scheduling may be delayed). [Definitions and history](./analytics/README.md).',
+    ...telegramMarkdown(result.businesses.jobRadar, chinese),
     finish,
   ];
   const content = await readFile(filename, 'utf8');

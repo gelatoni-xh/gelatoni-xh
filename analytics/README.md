@@ -1,8 +1,9 @@
-# Website traffic
+# Service usage
 
 The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `gelatoni.uk` and `tasukikeifu.com`, including their `www` hostnames.
 
 - **Previous day:** the previous complete calendar day in `Asia/Shanghai`, from 00:00 inclusive to the following 00:00 exclusive.
+- **Day before previous:** the complete Shanghai calendar day before yesterday. Both days are fetched in the same run. Each metric shows yesterday minus the prior day and its percentage of the prior day; a nonzero value after zero is labelled as a zero baseline with no percentage, and zero to zero is 0%. Current account totals have no historical comparison.
 - **Last 30 days:** the 30 complete Shanghai calendar days ending with the previous day, rather than a calendar month. Each day is queried separately and summed, because Cloudflare can apply coarser sampling to broader queries.
 - **Page views:** browser page load events from `rumPageloadEventsAdaptiveGroups.count`. Browser tracking can miss visits because of blocked scripts or failed page loads.
 - **Visits:** `sum.visits`, defined by Cloudflare as page views initiated from a different website (the referrer hostname differs). This is not a unique-user count or a GA4 session count.
@@ -20,9 +21,21 @@ The workflow runs at **00:00 UTC / 08:00 Asia/Shanghai** daily and supports manu
 
 All statistics and snapshots are public. The token remains in GitHub Actions Secrets and is never written into these files.
 
+## Telegram business activity
+
+The same daily update adds **Remote Job Radar** to both profile READMEs and the email. Website browser views and Telegram user activity are separate metrics. Bot figures include previous-day and day-before-previous new users, unique active users and processed interactions with absolute and percentage changes; seven complete days of new users, unique active users and interactions; and current registered users and users with enabled alerts. The fourteen complete daily rows are preserved in the public snapshot. Seven-day active users are deduplicated across the entire interval, not summed from daily active users. Do not compare this seven-day period to website thirty-day totals directly.
+
+The bot excludes its administrator from all figures. Interactions count completed private-chat messages and buttons, including navigation; retries are deduplicated by Telegram update ID. Automatic digests are not user activity. Globally paused, unreachable, or individually paused subscriptions do not qualify for enabled-alert users. Deleted accounts are excluded, so past counts can decrease. Zero indicates no observed activity, not proof of uptime.
+
+With `STATS_EXPORT_ENABLED=true` in the bot's protected runtime configuration, the bot maintains **one private, silent, pinned snapshot message** in the administrator chat. It updates after Shanghai midnight and persists its message pointer so normal retries edit the existing message. Keep that message pinned. `/stats` still returns the administrator's on-demand report. The export contains only aggregates, no user IDs or message content.
+
+This repository uses Secrets `TELEGRAM_STATS_BOT_TOKEN` and `TELEGRAM_STATS_CHAT_ID` to call Telegram Bot API `getChat` and read that pinned message. No SSH, production database connection, personal server HTTP endpoint, user-session client, or `getUpdates` polling is used. The bot's webhook continues receiving normal updates. The bot token grants bot-level control: keep it only in repository Secrets and never publish it. The chat ID is also kept private.
+
+The reader verifies the chat and publishing bot, versioned schema, exact previous Shanghai date, generation time, daily continuity and counts. Only an explicit aggregate field allowlist enters public JSON/Markdown. Missing, replaced, stale or invalid snapshots fail before any statistics files are written; they never become fake zeros. The daily email is sent only after a successful refresh. The export is a generation-time snapshot; delayed interactions or subsequent account deletions can revise later snapshots. The collection job fetches both Cloudflare and Telegram before publishing either. To stop integration, disable the bot export, remove its Telegram message and remove the two repository Secrets.
+
 ## Daily email
 
-After fetching and committing statistics successfully, the Action emails the same report using SMTP or Resend. No personal server is involved. If email delivery fails, the Action fails while the already published statistics remain available. A provider accepting a message does not guarantee inbox delivery; check spam on the first run.
+After fetching and committing statistics successfully, the Action emails the same website and Telegram report using SMTP or Resend. The collection and email job runs in GitHub Actions and accesses the Telegram snapshot via Telegram API. If email delivery fails, the Action fails while the already published statistics remain available. A provider accepting a message does not guarantee inbox delivery; check spam on the first run.
 
 Set the repository secret `MAIL_CONFIG` to one of these JSON objects (replace the example credentials and addresses):
 
