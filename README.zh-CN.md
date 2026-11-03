@@ -4,7 +4,7 @@
 
 <div align="center">
   <p><strong>后端工程 · 复杂业务流程 · 稳妥的系统变更</strong></p>
-  <p><a href="https://gelatoni.uk/articles">✦ 技术文章</a> · <a href="https://tasukikeifu.com/ja">↗ 线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ 代码仓库</a></p>
+  <p><a href="https://gelatoni.uk/zh/articles">✦ 技术文章</a> · <a href="https://tasukikeifu.com/zh">↗ 线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ 代码仓库</a></p>
 </div>
 
 我是**徐涣（Gelatoni）**，有企业人事主数据系统和跨境支付产品的开发经历。我会从需求、领域边界、后端实现、测试验证一直考虑到上线。公开仓库展示的是我的独立项目；企业工作更多通过我处理过的问题和工作方式来说明，而不是公开原公司的代码。
@@ -16,7 +16,7 @@
 | 演进系统，同时保持既有用户的使用方式 | HR 主数据搬迁、接口融合、任职模型改造与分阶段切流 |
 | 把宽泛的业务需求收敛为可实施范围 | 支付和计费方案中的职责边界、数据流、边缘情况与范围排除 |
 | 让变更可验证、可运维 | 从需求导出用例、回归路径、可观测性、迁移与发布检查 |
-| 独立构建产品与数据工作流 | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) 及其[线上站点](https://tasukikeifu.com/ja) |
+| 独立构建产品与数据工作流 | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) 及其[线上站点](https://tasukikeifu.com/zh) |
 
 ## 企业交付经历
 
@@ -51,11 +51,11 @@
 
 ## 文章与独立项目
 
-[文章归档](https://gelatoni.uk/articles)记录了我对迁移、稳定性、产品范围、支付业务和 AI 辅助研发的思考。可以从[AI 辅助研发模式回顾](https://gelatoni.uk/articles/2026-06-26-AI辅助研发模式回顾)与[稳定性专题](https://gelatoni.uk/articles/2026-03-02-稳定性)开始。部分旧文涉及原公司的系统；我正在检查哪些适合继续公开，哪些需要改写为匿名案例。
+[文章归档](https://gelatoni.uk/zh/articles)记录了我对迁移、稳定性、产品范围、支付业务和 AI 辅助研发的思考。可以从[AI 辅助研发模式回顾](https://gelatoni.uk/zh/articles/2026-06-26-AI辅助研发模式回顾)与[稳定性专题](https://gelatoni.uk/zh/articles/2026-03-02-稳定性)开始。部分旧文涉及原公司的系统；我正在检查哪些适合继续公开，哪些需要改写为匿名案例。
 
 | 公开项目 | 可以核对的内容 |
 | --- | --- |
-| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) · [线上站点](https://tasukikeifu.com/ja) | 基于 Next.js 和 PostgreSQL 的跑步数据产品、数据导入、迁移、搜索与部署 |
+| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) · [线上站点](https://tasukikeifu.com/zh) | 基于 Next.js 和 PostgreSQL 的跑步数据产品、数据导入、迁移、搜索与部署 |
 | [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 数据质量诊断、可审计操作、默认试运行与写入保护 |
 | [个人站点](https://github.com/gelatoni-xh/personal-site) · [线上站点](https://gelatoni.uk) | Markdown 发布、构建检查、Docker 部署与部署后健康检查 |
 
@@ -71,10 +71,15 @@
 
 企业系统使用了公司自有基础设施；这里按通用能力描述，不暗示使用了某个同类开源产品。
 
+## 教育经历
+
+- **华东师范大学** · 大数据技术与工程硕士（2020–2023）
+- **华东理工大学** · 计算机科学与技术本科（2016–2020）
+
 ## 正在补齐的作品集内容
 
 - **企业案例：** 匿名写明起点问题、我的准确职责、关键决策、验证方式和实际落地范围。
 - **独立产品证据：** 截图、演示过程，以及能够核实的结果数据。
 - **合作入口：** 直接联系方式和更明确的承接任务范围。
 
-现阶段可以[阅读文章](https://gelatoni.uk/articles)、[体验线上产品](https://tasukikeifu.com/ja)，或[查看代码仓库](https://github.com/gelatoni-xh?tab=repositories)。
+现阶段可以[阅读文章](https://gelatoni.uk/zh/articles)、[体验线上产品](https://tasukikeifu.com/zh)，或[查看代码仓库](https://github.com/gelatoni-xh?tab=repositories)。
