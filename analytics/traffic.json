@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T21:46:30.116Z",
+  "generatedAt": "2026-11-03T22:03:06.707Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -15,6 +15,23 @@
         "pageViews": 27,
         "visits": 9,
         "sampled": false
+      },
+      "dayBeforePrevious": {
+        "startDate": "2026-11-02",
+        "endDateExclusive": "2026-11-03",
+        "pageViews": 0,
+        "visits": 0,
+        "sampled": false
+      },
+      "comparison": {
+        "pageViews": {
+          "difference": 27,
+          "percent": null
+        },
+        "visits": {
+          "difference": 9,
+          "percent": null
+        }
       },
       "last30Days": {
         "startDate": "2026-10-05",
@@ -33,13 +50,162 @@
         "visits": 34,
         "sampled": false
       },
+      "dayBeforePrevious": {
+        "startDate": "2026-11-02",
+        "endDateExclusive": "2026-11-03",
+        "pageViews": 119,
+        "visits": 34,
+        "sampled": false
+      },
+      "comparison": {
+        "pageViews": {
+          "difference": -26,
+          "percent": -21.84873949579832
+        },
+        "visits": {
+          "difference": 0,
+          "percent": 0
+        }
+      },
       "last30Days": {
         "startDate": "2026-10-05",
         "endDateExclusive": "2026-11-04",
-        "pageViews": 812,
-        "visits": 372,
+        "pageViews": 722,
+        "visits": 332,
         "sampled": true
       }
+    }
+  },
+  "businesses": {
+    "jobRadar": {
+      "name": "Remote Job Radar",
+      "url": "https://t.me/GelatoniJobRadarBot",
+      "source": "Telegram Bot API / private pinned aggregate snapshot",
+      "generatedAt": "2026-11-03T21:58:07.972Z",
+      "timezone": "Asia/Shanghai",
+      "previousDay": {
+        "date": "2026-11-03",
+        "newUsers": 0,
+        "activeUsers": 0,
+        "interactions": 0
+      },
+      "dayBeforePrevious": {
+        "date": "2026-11-02",
+        "newUsers": 0,
+        "activeUsers": 0,
+        "interactions": 0
+      },
+      "comparison": {
+        "newUsers": {
+          "difference": 0,
+          "percent": 0
+        },
+        "activeUsers": {
+          "difference": 0,
+          "percent": 0
+        },
+        "interactions": {
+          "difference": 0,
+          "percent": 0
+        }
+      },
+      "last7Days": {
+        "startDate": "2026-10-28",
+        "endDateExclusive": "2026-11-04",
+        "newUsers": 0,
+        "activeUsers": 0,
+        "interactions": 0
+      },
+      "totals": {
+        "registeredUsers": 0,
+        "enabledAlertUsers": 0
+      },
+      "daily": [
+        {
+          "date": "2026-10-21",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-22",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-23",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-24",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-25",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-26",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-27",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-28",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-29",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-30",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-31",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-01",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-02",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-03",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        }
+      ]
     }
   }
 }
