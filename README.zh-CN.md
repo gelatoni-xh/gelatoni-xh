@@ -17,7 +17,7 @@
 | 站点 | 前一天浏览量 | 前一天访问次数 | 近 30 天浏览量 | 近 30 天访问次数 |
 | --- | ---: | ---: | ---: | ---: |
 | [个人站](https://gelatoni.uk) | 27 | 9 | 97 | 31 |
-| [跑步数据站](https://tasukikeifu.com) | 93 | 34 | 802 | 372 |
+| [跑步数据站](https://tasukikeifu.com) | 93 | 34 | 812 | 372 |
 
 来源：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户数。每天北京时间 08:00 自动更新（GitHub 调度可能延迟）。[统计口径与历史](./analytics/README.md)。
 <!-- TRAFFIC:END -->

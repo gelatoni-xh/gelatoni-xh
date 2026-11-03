@@ -17,7 +17,7 @@ Previous day: **2026-11-03**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 | Site | Previous day views | Previous day visits | 30-day views | 30-day visits |
 | --- | ---: | ---: | ---: | ---: |
 | [Personal site](https://gelatoni.uk) | 27 | 9 | 97 | 31 |
-| [Tasuki Keifu](https://tasukikeifu.com) | 93 | 34 | 802 | 372 |
+| [Tasuki Keifu](https://tasukikeifu.com) | 93 | 34 | 812 | 372 |
 
 Source: Cloudflare Web Analytics; figures may include sampling estimates. Visits are not unique users. Updated daily at 08:00 Asia/Shanghai (GitHub scheduling may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->

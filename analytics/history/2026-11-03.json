@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T20:45:47.490Z",
+  "generatedAt": "2026-11-03T20:47:14.578Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -36,7 +36,7 @@
       "last30Days": {
         "startDate": "2026-10-05",
         "endDateExclusive": "2026-11-04",
-        "pageViews": 802,
+        "pageViews": 812,
         "visits": 372,
         "sampled": true
       }
@@ -292,9 +292,9 @@
           "sampled": false
         },
         "running": {
-          "pageViews": 0,
+          "pageViews": 10,
           "visits": 0,
-          "sampled": false
+          "sampled": true
         }
       }
     },
