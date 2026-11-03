@@ -35,3 +35,12 @@ jobs:
             git commit -m "Update daily traffic statistics"
             git push
           fi
+      - name: Email traffic report
+        env:
+          MAIL_CONFIG: ${{ secrets.MAIL_CONFIG }}
+        run: |
+          if [ -z "$MAIL_CONFIG" ]; then
+            echo "::notice::Daily email is not configured. Set the MAIL_CONFIG repository secret."
+            exit 0
+          fi
+          python3 scripts/send-traffic-email.py
