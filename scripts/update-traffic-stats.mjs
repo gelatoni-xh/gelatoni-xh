@@ -6,7 +6,6 @@ const account = process.env.CLOUDFLARE_ACCOUNT_ID;
 if (!token || !account) throw new Error('CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are required');
 
 const sites = [
-  { key: 'personal', domain: 'gelatoni.uk', en: 'Personal site', zh: '个人站' },
   { key: 'running', domain: 'tasukikeifu.com', en: 'Tasuki Keifu', zh: '跑步数据站' },
 ];
 const dayMs = 86_400_000;

@@ -7,40 +7,6 @@
     "visits": "Page views initiated from a different website (referrer hostname differs); not unique users or GA4 sessions"
   },
   "sites": {
-    "personal": {
-      "domain": "gelatoni.uk",
-      "previousDay": {
-        "startDate": "2026-11-03",
-        "endDateExclusive": "2026-11-04",
-        "pageViews": 27,
-        "visits": 9,
-        "sampled": false
-      },
-      "dayBeforePrevious": {
-        "startDate": "2026-11-02",
-        "endDateExclusive": "2026-11-03",
-        "pageViews": 0,
-        "visits": 0,
-        "sampled": false
-      },
-      "comparison": {
-        "pageViews": {
-          "difference": 27,
-          "percent": null
-        },
-        "visits": {
-          "difference": 9,
-          "percent": null
-        }
-      },
-      "last30Days": {
-        "startDate": "2026-10-05",
-        "endDateExclusive": "2026-11-04",
-        "pageViews": 97,
-        "visits": 31,
-        "sampled": true
-      }
-    },
     "running": {
       "domain": "tasukikeifu.com",
       "previousDay": {

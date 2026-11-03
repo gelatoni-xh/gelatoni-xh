@@ -1,6 +1,6 @@
 # Service usage
 
-The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `gelatoni.uk` and `tasukikeifu.com`, including their `www` hostnames.
+The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `tasukikeifu.com`, including its `www` hostname, alongside Telegram activity for Remote Job Radar.
 
 - **Previous day:** the previous complete calendar day in `Asia/Shanghai`, from 00:00 inclusive to the following 00:00 exclusive.
 - **Day before previous:** the complete Shanghai calendar day before yesterday. Both days are fetched in the same run. Each metric shows yesterday minus the prior day and its percentage of the prior day; a nonzero value after zero is labelled as a zero baseline with no percentage, and zero to zero is 0%. Current account totals have no historical comparison.

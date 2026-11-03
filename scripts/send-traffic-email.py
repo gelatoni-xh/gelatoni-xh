@@ -17,9 +17,9 @@ def change(current, previous):
 
 
 def build_message(stats):
-    day = stats['sites']['personal']['previousDay']['startDate']
-    before_day = stats['sites']['personal']['dayBeforePrevious']['startDate']
-    start = stats['sites']['personal']['last30Days']['startDate']
+    day = stats['sites']['running']['previousDay']['startDate']
+    before_day = stats['sites']['running']['dayBeforePrevious']['startDate']
+    start = stats['sites']['running']['last30Days']['startDate']
     bot = stats['businesses']['jobRadar']
     if bot['previousDay']['date'] != day or bot['dayBeforePrevious']['date'] != before_day:
         raise ValueError('Telegram and website report dates differ')
@@ -27,7 +27,7 @@ def build_message(stats):
     lines = [f'服务使用日报：{day}', '统计时区：北京时间，昨日与前天均为完整自然日 00:00–24:00',
              f'昨日：{day}；前天：{before_day}',
              f'近 30 天：{start} 至 {day}', '']
-    for key, name in [('personal', '个人站'), ('running', '跑步数据站')]:
+    for key, name in [('running', '跑步数据站')]:
         site = stats['sites'][key]
         previous, before, month = site['previousDay'], site['dayBeforePrevious'], site['last30Days']
         lines.extend([

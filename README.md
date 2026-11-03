@@ -16,8 +16,6 @@ Previous day: **2026-11-03**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 
 | Site / metric | Prior day 2026-11-02 | Yesterday 2026-11-03 | Yesterday vs prior day | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| [Personal site](https://gelatoni.uk) / Views | 0 | 27 | +27 (prior day was 0) | 97 |
-| [Personal site](https://gelatoni.uk) / Visits | 0 | 9 | +9 (prior day was 0) | 31 |
 | [Tasuki Keifu](https://tasukikeifu.com) / Views | 119 | 93 | -26 (-21.8%) | 722 |
 | [Tasuki Keifu](https://tasukikeifu.com) / Visits | 34 | 34 | 0 (0%) | 332 |
 

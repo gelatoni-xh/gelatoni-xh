@@ -7,40 +7,6 @@
     "visits": "Page views initiated from a different website (referrer hostname differs); not unique users or GA4 sessions"
   },
   "sites": {
-    "personal": {
-      "domain": "gelatoni.uk",
-      "previousDay": {
-        "startDate": "2026-11-03",
-        "endDateExclusive": "2026-11-04",
-        "pageViews": 27,
-        "visits": 9,
-        "sampled": false
-      },
-      "dayBeforePrevious": {
-        "startDate": "2026-11-02",
-        "endDateExclusive": "2026-11-03",
-        "pageViews": 0,
-        "visits": 0,
-        "sampled": false
-      },
-      "comparison": {
-        "pageViews": {
-          "difference": 27,
-          "percent": null
-        },
-        "visits": {
-          "difference": 9,
-          "percent": null
-        }
-      },
-      "last30Days": {
-        "startDate": "2026-10-05",
-        "endDateExclusive": "2026-11-04",
-        "pageViews": 97,
-        "visits": 31,
-        "sampled": true
-      }
-    },
     "running": {
       "domain": "tasukikeifu.com",
       "previousDay": {
@@ -212,11 +178,6 @@
     {
       "date": "2026-10-05",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 20,
           "visits": 10,
@@ -227,11 +188,6 @@
     {
       "date": "2026-10-06",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -242,11 +198,6 @@
     {
       "date": "2026-10-07",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 30,
           "visits": 20,
@@ -257,11 +208,6 @@
     {
       "date": "2026-10-08",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 20,
           "visits": 0,
@@ -272,11 +218,6 @@
     {
       "date": "2026-10-09",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 20,
           "visits": 10,
@@ -287,11 +228,6 @@
     {
       "date": "2026-10-10",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 0,
           "visits": 0,
@@ -302,11 +238,6 @@
     {
       "date": "2026-10-11",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -317,11 +248,6 @@
     {
       "date": "2026-10-12",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 40,
           "visits": 10,
@@ -332,11 +258,6 @@
     {
       "date": "2026-10-13",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -347,11 +268,6 @@
     {
       "date": "2026-10-14",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 0,
@@ -362,11 +278,6 @@
     {
       "date": "2026-10-15",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 30,
           "visits": 20,
@@ -377,11 +288,6 @@
     {
       "date": "2026-10-16",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -392,11 +298,6 @@
     {
       "date": "2026-10-17",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 0,
           "visits": 0,
@@ -407,11 +308,6 @@
     {
       "date": "2026-10-18",
       "sites": {
-        "personal": {
-          "pageViews": 10,
-          "visits": 10,
-          "sampled": true
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -422,11 +318,6 @@
     {
       "date": "2026-10-19",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 40,
           "visits": 10,
@@ -437,11 +328,6 @@
     {
       "date": "2026-10-20",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 40,
           "visits": 0,
@@ -452,11 +338,6 @@
     {
       "date": "2026-10-21",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 0,
@@ -467,11 +348,6 @@
     {
       "date": "2026-10-22",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -482,11 +358,6 @@
     {
       "date": "2026-10-23",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 20,
           "visits": 20,
@@ -497,11 +368,6 @@
     {
       "date": "2026-10-24",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 0,
           "visits": 0,
@@ -512,11 +378,6 @@
     {
       "date": "2026-10-25",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 10,
@@ -527,11 +388,6 @@
     {
       "date": "2026-10-26",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 10,
           "visits": 0,
@@ -542,11 +398,6 @@
     {
       "date": "2026-10-27",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 29,
           "visits": 13,
@@ -557,11 +408,6 @@
     {
       "date": "2026-10-28",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 22,
           "visits": 12,
@@ -572,11 +418,6 @@
     {
       "date": "2026-10-29",
       "sites": {
-        "personal": {
-          "pageViews": 2,
-          "visits": 2,
-          "sampled": false
-        },
         "running": {
           "pageViews": 22,
           "visits": 14,
@@ -587,11 +428,6 @@
     {
       "date": "2026-10-30",
       "sites": {
-        "personal": {
-          "pageViews": 57,
-          "visits": 9,
-          "sampled": true
-        },
         "running": {
           "pageViews": 20,
           "visits": 16,
@@ -602,11 +438,6 @@
     {
       "date": "2026-10-31",
       "sites": {
-        "personal": {
-          "pageViews": 1,
-          "visits": 1,
-          "sampled": false
-        },
         "running": {
           "pageViews": 16,
           "visits": 12,
@@ -617,11 +448,6 @@
     {
       "date": "2026-11-01",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 41,
           "visits": 27,
@@ -632,11 +458,6 @@
     {
       "date": "2026-11-02",
       "sites": {
-        "personal": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
-        },
         "running": {
           "pageViews": 119,
           "visits": 34,
@@ -647,11 +468,6 @@
     {
       "date": "2026-11-03",
       "sites": {
-        "personal": {
-          "pageViews": 27,
-          "visits": 9,
-          "sampled": false
-        },
         "running": {
           "pageViews": 93,
           "visits": 34,
