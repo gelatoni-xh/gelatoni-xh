@@ -9,6 +9,19 @@
 
 I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise HR data systems and cross-border payment products. I work across requirements, domain boundaries, backend implementation, testing, and rollout. My public repositories show independent work; much of my enterprise work is represented here through the problems I handled and the way I approached them, rather than employer-owned source code.
 
+<!-- TRAFFIC:START -->
+## Website traffic
+
+Previous day: **2026-11-03**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-05 through 2026-11-03.
+
+| Site | Previous day views | Previous day visits | 30-day views | 30-day visits |
+| --- | ---: | ---: | ---: | ---: |
+| [Personal site](https://gelatoni.uk) | 27 | 9 | 97 | 31 |
+| [Tasuki Keifu](https://tasukikeifu.com) | 93 | 34 | 802 | 372 |
+
+Source: Cloudflare Web Analytics; figures may include sampling estimates. Visits are not unique users. Updated daily at 08:00 Asia/Shanghai (GitHub scheduling may be delayed). [Definitions and history](./analytics/README.md).
+<!-- TRAFFIC:END -->
+
 ## Where I can help
 
 | Need | Relevant experience |

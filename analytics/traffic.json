@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-11-03T20:45:47.490Z",
+  "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
+  "timezone": "Asia/Shanghai",
+  "metrics": {
+    "pageViews": "Browser page load events; may be estimated through adaptive sampling",
+    "visits": "Page views initiated from a different website (referrer hostname differs); not unique users or GA4 sessions"
+  },
+  "sites": {
+    "personal": {
+      "domain": "gelatoni.uk",
+      "previousDay": {
+        "startDate": "2026-11-03",
+        "endDateExclusive": "2026-11-04",
+        "pageViews": 27,
+        "visits": 9,
+        "sampled": false
+      },
+      "last30Days": {
+        "startDate": "2026-10-05",
+        "endDateExclusive": "2026-11-04",
+        "pageViews": 97,
+        "visits": 31,
+        "sampled": true
+      }
+    },
+    "running": {
+      "domain": "tasukikeifu.com",
+      "previousDay": {
+        "startDate": "2026-11-03",
+        "endDateExclusive": "2026-11-04",
+        "pageViews": 93,
+        "visits": 34,
+        "sampled": false
+      },
+      "last30Days": {
+        "startDate": "2026-10-05",
+        "endDateExclusive": "2026-11-04",
+        "pageViews": 802,
+        "visits": 372,
+        "sampled": true
+      }
+    }
+  }
+}
