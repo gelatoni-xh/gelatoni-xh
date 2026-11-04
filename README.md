@@ -16,8 +16,8 @@ Previous day: **2026-11-03**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 
 | Site / metric | Prior day 2026-11-02 | Yesterday 2026-11-03 | Yesterday vs prior day | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| [Tasuki Keifu](https://tasukikeifu.com) / Views | 119 | 93 | -26 (-21.8%) | 722 |
-| [Tasuki Keifu](https://tasukikeifu.com) / Visits | 34 | 34 | 0 (0%) | 332 |
+| [Tasuki Keifu](https://tasukikeifu.com) / Views | 119 | 93 | -26 (-21.8%) | 823 |
+| [Tasuki Keifu](https://tasukikeifu.com) / Visits | 34 | 34 | 0 (0%) | 389 |
 
 Source: Cloudflare Web Analytics; figures may include sampling estimates. Visits are not unique users. Updated daily at 08:00 Asia/Shanghai (GitHub scheduling may be delayed). [Definitions and history](./analytics/README.md).
 ### Telegram business · Remote Job Radar

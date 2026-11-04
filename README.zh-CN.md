@@ -16,8 +16,8 @@
 
 | 站点 / 指标 | 前天 2026-11-02 | 昨日 2026-11-03 | 昨日较前天 | 近 30 天 |
 | --- | ---: | ---: | ---: | ---: |
-| [跑步数据站](https://tasukikeifu.com) / 浏览量 | 119 | 93 | -26 (-21.8%) | 722 |
-| [跑步数据站](https://tasukikeifu.com) / 访问次数 | 34 | 34 | 0 (0%) | 332 |
+| [跑步数据站](https://tasukikeifu.com) / 浏览量 | 119 | 93 | -26 (-21.8%) | 823 |
+| [跑步数据站](https://tasukikeifu.com) / 访问次数 | 34 | 34 | 0 (0%) | 389 |
 
 来源：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户数。每天北京时间 08:00 自动更新（GitHub 调度可能延迟）。[统计口径与历史](./analytics/README.md)。
 ### Telegram 业务 · Remote Job Radar

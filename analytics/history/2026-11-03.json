@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T22:03:06.707Z",
+  "generatedAt": "2026-11-04T04:23:48.607Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -36,8 +36,8 @@
       "last30Days": {
         "startDate": "2026-10-05",
         "endDateExclusive": "2026-11-04",
-        "pageViews": 722,
-        "visits": 332,
+        "pageViews": 823,
+        "visits": 389,
         "sampled": true
       }
     }
@@ -209,8 +209,8 @@
       "date": "2026-10-08",
       "sites": {
         "running": {
-          "pageViews": 20,
-          "visits": 0,
+          "pageViews": 40,
+          "visits": 20,
           "sampled": true
         }
       }
@@ -239,9 +239,9 @@
       "date": "2026-10-11",
       "sites": {
         "running": {
-          "pageViews": 10,
-          "visits": 10,
-          "sampled": true
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
         }
       }
     },
@@ -269,8 +269,8 @@
       "date": "2026-10-14",
       "sites": {
         "running": {
-          "pageViews": 10,
-          "visits": 0,
+          "pageViews": 40,
+          "visits": 20,
           "sampled": true
         }
       }
@@ -299,9 +299,9 @@
       "date": "2026-10-17",
       "sites": {
         "running": {
-          "pageViews": 0,
-          "visits": 0,
-          "sampled": false
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
         }
       }
     },
@@ -329,8 +329,8 @@
       "date": "2026-10-20",
       "sites": {
         "running": {
-          "pageViews": 40,
-          "visits": 0,
+          "pageViews": 50,
+          "visits": 10,
           "sampled": true
         }
       }
@@ -359,9 +359,9 @@
       "date": "2026-10-23",
       "sites": {
         "running": {
-          "pageViews": 20,
-          "visits": 20,
-          "sampled": true
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
         }
       }
     },
@@ -389,8 +389,8 @@
       "date": "2026-10-26",
       "sites": {
         "running": {
-          "pageViews": 10,
-          "visits": 0,
+          "pageViews": 60,
+          "visits": 10,
           "sampled": true
         }
       }
@@ -399,9 +399,9 @@
       "date": "2026-10-27",
       "sites": {
         "running": {
-          "pageViews": 29,
-          "visits": 13,
-          "sampled": false
+          "pageViews": 40,
+          "visits": 30,
+          "sampled": true
         }
       }
     },
