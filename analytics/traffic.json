@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T04:23:48.607Z",
+  "generatedAt": "2026-11-05T01:06:56.887Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -10,34 +10,34 @@
     "running": {
       "domain": "tasukikeifu.com",
       "previousDay": {
+        "startDate": "2026-11-04",
+        "endDateExclusive": "2026-11-05",
+        "pageViews": 82,
+        "visits": 37,
+        "sampled": false
+      },
+      "dayBeforePrevious": {
         "startDate": "2026-11-03",
         "endDateExclusive": "2026-11-04",
         "pageViews": 93,
         "visits": 34,
         "sampled": false
       },
-      "dayBeforePrevious": {
-        "startDate": "2026-11-02",
-        "endDateExclusive": "2026-11-03",
-        "pageViews": 119,
-        "visits": 34,
-        "sampled": false
-      },
       "comparison": {
         "pageViews": {
-          "difference": -26,
-          "percent": -21.84873949579832
+          "difference": -11,
+          "percent": -11.827956989247312
         },
         "visits": {
-          "difference": 0,
-          "percent": 0
+          "difference": 3,
+          "percent": 8.823529411764707
         }
       },
       "last30Days": {
-        "startDate": "2026-10-05",
-        "endDateExclusive": "2026-11-04",
-        "pageViews": 823,
-        "visits": 389,
+        "startDate": "2026-10-06",
+        "endDateExclusive": "2026-11-05",
+        "pageViews": 873,
+        "visits": 414,
         "sampled": true
       }
     }
@@ -47,16 +47,16 @@
       "name": "Remote Job Radar",
       "url": "https://t.me/GelatoniJobRadarBot",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
-      "generatedAt": "2026-11-03T21:58:07.972Z",
+      "generatedAt": "2026-11-04T16:01:42.109Z",
       "timezone": "Asia/Shanghai",
       "previousDay": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
       },
       "dayBeforePrevious": {
-        "date": "2026-11-02",
+        "date": "2026-11-03",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
@@ -76,8 +76,8 @@
         }
       },
       "last7Days": {
-        "startDate": "2026-10-28",
-        "endDateExclusive": "2026-11-04",
+        "startDate": "2026-10-29",
+        "endDateExclusive": "2026-11-05",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
@@ -87,12 +87,6 @@
         "enabledAlertUsers": 0
       },
       "daily": [
-        {
-          "date": "2026-10-21",
-          "newUsers": 0,
-          "activeUsers": 0,
-          "interactions": 0
-        },
         {
           "date": "2026-10-22",
           "newUsers": 0,
@@ -167,6 +161,12 @@
         },
         {
           "date": "2026-11-03",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-04",
           "newUsers": 0,
           "activeUsers": 0,
           "interactions": 0
