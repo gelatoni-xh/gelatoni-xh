@@ -23,11 +23,13 @@ jobs:
           node-version: 22
       - name: Check Telegram snapshot validation and email rendering
         run: |
-          node --test scripts/telegram-stats.test.mjs
+          node --test scripts/*.test.mjs
           python3 scripts/test-traffic-email.py
       - name: Fetch Cloudflare and Telegram statistics
         env:
           TELEGRAM_STATS_BOT_TOKEN: ${{ secrets.TELEGRAM_STATS_BOT_TOKEN }}
+          METADATA_STATS_BOT_TOKEN: ${{ secrets.METADATA_STATS_BOT_TOKEN }}
+          METADATA_STATS_CHAT_ID: ${{ secrets.METADATA_STATS_CHAT_ID }}
           TELEGRAM_STATS_CHAT_ID: ${{ secrets.TELEGRAM_STATS_CHAT_ID }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

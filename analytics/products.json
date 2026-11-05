@@ -1,0 +1,5 @@
+[
+  {"key":"running","kind":"website","name":"Tasuki Keifu","nameZh":"跑步数据站","domain":"tasukikeifu.com","url":"https://tasukikeifu.com"},
+  {"key":"jobRadar","kind":"telegram","name":"Remote Job Radar","service":"remote-job-radar","url":"https://t.me/GelatoniJobRadarBot","secretPrefix":"TELEGRAM_STATS","prefix":"Remote Job Radar · Daily statistics export\n"},
+  {"key":"metadata","kind":"telegram","name":"JAVIndexBot","service":"telegram-metadata","url":"https://t.me/JAVIndexBot","secretPrefix":"METADATA_STATS","prefix":"Telegram Metadata · Daily statistics export\n"}
+]

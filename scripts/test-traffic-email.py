@@ -35,6 +35,28 @@ class EmailReportTest(unittest.TestCase):
                          '2026-10-28', '2026-11-04T00:01:00Z', '前天', '+4 (+50.0%)', '+2 (前天为 0)', '-3 (-50.0%)']:
             self.assertIn(expected, body)
 
+    def test_multiple_products_with_unknown_history(self):
+        stats = fixture()
+        stats['reportDate'] = '2026-11-03'
+        stats['products'] = [
+            {'key': 'running', 'kind': 'website', 'name': 'Running'},
+            {'key': 'jobRadar', 'kind': 'telegram', 'name': 'Remote Job Radar'},
+            {'key': 'metadata', 'kind': 'telegram', 'name': 'JAVIndexBot'},
+        ]
+        import copy
+        bot = copy.deepcopy(stats['businesses']['jobRadar'])
+        bot['trackingSince'] = '2026-11-04T00:00:00Z'
+        for period in ['previousDay', 'dayBeforePrevious', 'last7Days']:
+            bot[period].update(activeUsers=None, interactions=None, searches=None)
+        del bot['totals']['enabledAlertUsers']
+        stats['businesses']['metadata'] = bot
+        subject, body = module.build_message(stats)
+        self.assertIn('产品使用日报', subject)
+        self.assertIn('3. JAVIndexBot', body)
+        self.assertIn('查询请求：— → —', body)
+        self.assertNotIn('None', body)
+        self.assertEqual(body.count('当前启用提醒'), 1)
+
     def test_zero_baseline(self):
         self.assertEqual(module.change(0, 0), '+0 (0%)')
         self.assertEqual(module.change(5, 0), '+5 (前天为 0)')

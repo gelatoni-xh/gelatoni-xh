@@ -1,13 +1,13 @@
-import { fetchTelegramStats, telegramMarkdown, compareMetrics, formatChange } from './telegram-stats.mjs';
+import { fetchTelegramStats, compareMetrics } from './telegram-stats.mjs';
+import { fetchMetadataStats, productMarkdown } from './product-report.mjs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const token = process.env.CLOUDFLARE_API_TOKEN?.trim();
 const account = process.env.CLOUDFLARE_ACCOUNT_ID;
 if (!token || !account) throw new Error('CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are required');
 
-const sites = [
-  { key: 'running', domain: 'tasukikeifu.com', en: 'Tasuki Keifu', zh: '跑步数据站' },
-];
+const products = JSON.parse(await readFile('analytics/products.json', 'utf8'));
+const sites = products.filter(product => product.kind === 'website');
 const dayMs = 86_400_000;
 const offset = 8 * 3_600_000;
 const now = new Date();
@@ -100,7 +100,13 @@ for (const site of sites) {
   };
 }
 
-result.businesses = { jobRadar: await fetchTelegramStats(previousDay.date) };
+result.reportDate = previousDay.date;
+result.products = products.map(({ key, kind, name, nameZh, url }) => ({ key, kind, name, ...(nameZh ? { nameZh } : {}), url }));
+result.businesses = {};
+for (const product of products.filter(product => product.kind === 'telegram')) {
+  result.businesses[product.key] = product.service === 'remote-job-radar'
+    ? await fetchTelegramStats(previousDay.date) : await fetchMetadataStats(previousDay.date, product);
+}
 
 const begin = '<!-- TRAFFIC:START -->';
 const finish = '<!-- TRAFFIC:END -->';
@@ -110,17 +116,9 @@ for (const [filename, chinese] of [['README.md', false], ['README.zh-CN.md', tru
     chinese ? '## 服务使用记录' : '## Service usage', '',
     chinese ? `前一天：**${previousDay.date}**（北京时间 00:00–24:00）；近 30 天：${daily[0].date} 至 ${previousDay.date}。` :
       `Previous day: **${previousDay.date}**, 00:00–24:00 Asia/Shanghai. Last 30 days: ${daily[0].date} through ${previousDay.date}.`, '',
-    chinese ? `| 站点 / 指标 | 前天 ${dayBeforePrevious.date} | 昨日 ${previousDay.date} | 昨日较前天 | 近 30 天 |` :
-      `| Site / metric | Prior day ${dayBeforePrevious.date} | Yesterday ${previousDay.date} | Yesterday vs prior day | Last 30 days |`,
-    '| --- | ---: | ---: | ---: | ---: |',
-    ...sites.flatMap((site) => {
-      const { previousDay: day, dayBeforePrevious: before, comparison, last30Days: month } = result.sites[site.key];
-      return [['pageViews', '浏览量', 'Views'], ['visits', '访问次数', 'Visits']].map(([key, zh, en]) =>
-        `| [${chinese ? site.zh : site.en}](https://${site.domain}) / ${chinese ? zh : en} | ${before[key]} | ${day[key]} | ${formatChange(comparison[key], chinese)} | ${month[key]} |`);
-    }), '',
-    chinese ? '来源：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户数。每天北京时间 08:00 自动更新（GitHub 调度可能延迟）。[统计口径与历史](./analytics/README.md)。' :
-      'Source: Cloudflare Web Analytics; figures may include sampling estimates. Visits are not unique users. Updated daily at 08:00 Asia/Shanghai (GitHub scheduling may be delayed). [Definitions and history](./analytics/README.md).',
-    ...telegramMarkdown(result.businesses.jobRadar, chinese),
+    ...products.flatMap(product => productMarkdown(product, product.kind === 'website' ? result.sites[product.key] : result.businesses[product.key], chinese)),
+    chinese ? '网站来源为 Cloudflare Web Analytics（含采样估算，访问不等于独立用户）；Bot 来源为 Telegram 私聊汇总，排除管理员，活跃按区间去重，交互按更新 ID 去重。不同产品与口径不合计。每天北京时间 08:00 调度（可能延迟）。[统计口径与历史](./analytics/README.md)。' :
+      'Websites: Cloudflare Web Analytics (sampling estimates; visits are not unique users). Bots: Telegram private aggregate snapshots; administrator excluded, active users deduplicated per period, interactions deduplicated by update ID. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).',
     finish,
   ];
   const content = await readFile(filename, 'utf8');

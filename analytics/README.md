@@ -1,6 +1,6 @@
 # Service usage
 
-The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `tasukikeifu.com`, including its `www` hostname, alongside Telegram activity for Remote Job Radar.
+The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `tasukikeifu.com`, including its `www` hostname, alongside Telegram activity for Remote Job Radar and JAVIndexBot.
 
 - **Previous day:** the previous complete calendar day in `Asia/Shanghai`, from 00:00 inclusive to the following 00:00 exclusive.
 - **Day before previous:** the complete Shanghai calendar day before yesterday. Both days are fetched in the same run. Each metric shows yesterday minus the prior day and its percentage of the prior day; a nonzero value after zero is labelled as a zero baseline with no percentage, and zero to zero is 0%. Current account totals have no historical comparison.
@@ -56,3 +56,17 @@ Until `MAIL_CONFIG` is configured, the Action skips sending and records a notice
 ```sh
 python3 scripts/send-traffic-email.py --preview
 ```
+
+## Product registry and adding services
+
+[`products.json`](./products.json) defines public product keys, names, links, collection types and Telegram secret prefixes. Both profile READMEs and the email iterate this registry in order, producing one independent section per product. Counts are never added across products or different definitions. `traffic.json` includes `reportDate` and the public product descriptors to keep all renderers aligned. Existing `sites`, `businesses` and historical snapshots remain readable.
+
+For another website using the same Cloudflare account, add a `website` entry with `domain`. For another bot exporting the metadata aggregate contract, add a `telegram` entry with `service`, snapshot text `prefix`, `secretPrefix`, public name and link. Configure its `<PREFIX>_BOT_TOKEN` / `<PREFIX>_CHAT_ID` Secrets and pass them to the collection step in the workflow. A different snapshot contract needs a validating adapter; only aggregate allowlisted fields can be published.
+
+### JAVIndexBot
+
+The private `telegram-metadata` repository now exposes administrator-only `/stats` and updates a silent pinned aggregate snapshot every five minutes. The profile collector reads it via Telegram `getChat`, using `METADATA_STATS_BOT_TOKEN` and `METADATA_STATS_CHAT_ID`. It never connects to the production database or server. The pin must belong to this bot and match the expected Shanghai date; missing/stale/invalid data fails the update rather than publishing zeros.
+
+Daily metrics are new users, unique active users, handled interactions, and upstream search attempts (initial query, filters and pagination; provider failures count as attempts). Telegram retries share an update ID and count once. Administrator activity and automatic messages are excluded. Seven-day active users are deduplicated across the entire interval. Registered totals and new users derive from existing user records; interaction tracking begins at `trackingSince`.
+
+Days before installation and the partial installation day have `null` interactions/active/searches. Incomplete weekly metrics also remain `null`, displayed as **— / unavailable**, not zero. New-user history can be available earlier because account creation timestamps already existed. The portfolio includes only aggregates, no IDs, user messages, search terms or provider results. A zero value alone does not prove service health.

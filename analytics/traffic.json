@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T01:06:56.887Z",
+  "generatedAt": "2026-11-05T01:36:42.284Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -42,6 +42,28 @@
       }
     }
   },
+  "reportDate": "2026-11-04",
+  "products": [
+    {
+      "key": "running",
+      "kind": "website",
+      "name": "Tasuki Keifu",
+      "nameZh": "跑步数据站",
+      "url": "https://tasukikeifu.com"
+    },
+    {
+      "key": "jobRadar",
+      "kind": "telegram",
+      "name": "Remote Job Radar",
+      "url": "https://t.me/GelatoniJobRadarBot"
+    },
+    {
+      "key": "metadata",
+      "kind": "telegram",
+      "name": "JAVIndexBot",
+      "url": "https://t.me/JAVIndexBot"
+    }
+  ],
   "businesses": {
     "jobRadar": {
       "name": "Remote Job Radar",
@@ -170,6 +192,139 @@
           "newUsers": 0,
           "activeUsers": 0,
           "interactions": 0
+        }
+      ]
+    },
+    "metadata": {
+      "name": "JAVIndexBot",
+      "url": "https://t.me/JAVIndexBot",
+      "generatedAt": "2026-11-05T01:33:47.386Z",
+      "trackingSince": "2026-11-05T01:33:42.493Z",
+      "timezone": "Asia/Shanghai",
+      "source": "Telegram Bot API / private pinned aggregate snapshot",
+      "previousDay": {
+        "date": "2026-11-04",
+        "newUsers": 0,
+        "activeUsers": null,
+        "interactions": null,
+        "searches": null
+      },
+      "dayBeforePrevious": {
+        "date": "2026-11-03",
+        "newUsers": 0,
+        "activeUsers": null,
+        "interactions": null,
+        "searches": null
+      },
+      "last7Days": {
+        "startDate": "2026-10-29",
+        "endDateExclusive": "2026-11-05",
+        "newUsers": 0,
+        "activeUsers": null,
+        "interactions": null,
+        "searches": null
+      },
+      "totals": {
+        "registeredUsers": 0
+      },
+      "daily": [
+        {
+          "date": "2026-10-22",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-23",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-24",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-25",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-26",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-27",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-28",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-29",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-30",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-31",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-01",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-02",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-03",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-04",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
         }
       ]
     }

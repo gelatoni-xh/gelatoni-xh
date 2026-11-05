@@ -17,40 +17,54 @@ def change(current, previous):
 
 
 def build_message(stats):
-    day = stats['sites']['running']['previousDay']['startDate']
-    before_day = stats['sites']['running']['dayBeforePrevious']['startDate']
-    start = stats['sites']['running']['last30Days']['startDate']
-    bot = stats['businesses']['jobRadar']
-    if bot['previousDay']['date'] != day or bot['dayBeforePrevious']['date'] != before_day:
-        raise ValueError('Telegram and website report dates differ')
-    subject = f'服务使用日报 · {day}'
-    lines = [f'服务使用日报：{day}', '统计时区：北京时间，昨日与前天均为完整自然日 00:00–24:00',
-             f'昨日：{day}；前天：{before_day}',
-             f'近 30 天：{start} 至 {day}', '']
-    for key, name in [('running', '跑步数据站')]:
-        site = stats['sites'][key]
-        previous, before, month = site['previousDay'], site['dayBeforePrevious'], site['last30Days']
-        lines.extend([
-            f'{name}（{site["domain"]}）',
-            f'  前天：{before["pageViews"]} 次浏览 / {before["visits"]} 次访问',
-            f'  昨日：{previous["pageViews"]} 次浏览 / {previous["visits"]} 次访问',
-            f'  昨日较前天：浏览 {change(previous["pageViews"], before["pageViews"])} / 访问 {change(previous["visits"], before["visits"])}',
-            f'  近 30 天：{month["pageViews"]} 次浏览 / {month["visits"]} 次访问', '',
-        ])
-    previous, before, week, totals = bot['previousDay'], bot['dayBeforePrevious'], bot['last7Days'], bot['totals']
+    products = stats.get('products') or [
+        {'key': 'running', 'kind': 'website', 'name': '跑步数据站'},
+        {'key': 'jobRadar', 'kind': 'telegram', 'name': 'Remote Job Radar'},
+    ]
+    day = stats.get('reportDate') or stats['sites']['running']['previousDay']['startDate']
+    subject = f'产品使用日报 · {day}'
+    lines = [subject, '北京时间，昨日与前天均为完整自然日 00:00–24:00。',
+             '各产品独立统计；— 表示暂无完整数据，不代表 0。', '']
+    metrics = [('newUsers', '新增用户'), ('activeUsers', '活跃用户'),
+               ('interactions', '交互次数'), ('searches', '查询请求')]
+    def value(number):
+        return '—' if number is None else str(number)
+    for index, product in enumerate(products, 1):
+        website = product['kind'] == 'website'
+        data = stats['sites' if website else 'businesses'][product['key']]
+        previous, before = data['previousDay'], data['dayBeforePrevious']
+        date_key = 'startDate' if website else 'date'
+        if previous[date_key] != day:
+            raise ValueError('Product report dates differ')
+        from datetime import date, timedelta
+        if before[date_key] != (date.fromisoformat(day) - timedelta(days=1)).isoformat():
+            raise ValueError('Product prior-day dates differ')
+        period = data['last30Days' if website else 'last7Days']
+        period_days = 30 if website else 7
+        name = product.get('nameZh') or product['name']
+        lines.extend([f'{index}. {name}', product.get('url') or data.get('url') or data.get('domain', ''),
+                      f'前天 {before[date_key]} → 昨日 {day}',
+                      f'近 {period_days} 天：{period["startDate"]} 至 {day}'])
+        fields = [('pageViews', '浏览量'), ('visits', '访问次数')] if website else metrics
+        for key, label in fields:
+            if key not in previous:
+                continue
+            current, prior = previous[key], before[key]
+            delta = '—' if current is None or prior is None else change(current, prior)
+            lines.append(f'  {label}：{value(prior)} → {value(current)}；日变化 {delta}；近 {period_days} 天 {value(period[key])}')
+        if not website:
+            totals = data['totals']
+            lines.append(f'  当前注册用户：{totals["registeredUsers"]}')
+            if 'enabledAlertUsers' in totals:
+                lines.append(f'  当前启用提醒：{totals["enabledAlertUsers"]}')
+            lines.append(f'  快照更新时间：{data["generatedAt"]}（UTC）')
+            if data.get('trackingSince'):
+                lines.append(f'  交互统计始于 {data["trackingSince"]}（UTC）；接入前及不足完整区间显示为 —。')
+        lines.append('')
     lines.extend([
-        'Remote Job Radar（Telegram）',
-        f'  前天：新增 {before["newUsers"]} 人 / 活跃 {before["activeUsers"]} 人 / 交互 {before["interactions"]} 次',
-        f'  昨日：新增 {previous["newUsers"]} 人 / 活跃 {previous["activeUsers"]} 人 / 交互 {previous["interactions"]} 次',
-        f'  昨日较前天：新增 {change(previous["newUsers"], before["newUsers"])} / 活跃 {change(previous["activeUsers"], before["activeUsers"])} / 交互 {change(previous["interactions"], before["interactions"])}',
-        f'  近 7 天（{week["startDate"]} 至 {day}）：新增 {week["newUsers"]} 人 / 活跃 {week["activeUsers"]} 人 / 交互 {week["interactions"]} 次',
-        f'  当前：注册 {totals["registeredUsers"]} 人 / 启用提醒 {totals["enabledAlertUsers"]} 人',
-        f'  快照更新时间：{bot["generatedAt"]}（UTC）',
-        '  已排除管理员；活跃人数按区间去重；交互排除 Telegram 重试；自动推送不计活跃。',
-        '  删除账号会影响历史数字。Telegram 用户量与网站浏览量分别统计。', '',
-    ])
-    lines.extend([
-        '来源：Cloudflare Web Analytics。可能包含采样估算；访问次数不等于独立用户数。',
+        '网站：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户。',
+        'Bot：排除管理员；活跃按区间去重，交互按 Telegram 更新 ID 去重；自动推送不计。',
+        '查询请求含初始查询、筛选与翻页的上游尝试，失败尝试也计入。删除账号会影响历史数字。',
         '公开统计：https://github.com/gelatoni-xh/gelatoni-xh',
     ])
     if os.environ.get('GITHUB_RUN_ID'):
