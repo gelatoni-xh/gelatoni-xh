@@ -1,6 +1,6 @@
 # Service usage
 
-The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `tasukikeifu.com`, including its `www` hostname, alongside Telegram activity for Remote Job Radar and JAVIndexBot.
+The English and Chinese profile READMEs show Cloudflare **Web Analytics** page views and visits for `tasukikeifu.com`, including its `www` hostname, Telegram activity for Remote Job Radar and JAVIndexBot, and daily snapshots for AI Product Radar and Steam Deals Radar.
 
 - **Previous day:** the previous complete calendar day in `Asia/Shanghai`, from 00:00 inclusive to the following 00:00 exclusive.
 - **Day before previous:** the complete Shanghai calendar day before yesterday. Both days are fetched in the same run. Each metric shows yesterday minus the prior day and its percentage of the prior day; a nonzero value after zero is labelled as a zero baseline with no percentage, and zero to zero is 0%. Current account totals have no historical comparison.
@@ -22,6 +22,14 @@ The workflow runs at **00:00 UTC / 08:00 Asia/Shanghai** daily and supports manu
 All statistics and snapshots are public. The token remains in GitHub Actions Secrets and is never written into these files.
 
 ## Telegram business activity
+
+## Telegram publishing channels
+
+The channel publisher records the Bot API `getChatMemberCount` result and the daily publication receipt for each channel. The public report contains the date, subscriber count, item count, status, sent timestamp and message link only. Daily snapshots begin when this integration is deployed; earlier subscriber counts are unavailable and remain `null`. The publisher's existing receipts can populate earlier publication status and item counts where present.
+
+The profile workflow reads a fixed aggregate query through a dedicated SSH key restricted to `deploy/export-channel-stats.sh`; it does not receive a database password or Telegram bot token. The query exposes only channel/date-level aggregates, not post text, source candidates, or user data. Missing or invalid data fails the refresh instead of becoming zero. Snapshots are retained in `history/` for trend inspection.
+
+Telegram Bot API does not expose channel post view counts, so this report does not show them. Channel subscriber count is a point-in-time daily snapshot and is not a unique-user or engagement metric.
 
 The same daily update adds **Remote Job Radar** to both profile READMEs and the email. Website browser views and Telegram user activity are separate metrics. Bot figures include previous-day and day-before-previous new users, unique active users and processed interactions with absolute and percentage changes; seven complete days of new users, unique active users and interactions; and current registered users and users with enabled alerts. The fourteen complete daily rows are preserved in the public snapshot. Seven-day active users are deduplicated across the entire interval, not summed from daily active users. Do not compare this seven-day period to website thirty-day totals directly.
 

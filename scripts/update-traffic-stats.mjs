@@ -1,5 +1,5 @@
 import { fetchTelegramStats, compareMetrics } from './telegram-stats.mjs';
-import { fetchMetadataStats, productMarkdown } from './product-report.mjs';
+import { fetchChannelStats, fetchMetadataStats, productMarkdown } from './product-report.mjs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const token = process.env.CLOUDFLARE_API_TOKEN?.trim();
@@ -107,6 +107,13 @@ for (const product of products.filter(product => product.kind === 'telegram')) {
   result.businesses[product.key] = product.service === 'remote-job-radar'
     ? await fetchTelegramStats(previousDay.date) : await fetchMetadataStats(previousDay.date, product);
 }
+const channelReport = await fetchChannelStats(previousDay.date);
+result.channelStats = Object.fromEntries(products.filter(product => product.kind === 'telegram-channel')
+  .map(product => [product.key, { ...channelReport,
+    previousDay: channelReport.previousDay.channels[product.key === 'aiChannel' ? 'ai' : 'steam'],
+    dayBeforePrevious: channelReport.dayBeforePrevious.channels[product.key === 'aiChannel' ? 'ai' : 'steam'],
+    daily: channelReport.daily.map(day => ({ date: day.date, ...day.channels[product.key === 'aiChannel' ? 'ai' : 'steam'] }))
+  }]));
 
 const begin = '<!-- TRAFFIC:START -->';
 const finish = '<!-- TRAFFIC:END -->';
@@ -116,9 +123,9 @@ for (const [filename, chinese] of [['README.md', false], ['README.zh-CN.md', tru
     chinese ? '## 服务使用记录' : '## Service usage', '',
     chinese ? `前一天：**${previousDay.date}**（北京时间 00:00–24:00）；近 30 天：${daily[0].date} 至 ${previousDay.date}。` :
       `Previous day: **${previousDay.date}**, 00:00–24:00 Asia/Shanghai. Last 30 days: ${daily[0].date} through ${previousDay.date}.`, '',
-    ...products.flatMap(product => productMarkdown(product, product.kind === 'website' ? result.sites[product.key] : result.businesses[product.key], chinese)),
-    chinese ? '网站来源为 Cloudflare Web Analytics（含采样估算，访问不等于独立用户）；Bot 来源为 Telegram 私聊汇总，排除管理员，活跃按区间去重，交互按更新 ID 去重。不同产品与口径不合计。每天北京时间 08:00 调度（可能延迟）。[统计口径与历史](./analytics/README.md)。' :
-      'Websites: Cloudflare Web Analytics (sampling estimates; visits are not unique users). Bots: Telegram private aggregate snapshots; administrator excluded, active users deduplicated per period, interactions deduplicated by update ID. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).',
+    ...products.flatMap(product => productMarkdown(product, product.kind === 'website' ? result.sites[product.key] : product.kind === 'telegram' ? result.businesses[product.key] : result.channelStats[product.key], chinese)),
+    chinese ? '网站来源为 Cloudflare Web Analytics；Bot 来源为 Telegram 私聊汇总；频道记录订阅人数快照与发布回执。频道帖子浏览量无法通过 Bot API 获取。不同产品与口径不合计。每天北京时间 08:00 调度（可能延迟）。[统计口径与历史](./analytics/README.md)。' :
+      'Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).',
     finish,
   ];
   const content = await readFile(filename, 'utf8');

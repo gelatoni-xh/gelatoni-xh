@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateMetadataStats, productMarkdown } from './product-report.mjs';
+import { validateChannelStats, validateMetadataStats, productMarkdown } from './product-report.mjs';
 const product = {key:'metadata',name:'JAVIndexBot',service:'telegram-metadata',kind:'telegram',url:'https://t.me/JAVIndexBot',prefix:'Telegram Metadata · Daily statistics export\n'};
 const dayMs=86400_000,offset=8*3600_000,end=Math.floor((Date.now()+offset)/dayMs)*dayMs-offset;
 const date=n=>new Date(n+offset).toISOString().slice(0,10),expected=date(end-dayMs);
@@ -28,4 +28,20 @@ test('wrong author, stale snapshot, broken dates and fabricated coverage fail',(
  for(const fn of [r=>r.reportDate='2000-01-01',r=>r.daily.pop(),r=>r.daily[0].active=0,r=>r.weeklyActive=0,
  r=>r.daily[0].day='2000-01-01',r=>r.generatedAt='2000-01-01'])
   assert.throws(()=>validateMetadataStats(modify(fixture(),fn),expected,'456','123',product));
+});
+
+test('channel report uses daily subscriber snapshots and publication receipts without fabricating history',()=>{
+ const product={key:'aiChannel',name:'AI Product Radar',nameZh:'AI产品雷达',kind:'telegram-channel',url:'https://t.me/ai_product_radar_cn'};
+ const exportDay=(date,count,status='sent')=>({date,channels:[
+  {key:'ai',status,publishedItems:status==='sent'?2:0,memberCount:count,messageId:status==='sent'?12:null,
+   url:status==='sent'?'https://t.me/ai_product_radar_cn/12':null,collectedAt:count===null?null:`${date}T01:00:00.000Z`},
+  {key:'steam',status:'no_content',publishedItems:0,memberCount:null,messageId:null,url:null,collectedAt:null},
+ ]});
+ const raw=validateChannelStats({version:1,generatedAt:new Date().toISOString(),days:[exportDay(expected,120),exportDay(date(end-2*dayMs),null,'no_content')]},expected);
+ const report={...raw,previousDay:raw.previousDay.channels.ai,dayBeforePrevious:raw.dayBeforePrevious.channels.ai};
+ assert.equal(report.previousDay.memberCount,120);
+ assert.equal(report.dayBeforePrevious.memberCount,null);
+ assert.equal(report.dayBeforePrevious.publishedItems,0);
+ assert.match(productMarkdown(product,report,true).join('\n'),/订阅人数.*—.*120/);
+ assert.throws(()=>validateChannelStats({version:1,generatedAt:new Date().toISOString(),days:[]},expected));
 });

@@ -1,5 +1,7 @@
 [
   {"key":"running","kind":"website","name":"Tasuki Keifu","nameZh":"跑步数据站","domain":"tasukikeifu.com","url":"https://tasukikeifu.com"},
   {"key":"jobRadar","kind":"telegram","name":"Remote Job Radar","service":"remote-job-radar","url":"https://t.me/GelatoniJobRadarBot","secretPrefix":"TELEGRAM_STATS","prefix":"Remote Job Radar · Daily statistics export\n"},
-  {"key":"metadata","kind":"telegram","name":"JAVIndexBot","service":"telegram-metadata","url":"https://t.me/JAVIndexBot","secretPrefix":"METADATA_STATS","prefix":"Telegram Metadata · Daily statistics export\n"}
+  {"key":"metadata","kind":"telegram","name":"JAVIndexBot","service":"telegram-metadata","url":"https://t.me/JAVIndexBot","secretPrefix":"METADATA_STATS","prefix":"Telegram Metadata · Daily statistics export\n"},
+  {"key":"aiChannel","kind":"telegram-channel","name":"AI Product Radar","nameZh":"AI产品雷达","url":"https://t.me/ai_product_radar_cn"},
+  {"key":"steamChannel","kind":"telegram-channel","name":"Steam Deals Radar","nameZh":"Steam折扣情报局","url":"https://t.me/steam_deals_radar_cn"}
 ]

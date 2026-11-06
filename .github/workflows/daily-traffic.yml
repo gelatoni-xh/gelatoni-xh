@@ -33,7 +33,19 @@ jobs:
           TELEGRAM_STATS_CHAT_ID: ${{ secrets.TELEGRAM_STATS_CHAT_ID }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: node scripts/update-traffic-stats.mjs
+          CHANNEL_STATS_SSH_HOST: ${{ secrets.CHANNEL_STATS_SSH_HOST }}
+          CHANNEL_STATS_SSH_KEY: ${{ secrets.CHANNEL_STATS_SSH_KEY }}
+          CHANNEL_STATS_KNOWN_HOSTS: ${{ secrets.CHANNEL_STATS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p "$RUNNER_TEMP/channel-stats"
+          printf '%s\n' "$CHANNEL_STATS_SSH_KEY" > "$RUNNER_TEMP/channel-stats/key"
+          printf '%s\n' "$CHANNEL_STATS_KNOWN_HOSTS" > "$RUNNER_TEMP/channel-stats/known_hosts"
+          chmod 600 "$RUNNER_TEMP/channel-stats/key" "$RUNNER_TEMP/channel-stats/known_hosts"
+          export CHANNEL_STATS_SSH_KEY_PATH="$RUNNER_TEMP/channel-stats/key"
+          export CHANNEL_STATS_KNOWN_HOSTS_PATH="$RUNNER_TEMP/channel-stats/known_hosts"
+          node scripts/update-traffic-stats.mjs
       - name: Commit statistics
         run: |
           git config user.name github-actions[bot]

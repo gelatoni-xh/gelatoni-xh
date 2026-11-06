@@ -1,9 +1,12 @@
 import { compareMetrics, formatChange } from './telegram-stats.mjs';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 
 const integer = n => Number.isSafeInteger(n) && n >= 0;
 const nullableInteger = n => n === null || integer(n);
 const offset = 8 * 3600_000, dayMs = 86400_000;
 const localDate = n => new Date(n + offset).toISOString().slice(0, 10);
+const execute = promisify(execFile);
 export const botMetrics = [
   ['newUsers', '新增用户', 'New users'], ['activeUsers', '活跃用户', 'Active users'],
   ['interactions', '交互次数', 'Interactions'], ['searches', '查询请求', 'Search requests'],
@@ -58,8 +61,74 @@ export async function fetchMetadataStats(expectedDate, product) {
   }
 }
 
+export function validateChannelStats(report, expectedDate) {
+  const integer = n => Number.isSafeInteger(n) && n >= 0;
+  if (report?.version !== 1 || !Number.isFinite(Date.parse(report.generatedAt)) || !Array.isArray(report.days)) {
+    throw new Error('Invalid channel statistics export');
+  }
+  const byDate = new Map();
+  for (const day of report.days) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day.date) || !Array.isArray(day.channels) || byDate.has(day.date)) {
+      throw new Error('Invalid channel statistics day');
+    }
+    const rows = new Map();
+    for (const row of day.channels) {
+      let validMessageUrl = false;
+      if (typeof row.url === 'string') {
+        try {
+          const url = new URL(row.url);
+          validMessageUrl = url.protocol === 'https:' && url.hostname === 't.me' && /^\/[a-zA-Z0-9_]+\/\d+$/.test(url.pathname);
+        } catch { /* Invalid URLs are rejected by the row check below. */ }
+      }
+      if (!['ai', 'steam'].includes(row.key) || rows.has(row.key) ||
+          !['sent', 'no_content', 'no_publication_errors', 'failed', 'uncertain', 'sending', 'no_run'].includes(row.status) ||
+          !integer(row.publishedItems) || (row.memberCount !== null && !integer(row.memberCount)) ||
+          (row.status === 'sent' && (!integer(row.messageId) || row.messageId < 1 || !validMessageUrl))) {
+        throw new Error('Invalid channel statistics row');
+      }
+      rows.set(row.key, { ...row });
+    }
+    if (rows.size !== 2) throw new Error('Incomplete channel statistics day');
+    byDate.set(day.date, rows);
+  }
+  const dateMs = Date.parse(`${expectedDate}T00:00:00+08:00`);
+  const previousDate = localDate(dateMs - dayMs);
+  const day = byDate.get(expectedDate), before = byDate.get(previousDate);
+  if (!day) throw new Error('Channel statistics are missing for the report date');
+  const makeDay = (date, rows) => ({ date, channels: Object.fromEntries(['ai', 'steam'].map(key => {
+    const row = rows?.get(key);
+    return [key, row ? { status: row.status, publishedItems: row.publishedItems,
+      memberCount: row.memberCount, messageId: row.messageId, url: row.url, collectedAt: row.collectedAt } :
+      { status: 'unavailable', publishedItems: null, memberCount: null, messageId: null, url: null, collectedAt: null }];
+  })) });
+  const daily = [...byDate.keys()].filter(date => date <= expectedDate && date >= localDate(dateMs - 29 * dayMs)).sort()
+    .map(date => makeDay(date, byDate.get(date)));
+  const previousDay = makeDay(expectedDate, day), dayBeforePrevious = makeDay(previousDate, before);
+  return { source: 'Telegram Bot API getChatMemberCount + channel publication ledger', generatedAt: report.generatedAt,
+    trackingSince: daily.find(row => Object.values(row.channels).some(value => value.memberCount !== null))?.date ?? null,
+    previousDay, dayBeforePrevious, daily };
+}
+
+export async function fetchChannelStats(expectedDate) {
+  const host = process.env.CHANNEL_STATS_SSH_HOST?.trim();
+  const keyPath = process.env.CHANNEL_STATS_SSH_KEY_PATH?.trim();
+  const knownHosts = process.env.CHANNEL_STATS_KNOWN_HOSTS_PATH?.trim();
+  if (!host || !/^ubuntu@[-a-zA-Z0-9.]+$/.test(host) || !keyPath || !knownHosts) {
+    throw new Error('Channel statistics SSH reader is not configured');
+  }
+  try {
+    const { stdout } = await execute('ssh', ['-i', keyPath, '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes',
+      '-o', 'StrictHostKeyChecking=yes', '-o', `UserKnownHostsFile=${knownHosts}`, '-o', 'ConnectTimeout=15',
+      host, 'export-channel-stats'], { timeout: 30_000, maxBuffer: 2 * 1024 * 1024 });
+    return validateChannelStats(JSON.parse(stdout), expectedDate);
+  } catch {
+    throw new Error('Channel statistics export failed or is stale; raw SSH output omitted');
+  }
+}
+
 const value = n => n === null || n === undefined ? '—' : n;
 export function productMarkdown(product, stats, chinese) {
+  if (product.kind === 'telegram-channel') return channelMarkdown(product, stats, chinese);
   const site = product.kind === 'website', before = stats.dayBeforePrevious, day = stats.previousDay;
   const period = site ? stats.last30Days : stats.last7Days;
   const metrics = site ? [['pageViews', '浏览量', 'Views'], ['visits', '访问次数', 'Visits']] : botMetrics.filter(([key]) => key in day);
@@ -77,4 +146,20 @@ export function productMarkdown(product, stats, chinese) {
     ...(stats.trackingSince ? [chinese ? `交互统计始于 ${stats.trackingSince}（UTC）；接入前及不足完整区间的指标显示为「—」。` :
       `Interaction tracking started ${stats.trackingSince} (UTC). Unavailable or incomplete periods are shown as “—”.`, ''] : []),
   ];
+}
+
+function channelMarkdown(product, stats, chinese) {
+  const before = stats.dayBeforePrevious, day = stats.previousDay;
+  const label = value => value === null || value === undefined ? '—' : value;
+  const growth = before.memberCount === null || day.memberCount === null ? '—' : `${day.memberCount - before.memberCount >= 0 ? '+' : ''}${day.memberCount - before.memberCount}`;
+  const status = value => ({ sent: chinese ? '已发布' : 'Published', no_content: chinese ? '无合格内容' : 'No eligible content',
+    no_publication_errors: chinese ? '发布流程异常' : 'Publication error', unavailable: '—' })[value] ?? value;
+  return [`### [${chinese ? product.nameZh ?? product.name : product.name}](${product.url})`, '',
+    chinese ? '| 指标 | 前天 | 昨日 |' : '| Metric | Prior day | Yesterday |', '| --- | ---: | ---: |',
+    `| ${chinese ? '订阅人数' : 'Subscribers'} | ${label(before.memberCount)} | ${label(day.memberCount)} |`,
+    `| ${chinese ? '发布状态' : 'Status'} | ${status(before.status)} | ${status(day.status)} |`,
+    `| ${chinese ? '发布条数' : 'Items published'} | ${label(before.publishedItems)} | ${label(day.publishedItems)} |`, '',
+    chinese ? `昨日订阅人数变化：${growth}；快照采集时间：${day.collectedAt ?? '—'}。` :
+      `Subscriber change yesterday: ${growth}; snapshot collected: ${day.collectedAt ?? '—'}.`,
+    day.url ? (chinese ? `昨日消息：[查看发布](${day.url})。` : `Yesterday's post: [view message](${day.url}).`) : '', ''];
 }

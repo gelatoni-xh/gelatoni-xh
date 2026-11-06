@@ -22,6 +22,14 @@ def fixture():
             'totals': {'registeredUsers': 10, 'enabledAlertUsers': 5},
             'generatedAt': '2026-11-04T00:01:00Z',
         }},
+        'channelStats': {
+            'aiChannel': {'previousDay': {'date': '2026-11-03', 'status': 'sent', 'publishedItems': 2,
+                'memberCount': 105, 'url': 'https://t.me/ai_product_radar_cn/6', 'collectedAt': '2026-11-03T01:00:00Z'},
+                'dayBeforePrevious': {'date': '2026-11-02', 'status': 'sent', 'publishedItems': 1, 'memberCount': 102}},
+            'steamChannel': {'previousDay': {'date': '2026-11-03', 'status': 'no_content', 'publishedItems': 0,
+                'memberCount': None, 'url': None, 'collectedAt': None},
+                'dayBeforePrevious': {'date': '2026-11-02', 'status': 'sent', 'publishedItems': 1, 'memberCount': None}},
+        },
     }
 
 
@@ -42,6 +50,8 @@ class EmailReportTest(unittest.TestCase):
             {'key': 'running', 'kind': 'website', 'name': 'Running'},
             {'key': 'jobRadar', 'kind': 'telegram', 'name': 'Remote Job Radar'},
             {'key': 'metadata', 'kind': 'telegram', 'name': 'JAVIndexBot'},
+            {'key': 'aiChannel', 'kind': 'telegram-channel', 'name': 'AI Product Radar', 'nameZh': 'AI产品雷达', 'url': 'https://t.me/ai_product_radar_cn'},
+            {'key': 'steamChannel', 'kind': 'telegram-channel', 'name': 'Steam Deals Radar', 'nameZh': 'Steam折扣情报局', 'url': 'https://t.me/steam_deals_radar_cn'},
         ]
         import copy
         bot = copy.deepcopy(stats['businesses']['jobRadar'])
@@ -53,6 +63,8 @@ class EmailReportTest(unittest.TestCase):
         subject, body = module.build_message(stats)
         self.assertIn('产品使用日报', subject)
         self.assertIn('3. JAVIndexBot', body)
+        self.assertIn('AI产品雷达', body)
+        self.assertIn('105', body)
         self.assertIn('查询请求：— → —', body)
         self.assertNotIn('None', body)
         self.assertEqual(body.count('当前启用提醒'), 1)

@@ -31,7 +31,17 @@ def build_message(stats):
         return '—' if number is None else str(number)
     for index, product in enumerate(products, 1):
         website = product['kind'] == 'website'
-        data = stats['sites' if website else 'businesses'][product['key']]
+        channel = product['kind'] == 'telegram-channel'
+        data = stats['sites' if website else 'channelStats' if channel else 'businesses'][product['key']]
+        if channel:
+            current, prior = data['previousDay'], data['dayBeforePrevious']
+            lines.extend([f'{index}. {product.get("nameZh") or product["name"]}', product['url'],
+                          f'前天 {prior["date"]} → 昨日 {current["date"]}',
+                          f'  订阅人数：{value(prior.get("memberCount"))} → {value(current.get("memberCount"))}',
+                          f'  昨日发布：{current.get("publishedItems") if current.get("publishedItems") is not None else "—"} 条；状态：{current.get("status", "—")}',
+                          f'  消息：{current.get("url") or "—"}',
+                          f'  快照采集时间：{current.get("collectedAt") or "—"}', ''])
+            continue
         previous, before = data['previousDay'], data['dayBeforePrevious']
         date_key = 'startDate' if website else 'date'
         if previous[date_key] != day:
@@ -65,6 +75,7 @@ def build_message(stats):
         '网站：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户。',
         'Bot：排除管理员；活跃按区间去重，交互按 Telegram 更新 ID 去重；自动推送不计。',
         '查询请求含初始查询、筛选与翻页的上游尝试，失败尝试也计入。删除账号会影响历史数字。',
+        '频道订阅人数按每日快照记录；发布条数与状态来自发布回执。Telegram Bot API 不提供频道帖子的浏览量。',
         '公开统计：https://github.com/gelatoni-xh/gelatoni-xh',
     ])
     if os.environ.get('GITHUB_RUN_ID'):
