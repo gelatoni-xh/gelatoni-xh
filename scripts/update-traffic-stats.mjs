@@ -1,5 +1,5 @@
 import { fetchTelegramStats, compareMetrics } from './telegram-stats.mjs';
-import { fetchChannelStats, fetchMetadataStats, productMarkdown } from './product-report.mjs';
+import { channelProductStats, fetchChannelStats, fetchMetadataStats, productMarkdown } from './product-report.mjs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const token = process.env.CLOUDFLARE_API_TOKEN?.trim();
@@ -109,11 +109,7 @@ for (const product of products.filter(product => product.kind === 'telegram')) {
 }
 const channelReport = await fetchChannelStats(previousDay.date);
 result.channelStats = Object.fromEntries(products.filter(product => product.kind === 'telegram-channel')
-  .map(product => [product.key, { ...channelReport,
-    previousDay: channelReport.previousDay.channels[product.key === 'aiChannel' ? 'ai' : 'steam'],
-    dayBeforePrevious: channelReport.dayBeforePrevious.channels[product.key === 'aiChannel' ? 'ai' : 'steam'],
-    daily: channelReport.daily.map(day => ({ date: day.date, ...day.channels[product.key === 'aiChannel' ? 'ai' : 'steam'] }))
-  }]));
+  .map(product => [product.key, channelProductStats(channelReport, product.key)]));
 
 const begin = '<!-- TRAFFIC:START -->';
 const finish = '<!-- TRAFFIC:END -->';

@@ -109,6 +109,15 @@ export function validateChannelStats(report, expectedDate) {
     previousDay, dayBeforePrevious, daily };
 }
 
+export function channelProductStats(report, productKey) {
+  const channel = productKey === 'aiChannel' ? 'ai' : productKey === 'steamChannel' ? 'steam' : null;
+  if (!channel) throw new Error('Unknown Telegram channel product');
+  return { ...report,
+    previousDay: { date: report.previousDay.date, ...report.previousDay.channels[channel] },
+    dayBeforePrevious: { date: report.dayBeforePrevious.date, ...report.dayBeforePrevious.channels[channel] },
+    daily: report.daily.map(day => ({ date: day.date, ...day.channels[channel] })) };
+}
+
 export async function fetchChannelStats(expectedDate) {
   const host = process.env.CHANNEL_STATS_SSH_HOST?.trim();
   const keyPath = process.env.CHANNEL_STATS_SSH_KEY_PATH?.trim();

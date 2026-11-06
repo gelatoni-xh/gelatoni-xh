@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateChannelStats, validateMetadataStats, productMarkdown } from './product-report.mjs';
+import { channelProductStats, validateChannelStats, validateMetadataStats, productMarkdown } from './product-report.mjs';
 const product = {key:'metadata',name:'JAVIndexBot',service:'telegram-metadata',kind:'telegram',url:'https://t.me/JAVIndexBot',prefix:'Telegram Metadata · Daily statistics export\n'};
 const dayMs=86400_000,offset=8*3600_000,end=Math.floor((Date.now()+offset)/dayMs)*dayMs-offset;
 const date=n=>new Date(n+offset).toISOString().slice(0,10),expected=date(end-dayMs);
@@ -38,8 +38,9 @@ test('channel report uses daily subscriber snapshots and publication receipts wi
   {key:'steam',status:'no_content',publishedItems:0,memberCount:null,messageId:null,url:null,collectedAt:null},
  ]});
  const raw=validateChannelStats({version:1,generatedAt:new Date().toISOString(),days:[exportDay(expected,120),exportDay(date(end-2*dayMs),null,'no_content')]},expected);
- const report={...raw,previousDay:raw.previousDay.channels.ai,dayBeforePrevious:raw.dayBeforePrevious.channels.ai};
+ const report=channelProductStats(raw,'aiChannel');
  assert.equal(report.previousDay.memberCount,120);
+ assert.equal(report.previousDay.date,expected);
  assert.equal(report.dayBeforePrevious.memberCount,null);
  assert.equal(report.dayBeforePrevious.publishedItems,0);
  assert.match(productMarkdown(product,report,true).join('\n'),/订阅人数.*—.*120/);
