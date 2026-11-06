@@ -53,6 +53,7 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 | Items published | 4 | 2 |
 
 Subscriber change yesterday: —; snapshot collected: —.
+Current subscribers: 2 (2026-11-07, 2026-11-06T21:44:06.888Z).
 Yesterday's post: [view message](https://t.me/ai_product_radar_cn/6).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
@@ -64,6 +65,7 @@ Yesterday's post: [view message](https://t.me/ai_product_radar_cn/6).
 | Items published | 5 | 1 |
 
 Subscriber change yesterday: —; snapshot collected: —.
+Current subscribers: 2 (2026-11-07, 2026-11-06T21:44:06.888Z).
 Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/6).
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
