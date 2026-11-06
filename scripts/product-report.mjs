@@ -176,6 +176,7 @@ function channelMarkdown(product, stats, chinese) {
   const before = stats.dayBeforePrevious, day = stats.previousDay;
   const label = value => value === null || value === undefined ? '—' : value;
   const growth = before.memberCount === null || day.memberCount === null ? '—' : `${day.memberCount - before.memberCount >= 0 ? '+' : ''}${day.memberCount - before.memberCount}`;
+  const collectedAtUtc = stats.currentSnapshot.collectedAt.slice(0, 19).replace('T', ' ') + ' UTC';
   const status = value => ({ sent: chinese ? '已发布' : 'Published', no_content: chinese ? '无合格内容' : 'No eligible content',
     no_publication_errors: chinese ? '发布流程异常' : 'Publication error', unavailable: '—' })[value] ?? value;
   return [`### [${chinese ? product.nameZh ?? product.name : product.name}](${product.url})`, '',
@@ -185,7 +186,7 @@ function channelMarkdown(product, stats, chinese) {
     `| ${chinese ? '发布条数' : 'Items published'} | ${label(before.publishedItems)} | ${label(day.publishedItems)} |`, '',
     chinese ? `昨日订阅人数变化：${growth}；快照采集时间：${day.collectedAt ?? '—'}。` :
       `Subscriber change yesterday: ${growth}; snapshot collected: ${day.collectedAt ?? '—'}.`,
-    chinese ? `当前订阅人数：${label(stats.currentSnapshot.memberCount)}（${stats.currentSnapshot.date} ${stats.currentSnapshot.collectedAt}）。` :
-      `Current subscribers: ${label(stats.currentSnapshot.memberCount)} (${stats.currentSnapshot.date}, ${stats.currentSnapshot.collectedAt}).`,
+    chinese ? `当前订阅人数：${label(stats.currentSnapshot.memberCount)}（${stats.currentSnapshot.date}；采集于 ${collectedAtUtc}）。` :
+      `Current subscribers: ${label(stats.currentSnapshot.memberCount)} (${stats.currentSnapshot.date}; collected ${collectedAtUtc}).`,
     day.url ? (chinese ? `昨日消息：[查看发布](${day.url})。` : `Yesterday's post: [view message](${day.url}).`) : '', ''];
 }

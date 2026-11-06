@@ -39,7 +39,7 @@ def build_message(stats):
                           f'前天 {prior["date"]} → 昨日 {current["date"]}',
                           f'  订阅人数：{value(prior.get("memberCount"))} → {value(current.get("memberCount"))}',
                           f'  昨日发布：{current.get("publishedItems") if current.get("publishedItems") is not None else "—"} 条；状态：{current.get("status", "—")}',
-                          f'  当前订阅人数：{value(data.get("currentSnapshot", {}).get("memberCount"))}（{data.get("currentSnapshot", {}).get("collectedAt") or "—"}）',
+                          f'  当前订阅人数：{value(data.get("currentSnapshot", {}).get("memberCount"))}（{data.get("currentSnapshot", {}).get("date") or "—"}；采集时间 UTC {data.get("currentSnapshot", {}).get("collectedAt") or "—"}）',
                           f'  消息：{current.get("url") or "—"}',
                           f'  快照采集时间：{current.get("collectedAt") or "—"}', ''])
             continue
