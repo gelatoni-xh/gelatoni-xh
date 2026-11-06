@@ -25,7 +25,7 @@ All statistics and snapshots are public. The token remains in GitHub Actions Sec
 
 ## Telegram publishing channels
 
-The channel publisher records the Bot API `getChatMemberCount` result and the daily publication receipt for each channel. The public report contains the date, subscriber count, item count, status, sent timestamp and message link only. Daily snapshots begin when this integration is deployed; earlier subscriber counts are unavailable and remain `null`. The publisher's existing receipts can populate earlier publication status and item counts where present.
+The channel publisher records the Bot API `getChatMemberCount` result and the daily publication receipt for each channel. The profile workflow also collects a current subscriber snapshot when it builds the report. The public report contains the date, subscriber count, item count, status, sent timestamp and message link only. Daily snapshots begin when this integration is deployed; earlier subscriber counts are unavailable and remain `null`. The publisher's existing receipts can populate earlier publication status and item counts where present.
 
 The profile workflow reads a fixed aggregate query through a dedicated SSH key restricted to `deploy/export-channel-stats.sh`; it does not receive a database password or Telegram bot token. The query exposes only channel/date-level aggregates, not post text, source candidates, or user data. Missing or invalid data fails the refresh instead of becoming zero. Snapshots are retained in `history/` for trend inspection.
 

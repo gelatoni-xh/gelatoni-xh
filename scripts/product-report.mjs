@@ -92,6 +92,17 @@ export function validateChannelStats(report, expectedDate) {
     byDate.set(day.date, rows);
   }
   const dateMs = Date.parse(`${expectedDate}T00:00:00+08:00`);
+  const currentDate = localDate(dateMs + dayMs);
+  const currentSnapshot = report.currentSnapshot;
+  const collectedAt = Date.parse(currentSnapshot?.collectedAt);
+  if (currentSnapshot?.date !== currentDate || !Number.isFinite(collectedAt) || localDate(collectedAt) !== currentDate ||
+      collectedAt > Date.now() + 300_000 ||
+      !Array.isArray(currentSnapshot.channels) || currentSnapshot.channels.length !== 2 ||
+      currentSnapshot.channels.some(row => !['ai', 'steam'].includes(row.key) ||
+        (row.memberCount !== null && !integer(row.memberCount))) ||
+      new Set(currentSnapshot.channels.map(row => row.key)).size !== 2) {
+    throw new Error('Invalid current channel subscriber snapshot');
+  }
   const previousDate = localDate(dateMs - dayMs);
   const day = byDate.get(expectedDate), before = byDate.get(previousDate);
   if (!day) throw new Error('Channel statistics are missing for the report date');
@@ -105,7 +116,9 @@ export function validateChannelStats(report, expectedDate) {
     .map(date => makeDay(date, byDate.get(date)));
   const previousDay = makeDay(expectedDate, day), dayBeforePrevious = makeDay(previousDate, before);
   return { source: 'Telegram Bot API getChatMemberCount + channel publication ledger', generatedAt: report.generatedAt,
-    trackingSince: daily.find(row => Object.values(row.channels).some(value => value.memberCount !== null))?.date ?? null,
+    currentSnapshot,
+    trackingSince: daily.find(row => Object.values(row.channels).some(value => value.memberCount !== null))?.date ??
+      (currentSnapshot.channels.some(row => row.memberCount !== null) ? currentSnapshot.date : null),
     previousDay, dayBeforePrevious, daily };
 }
 
@@ -115,6 +128,8 @@ export function channelProductStats(report, productKey) {
   return { ...report,
     previousDay: { date: report.previousDay.date, ...report.previousDay.channels[channel] },
     dayBeforePrevious: { date: report.dayBeforePrevious.date, ...report.dayBeforePrevious.channels[channel] },
+    currentSnapshot: { date: report.currentSnapshot.date, collectedAt: report.currentSnapshot.collectedAt,
+      memberCount: report.currentSnapshot.channels.find(row => row.key === channel).memberCount },
     daily: report.daily.map(day => ({ date: day.date, ...day.channels[channel] })) };
 }
 
@@ -170,5 +185,7 @@ function channelMarkdown(product, stats, chinese) {
     `| ${chinese ? '发布条数' : 'Items published'} | ${label(before.publishedItems)} | ${label(day.publishedItems)} |`, '',
     chinese ? `昨日订阅人数变化：${growth}；快照采集时间：${day.collectedAt ?? '—'}。` :
       `Subscriber change yesterday: ${growth}; snapshot collected: ${day.collectedAt ?? '—'}.`,
+    chinese ? `当前订阅人数：${label(stats.currentSnapshot.memberCount)}（${stats.currentSnapshot.date} ${stats.currentSnapshot.collectedAt}）。` :
+      `Current subscribers: ${label(stats.currentSnapshot.memberCount)} (${stats.currentSnapshot.date}, ${stats.currentSnapshot.collectedAt}).`,
     day.url ? (chinese ? `昨日消息：[查看发布](${day.url})。` : `Yesterday's post: [view message](${day.url}).`) : '', ''];
 }

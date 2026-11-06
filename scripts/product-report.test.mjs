@@ -37,12 +37,17 @@ test('channel report uses daily subscriber snapshots and publication receipts wi
    url:status==='sent'?'https://t.me/ai_product_radar_cn/12':null,collectedAt:count===null?null:`${date}T01:00:00.000Z`},
   {key:'steam',status:'no_content',publishedItems:0,memberCount:null,messageId:null,url:null,collectedAt:null},
  ]});
- const raw=validateChannelStats({version:1,generatedAt:new Date().toISOString(),days:[exportDay(expected,120),exportDay(date(end-2*dayMs),null,'no_content')]},expected);
+ const raw=validateChannelStats({version:1,generatedAt:new Date().toISOString(),
+  currentSnapshot:{date:date(end),collectedAt:new Date().toISOString(),channels:[{key:'ai',memberCount:120},{key:'steam',memberCount:12}]},
+  days:[exportDay(expected,120),exportDay(date(end-2*dayMs),null,'no_content')]},expected);
  const report=channelProductStats(raw,'aiChannel');
  assert.equal(report.previousDay.memberCount,120);
  assert.equal(report.previousDay.date,expected);
+ assert.equal(report.currentSnapshot.memberCount,120);
+ assert.equal(report.trackingSince,expected);
  assert.equal(report.dayBeforePrevious.memberCount,null);
  assert.equal(report.dayBeforePrevious.publishedItems,0);
  assert.match(productMarkdown(product,report,true).join('\n'),/订阅人数.*—.*120/);
- assert.throws(()=>validateChannelStats({version:1,generatedAt:new Date().toISOString(),days:[]},expected));
+ assert.match(productMarkdown(product,report,true).join('\n'),/当前订阅人数：120/);
+ assert.throws(()=>validateChannelStats({version:1,generatedAt:new Date().toISOString(),currentSnapshot:{},days:[]},expected));
 });
