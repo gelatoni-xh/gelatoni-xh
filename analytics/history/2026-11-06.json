@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T21:43:53.591Z",
+  "generatedAt": "2026-11-06T21:45:48.171Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -36,8 +36,8 @@
       "last30Days": {
         "startDate": "2026-10-08",
         "endDateExclusive": "2026-11-07",
-        "pageViews": 1043,
-        "visits": 499,
+        "pageViews": 1023,
+        "visits": 483,
         "sampled": true
       }
     }
@@ -212,7 +212,7 @@
     "metadata": {
       "name": "JAVIndexBot",
       "url": "https://t.me/JAVIndexBot",
-      "generatedAt": "2026-11-06T21:39:35.720Z",
+      "generatedAt": "2026-11-06T21:44:35.721Z",
       "trackingSince": "2026-11-05T01:33:42.493Z",
       "timezone": "Asia/Shanghai",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
@@ -346,10 +346,10 @@
   "channelStats": {
     "aiChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-06T21:44:04.948459+00:00",
+      "generatedAt": "2026-11-06T21:46:03.359998+00:00",
       "currentSnapshot": {
         "date": "2026-11-07",
-        "collectedAt": "2026-11-06T21:44:06.888Z",
+        "collectedAt": "2026-11-06T21:46:05.450Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
@@ -394,10 +394,10 @@
     },
     "steamChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-06T21:44:04.948459+00:00",
+      "generatedAt": "2026-11-06T21:46:03.359998+00:00",
       "currentSnapshot": {
         "date": "2026-11-07",
-        "collectedAt": "2026-11-06T21:44:06.888Z",
+        "collectedAt": "2026-11-06T21:46:05.450Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
@@ -666,8 +666,8 @@
       "date": "2026-10-30",
       "sites": {
         "running": {
-          "pageViews": 20,
-          "visits": 16,
+          "pageViews": 0,
+          "visits": 0,
           "sampled": false
         }
       }
