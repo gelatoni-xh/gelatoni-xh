@@ -1,0 +1,634 @@
+{
+  "generatedAt": "2026-11-06T04:39:59.462Z",
+  "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
+  "timezone": "Asia/Shanghai",
+  "metrics": {
+    "pageViews": "Browser page load events; may be estimated through adaptive sampling",
+    "visits": "Page views initiated from a different website (referrer hostname differs); not unique users or GA4 sessions"
+  },
+  "sites": {
+    "running": {
+      "domain": "tasukikeifu.com",
+      "previousDay": {
+        "startDate": "2026-11-05",
+        "endDateExclusive": "2026-11-06",
+        "pageViews": 142,
+        "visits": 61,
+        "sampled": false
+      },
+      "dayBeforePrevious": {
+        "startDate": "2026-11-04",
+        "endDateExclusive": "2026-11-05",
+        "pageViews": 82,
+        "visits": 37,
+        "sampled": false
+      },
+      "comparison": {
+        "pageViews": {
+          "difference": 60,
+          "percent": 73.17073170731707
+        },
+        "visits": {
+          "difference": 24,
+          "percent": 64.86486486486487
+        }
+      },
+      "last30Days": {
+        "startDate": "2026-10-07",
+        "endDateExclusive": "2026-11-06",
+        "pageViews": 1013,
+        "visits": 481,
+        "sampled": true
+      }
+    }
+  },
+  "reportDate": "2026-11-05",
+  "products": [
+    {
+      "key": "running",
+      "kind": "website",
+      "name": "Tasuki Keifu",
+      "nameZh": "跑步数据站",
+      "url": "https://tasukikeifu.com"
+    },
+    {
+      "key": "jobRadar",
+      "kind": "telegram",
+      "name": "Remote Job Radar",
+      "url": "https://t.me/GelatoniJobRadarBot"
+    },
+    {
+      "key": "metadata",
+      "kind": "telegram",
+      "name": "JAVIndexBot",
+      "url": "https://t.me/JAVIndexBot"
+    }
+  ],
+  "businesses": {
+    "jobRadar": {
+      "name": "Remote Job Radar",
+      "url": "https://t.me/GelatoniJobRadarBot",
+      "source": "Telegram Bot API / private pinned aggregate snapshot",
+      "generatedAt": "2026-11-05T16:01:54.947Z",
+      "timezone": "Asia/Shanghai",
+      "previousDay": {
+        "date": "2026-11-05",
+        "newUsers": 0,
+        "activeUsers": 0,
+        "interactions": 0
+      },
+      "dayBeforePrevious": {
+        "date": "2026-11-04",
+        "newUsers": 0,
+        "activeUsers": 0,
+        "interactions": 0
+      },
+      "comparison": {
+        "newUsers": {
+          "difference": 0,
+          "percent": 0
+        },
+        "activeUsers": {
+          "difference": 0,
+          "percent": 0
+        },
+        "interactions": {
+          "difference": 0,
+          "percent": 0
+        }
+      },
+      "last7Days": {
+        "startDate": "2026-10-30",
+        "endDateExclusive": "2026-11-06",
+        "newUsers": 0,
+        "activeUsers": 0,
+        "interactions": 0
+      },
+      "totals": {
+        "registeredUsers": 0,
+        "enabledAlertUsers": 0
+      },
+      "daily": [
+        {
+          "date": "2026-10-23",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-24",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-25",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-26",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-27",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-28",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-29",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-30",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-10-31",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-01",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-02",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-03",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-04",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        },
+        {
+          "date": "2026-11-05",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
+        }
+      ]
+    },
+    "metadata": {
+      "name": "JAVIndexBot",
+      "url": "https://t.me/JAVIndexBot",
+      "generatedAt": "2026-11-06T04:38:14.220Z",
+      "trackingSince": "2026-11-05T01:33:42.493Z",
+      "timezone": "Asia/Shanghai",
+      "source": "Telegram Bot API / private pinned aggregate snapshot",
+      "previousDay": {
+        "date": "2026-11-05",
+        "newUsers": 0,
+        "activeUsers": null,
+        "interactions": null,
+        "searches": null
+      },
+      "dayBeforePrevious": {
+        "date": "2026-11-04",
+        "newUsers": 0,
+        "activeUsers": null,
+        "interactions": null,
+        "searches": null
+      },
+      "last7Days": {
+        "startDate": "2026-10-30",
+        "endDateExclusive": "2026-11-06",
+        "newUsers": 0,
+        "activeUsers": null,
+        "interactions": null,
+        "searches": null
+      },
+      "totals": {
+        "registeredUsers": 0
+      },
+      "daily": [
+        {
+          "date": "2026-10-23",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-24",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-25",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-26",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-27",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-28",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-29",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-30",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-10-31",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-01",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-02",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-03",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-04",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-05",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        }
+      ]
+    }
+  },
+  "daily": [
+    {
+      "date": "2026-10-07",
+      "sites": {
+        "running": {
+          "pageViews": 30,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "sites": {
+        "running": {
+          "pageViews": 20,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "sites": {
+        "running": {
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "sites": {
+        "running": {
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "sites": {
+        "running": {
+          "pageViews": 30,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "sites": {
+        "running": {
+          "pageViews": 50,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 0,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "sites": {
+        "running": {
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "sites": {
+        "running": {
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "sites": {
+        "running": {
+          "pageViews": 60,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "sites": {
+        "running": {
+          "pageViews": 30,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "sites": {
+        "running": {
+          "pageViews": 20,
+          "visits": 16,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "sites": {
+        "running": {
+          "pageViews": 16,
+          "visits": 12,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "sites": {
+        "running": {
+          "pageViews": 41,
+          "visits": 27,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "sites": {
+        "running": {
+          "pageViews": 119,
+          "visits": 34,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "sites": {
+        "running": {
+          "pageViews": 93,
+          "visits": 34,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "sites": {
+        "running": {
+          "pageViews": 82,
+          "visits": 37,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "sites": {
+        "running": {
+          "pageViews": 142,
+          "visits": 61,
+          "sampled": false
+        }
+      }
+    }
+  ]
+}

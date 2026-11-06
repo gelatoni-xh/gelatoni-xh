@@ -12,14 +12,14 @@ I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise 
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-04**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-06 through 2026-11-04.
+Previous day: **2026-11-05**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-07 through 2026-11-05.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 93 | 82 | -11 (-11.8%) | 873 |
-| Visits | 34 | 37 | +3 (+8.8%) | 414 |
+| Views | 82 | 142 | +60 (+73.2%) | 1013 |
+| Visits | 37 | 61 | +24 (+64.9%) | 481 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T04:40:26.673Z",
+  "generatedAt": "2026-11-06T04:39:59.462Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -10,39 +10,39 @@
     "running": {
       "domain": "tasukikeifu.com",
       "previousDay": {
+        "startDate": "2026-11-05",
+        "endDateExclusive": "2026-11-06",
+        "pageViews": 142,
+        "visits": 61,
+        "sampled": false
+      },
+      "dayBeforePrevious": {
         "startDate": "2026-11-04",
         "endDateExclusive": "2026-11-05",
         "pageViews": 82,
         "visits": 37,
         "sampled": false
       },
-      "dayBeforePrevious": {
-        "startDate": "2026-11-03",
-        "endDateExclusive": "2026-11-04",
-        "pageViews": 93,
-        "visits": 34,
-        "sampled": false
-      },
       "comparison": {
         "pageViews": {
-          "difference": -11,
-          "percent": -11.827956989247312
+          "difference": 60,
+          "percent": 73.17073170731707
         },
         "visits": {
-          "difference": 3,
-          "percent": 8.823529411764707
+          "difference": 24,
+          "percent": 64.86486486486487
         }
       },
       "last30Days": {
-        "startDate": "2026-10-06",
-        "endDateExclusive": "2026-11-05",
-        "pageViews": 873,
-        "visits": 414,
+        "startDate": "2026-10-07",
+        "endDateExclusive": "2026-11-06",
+        "pageViews": 1013,
+        "visits": 481,
         "sampled": true
       }
     }
   },
-  "reportDate": "2026-11-04",
+  "reportDate": "2026-11-05",
   "products": [
     {
       "key": "running",
@@ -69,16 +69,16 @@
       "name": "Remote Job Radar",
       "url": "https://t.me/GelatoniJobRadarBot",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
-      "generatedAt": "2026-11-04T16:01:42.109Z",
+      "generatedAt": "2026-11-05T16:01:54.947Z",
       "timezone": "Asia/Shanghai",
       "previousDay": {
-        "date": "2026-11-04",
+        "date": "2026-11-05",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
       },
       "dayBeforePrevious": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
@@ -98,8 +98,8 @@
         }
       },
       "last7Days": {
-        "startDate": "2026-10-29",
-        "endDateExclusive": "2026-11-05",
+        "startDate": "2026-10-30",
+        "endDateExclusive": "2026-11-06",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
@@ -110,12 +110,6 @@
       },
       "daily": [
         {
-          "date": "2026-10-22",
-          "newUsers": 0,
-          "activeUsers": 0,
-          "interactions": 0
-        },
-        {
           "date": "2026-10-23",
           "newUsers": 0,
           "activeUsers": 0,
@@ -192,33 +186,39 @@
           "newUsers": 0,
           "activeUsers": 0,
           "interactions": 0
+        },
+        {
+          "date": "2026-11-05",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
         }
       ]
     },
     "metadata": {
       "name": "JAVIndexBot",
       "url": "https://t.me/JAVIndexBot",
-      "generatedAt": "2026-11-05T04:38:47.401Z",
+      "generatedAt": "2026-11-06T04:38:14.220Z",
       "trackingSince": "2026-11-05T01:33:42.493Z",
       "timezone": "Asia/Shanghai",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
       "previousDay": {
-        "date": "2026-11-04",
+        "date": "2026-11-05",
         "newUsers": 0,
         "activeUsers": null,
         "interactions": null,
         "searches": null
       },
       "dayBeforePrevious": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "newUsers": 0,
         "activeUsers": null,
         "interactions": null,
         "searches": null
       },
       "last7Days": {
-        "startDate": "2026-10-29",
-        "endDateExclusive": "2026-11-05",
+        "startDate": "2026-10-30",
+        "endDateExclusive": "2026-11-06",
         "newUsers": 0,
         "activeUsers": null,
         "interactions": null,
@@ -229,13 +229,6 @@
       },
       "daily": [
         {
-          "date": "2026-10-22",
-          "newUsers": 0,
-          "activeUsers": null,
-          "interactions": null,
-          "searches": null
-        },
-        {
           "date": "2026-10-23",
           "newUsers": 0,
           "activeUsers": null,
@@ -321,6 +314,13 @@
         },
         {
           "date": "2026-11-04",
+          "newUsers": 0,
+          "activeUsers": null,
+          "interactions": null,
+          "searches": null
+        },
+        {
+          "date": "2026-11-05",
           "newUsers": 0,
           "activeUsers": null,
           "interactions": null,
