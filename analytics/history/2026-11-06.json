@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T21:33:14.060Z",
+  "generatedAt": "2026-11-06T21:41:18.766Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -212,7 +212,7 @@
     "metadata": {
       "name": "JAVIndexBot",
       "url": "https://t.me/JAVIndexBot",
-      "generatedAt": "2026-11-06T21:29:35.719Z",
+      "generatedAt": "2026-11-06T21:39:35.720Z",
       "trackingSince": "2026-11-05T01:33:42.493Z",
       "timezone": "Asia/Shanghai",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
@@ -346,7 +346,7 @@
   "channelStats": {
     "aiChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-06T21:33:21.67527+00:00",
+      "generatedAt": "2026-11-06T21:41:29.242574+00:00",
       "trackingSince": null,
       "previousDay": {
         "date": "2026-11-06",
@@ -389,7 +389,7 @@
     },
     "steamChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-06T21:33:21.67527+00:00",
+      "generatedAt": "2026-11-06T21:41:29.242574+00:00",
       "trackingSince": null,
       "previousDay": {
         "date": "2026-11-06",
