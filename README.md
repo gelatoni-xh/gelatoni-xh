@@ -12,14 +12,14 @@ I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise 
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-06**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-08 through 2026-11-06.
+Previous day: **2026-11-08**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-10 through 2026-11-08.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 142 | 60 | -82 (-57.7%) | 1103 |
-| Visits | 61 | 38 | -23 (-37.7%) | 543 |
+| Views | 72 | 122 | +50 (+69.4%) | 1191 |
+| Visits | 70 | 88 | +18 (+25.7%) | 639 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 
@@ -36,9 +36,9 @@ Registered users: 0; enabled alerts: 0.
 | Metric | Prior day | Yesterday | Daily change | Last 7 days |
 | --- | ---: | ---: | ---: | ---: |
 | New users | 0 | 0 | 0 (0%) | 0 |
-| Active users | — | 0 | — | — |
-| Interactions | — | 0 | — | — |
-| Search requests | — | 0 | — | — |
+| Active users | 0 | 0 | 0 (0%) | — |
+| Interactions | 0 | 0 | 0 (0%) | — |
+| Search requests | 0 | 0 | 0 (0%) | — |
 
 Registered users: 0.
 
@@ -48,25 +48,25 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | — | — |
-| Status | Published | Published |
-| Items published | 4 | 2 |
+| Subscribers | 2 | 2 |
+| Status | Published | no_run |
+| Items published | 9 | 0 |
 
-Subscriber change yesterday: —; snapshot collected: —.
-Current subscribers: 2 (2026-11-07; collected 2026-11-07 04:06:33 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/6).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-08T15:20:05.750Z.
+Current subscribers: 2 (2026-11-09; collected 2026-11-08 17:49:39 UTC).
+
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | — | — |
-| Status | Published | Published |
-| Items published | 5 | 1 |
+| Subscribers | 2 | 2 |
+| Status | Published | no_run |
+| Items published | 2 | 0 |
 
-Subscriber change yesterday: —; snapshot collected: —.
-Current subscribers: 2 (2026-11-07; collected 2026-11-07 04:06:33 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/6).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-08T15:20:05.744Z.
+Current subscribers: 2 (2026-11-09; collected 2026-11-08 17:49:39 UTC).
+
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
