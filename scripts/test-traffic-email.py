@@ -75,6 +75,17 @@ class EmailReportTest(unittest.TestCase):
         self.assertEqual(module.change(0, 0), '+0 (0%)')
         self.assertEqual(module.change(5, 0), '+5 (前天为 0)')
 
+    def test_failure_notice_has_step_and_actions_link_without_log_content(self):
+        subject, body = module.build_failure_message(
+            'Fetch Cloudflare and Telegram statistics', 'gelatoni-xh/gelatoni-xh', '42444370481', '2', 'schedule', 'refs/heads/main'
+        )
+        self.assertIn('失败', subject)
+        self.assertIn('Fetch Cloudflare and Telegram statistics', body)
+        self.assertIn('https://github.com/gelatoni-xh/gelatoni-xh/actions/runs/42444370481', body)
+        self.assertIn('运行尝试：2', body)
+        self.assertNotIn('MAIL_CONFIG', body)
+        self.assertNotIn('raw SSH output', body)
+
     def test_missing_or_stale_bot_fails(self):
         stats = fixture()
         stats['businesses']['jobRadar']['previousDay']['date'] = '2026-11-02'
