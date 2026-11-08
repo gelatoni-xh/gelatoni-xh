@@ -7,6 +7,7 @@ const nullableInteger = n => n === null || integer(n);
 const offset = 8 * 3600_000, dayMs = 86400_000;
 const localDate = n => new Date(n + offset).toISOString().slice(0, 10);
 const execute = promisify(execFile);
+const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 export const botMetrics = [
   ['newUsers', '新增用户', 'New users'], ['activeUsers', '活跃用户', 'Active users'],
   ['interactions', '交互次数', 'Interactions'], ['searches', '查询请求', 'Search requests'],
@@ -140,14 +141,45 @@ export async function fetchChannelStats(expectedDate) {
   if (!host || !/^ubuntu@[-a-zA-Z0-9.]+$/.test(host) || !keyPath || !knownHosts) {
     throw new Error('Channel statistics SSH reader is not configured');
   }
-  try {
-    const { stdout } = await execute('ssh', ['-i', keyPath, '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes',
-      '-o', 'StrictHostKeyChecking=yes', '-o', `UserKnownHostsFile=${knownHosts}`, '-o', 'ConnectTimeout=15',
-      host, 'export-channel-stats'], { timeout: 30_000, maxBuffer: 2 * 1024 * 1024 });
-    return validateChannelStats(JSON.parse(stdout), expectedDate);
-  } catch {
-    throw new Error('Channel statistics export failed or is stale; raw SSH output omitted');
+  let lastFailure;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    let stdout;
+    try {
+      ({ stdout } = await execute('ssh', ['-i', keyPath, '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes',
+        '-o', 'StrictHostKeyChecking=yes', '-o', `UserKnownHostsFile=${knownHosts}`, '-o', 'ConnectTimeout=15',
+        host, 'export-channel-stats'], { timeout: 30_000, maxBuffer: 2 * 1024 * 1024 }));
+    } catch (error) {
+      const stderr = String(error.stderr ?? '');
+      const remoteStage = stderr.match(/\[channel-stats\] remote_stage=([a-z_]+) exitCode=(\d+)/);
+      const reason = remoteStage ? 'remote_stage_failed' :
+        /Permission denied \(publickey\)/i.test(stderr) ? 'ssh_auth' :
+        /Host key verification failed/i.test(stderr) ? 'ssh_host_key' :
+        /Connection timed out|ETIMEDOUT/i.test(stderr) || error.code === 'ETIMEDOUT' ? 'ssh_timeout' :
+        /Could not resolve hostname|Connection refused|No route to host/i.test(stderr) ? 'ssh_network' :
+        error.code === 'ENOENT' ? 'ssh_client_missing' : 'remote_command_failed';
+      lastFailure = remoteStage ? { stage: remoteStage[1], reason, exitCode: Number(remoteStage[2]) } :
+        { stage: 'ssh', reason, exitCode: Number.isInteger(error.code) ? error.code : undefined };
+    }
+    if (stdout !== undefined) {
+      let report;
+      try {
+        report = JSON.parse(stdout);
+      } catch {
+        lastFailure = { stage: 'decode', reason: 'invalid_json' };
+      }
+      if (report !== undefined) {
+        try {
+          return validateChannelStats(report, expectedDate);
+        } catch (error) {
+          lastFailure = { stage: 'validate', reason: error.message };
+        }
+      }
+    }
+    console.error(`[channel-stats] attempt=${attempt}/3 stage=${lastFailure.stage} reason=${lastFailure.reason}` +
+      (lastFailure.exitCode === undefined ? '' : ` exitCode=${lastFailure.exitCode}`));
+    if (attempt < 3) await pause(attempt * 1000);
   }
+  throw new Error(`Channel statistics export failed after 3 attempts (${lastFailure.stage}: ${lastFailure.reason})`);
 }
 
 const value = n => n === null || n === undefined ? '—' : n;

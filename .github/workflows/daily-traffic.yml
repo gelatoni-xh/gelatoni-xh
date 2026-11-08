@@ -22,10 +22,12 @@ jobs:
         with:
           node-version: 22
       - name: Check Telegram snapshot validation and email rendering
+        id: tests
         run: |
           node --test scripts/*.test.mjs
           python3 scripts/test-traffic-email.py
       - name: Fetch Cloudflare and Telegram statistics
+        id: fetch
         env:
           TELEGRAM_STATS_BOT_TOKEN: ${{ secrets.TELEGRAM_STATS_BOT_TOKEN }}
           METADATA_STATS_BOT_TOKEN: ${{ secrets.METADATA_STATS_BOT_TOKEN }}
@@ -47,6 +49,7 @@ jobs:
           export CHANNEL_STATS_KNOWN_HOSTS_PATH="$RUNNER_TEMP/channel-stats/known_hosts"
           node scripts/update-traffic-stats.mjs
       - name: Commit statistics
+        id: commit
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -56,6 +59,7 @@ jobs:
             git push
           fi
       - name: Email traffic report
+        id: report_email
         env:
           MAIL_CONFIG: ${{ secrets.MAIL_CONFIG }}
         run: |
@@ -64,3 +68,26 @@ jobs:
             exit 0
           fi
           python3 scripts/send-traffic-email.py
+      - name: Email workflow failure notice
+        if: failure()
+        env:
+          MAIL_CONFIG: ${{ secrets.MAIL_CONFIG }}
+          TESTS_OUTCOME: ${{ steps.tests.outcome }}
+          FETCH_OUTCOME: ${{ steps.fetch.outcome }}
+          COMMIT_OUTCOME: ${{ steps.commit.outcome }}
+          REPORT_EMAIL_OUTCOME: ${{ steps.report_email.outcome }}
+        run: |
+          if [ -z "$MAIL_CONFIG" ]; then
+            echo "::notice::Failure email not sent because MAIL_CONFIG is not configured."
+            exit 0
+          fi
+          if [ "$TESTS_OUTCOME" = failure ]; then
+            export FAILED_STEP="Check Telegram snapshot validation and email rendering"
+          elif [ "$FETCH_OUTCOME" = failure ]; then
+            export FAILED_STEP="Fetch Cloudflare and Telegram statistics"
+          elif [ "$COMMIT_OUTCOME" = failure ]; then
+            export FAILED_STEP="Commit statistics"
+          elif [ "$REPORT_EMAIL_OUTCOME" = failure ]; then
+            export FAILED_STEP="Email traffic report"
+          fi
+          python3 scripts/send-traffic-email.py --failure

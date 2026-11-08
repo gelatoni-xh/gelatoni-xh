@@ -43,7 +43,7 @@ The reader verifies the chat and publishing bot, versioned schema, exact previou
 
 ## Daily email
 
-After fetching and committing statistics successfully, the Action emails the same website and Telegram report using SMTP or Resend. The collection and email job runs in GitHub Actions and accesses the Telegram snapshot via Telegram API. If email delivery fails, the Action fails while the already published statistics remain available. A provider accepting a message does not guarantee inbox delivery; check spam on the first run.
+After fetching and committing statistics successfully, the Action emails the same website and Telegram report using SMTP or Resend. If an earlier workflow step fails, it sends a separate failure notice with the failed step and Actions run link; the notice does not include raw logs or statistics. Both email paths use `MAIL_CONFIG`. The collection and email job runs in GitHub Actions and accesses the Telegram snapshot via Telegram API. If email delivery fails, the Action fails while the already published statistics remain available. A provider accepting a message does not guarantee inbox delivery; check spam on the first run.
 
 Set the repository secret `MAIL_CONFIG` to one of these JSON objects (replace the example credentials and addresses):
 

@@ -1,4 +1,4 @@
-"""Send the published traffic summary using SMTP or Resend (standard library only)."""
+"""Send a traffic summary or workflow failure notice using SMTP or Resend."""
 import argparse
 import json
 import os
@@ -84,6 +84,23 @@ def build_message(stats):
     return subject, '\n'.join(lines) + '\n'
 
 
+def build_failure_message(failed_step, repository, run_id, attempt, event, ref):
+    subject = f'产品使用日报失败 · {repository or "GitHub Actions"}'
+    run_url = f'https://github.com/{repository}/actions/runs/{run_id}' if repository and run_id else None
+    lines = [
+        '产品使用日报工作流执行失败。',
+        f'失败步骤：{failed_step or "未能确定（可能是工作流初始化或取消前失败）"}',
+        f'触发方式：{event or "unknown"}',
+        f'分支或标签：{ref or "unknown"}',
+    ]
+    if attempt:
+        lines.append(f'运行尝试：{attempt}')
+    if run_url:
+        lines.extend(['', f'运行记录：{run_url}'])
+    lines.extend(['', '为避免在邮件中暴露凭据或业务数据，此邮件不附带原始日志。'])
+    return subject, '\n'.join(lines) + '\n'
+
+
 def send(config, subject, body):
     sender, recipient = config['from'], config['to']
     if config['provider'] == 'resend':
@@ -125,9 +142,17 @@ def send(config, subject, body):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--preview', action='store_true', help='Print the report without sending')
+    parser.add_argument('--failure', action='store_true', help='Send a workflow failure notice instead of the report')
     args = parser.parse_args()
-    stats = json.loads(Path('analytics/traffic.json').read_text())
-    subject, body = build_message(stats)
+    if args.failure:
+        subject, body = build_failure_message(
+            os.environ.get('FAILED_STEP'), os.environ.get('GITHUB_REPOSITORY'),
+            os.environ.get('GITHUB_RUN_ID'), os.environ.get('GITHUB_RUN_ATTEMPT'),
+            os.environ.get('GITHUB_EVENT_NAME'), os.environ.get('GITHUB_REF'),
+        )
+    else:
+        stats = json.loads(Path('analytics/traffic.json').read_text())
+        subject, body = build_message(stats)
     if args.preview:
         print(subject + '\n\n' + body)
     else:
