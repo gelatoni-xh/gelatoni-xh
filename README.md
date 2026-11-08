@@ -9,6 +9,8 @@
 
 I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise HR data systems and cross-border payment products. I work across requirements, domain boundaries, backend implementation, testing, and rollout. My public repositories show independent work; much of my enterprise work is represented here through the problems I handled and the way I approached them, rather than employer-owned source code.
 
+> **Open source, product development, and engineering collaboration are welcome.** I’m open to working with developers and founders across languages and regions, and to building and supporting products for users worldwide. If you’re working on an open-source project, a commercial product, or an engineering engagement, feel free to get in touch.
+
 
 ## How I work on a delivery
 
