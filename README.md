@@ -83,8 +83,8 @@ Previous day: **2026-11-08**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 72 | 122 | +50 (+69.4%) | 1191 |
-| Visits | 70 | 88 | +18 (+25.7%) | 639 |
+| Views | 72 | 122 | +50 (+69.4%) | 1120 |
+| Visits | 70 | 88 | +18 (+25.7%) | 582 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 
@@ -118,7 +118,7 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 | Items published | 9 | 0 |
 
 Subscriber change yesterday: +0; snapshot collected: 2026-11-08T15:20:05.750Z.
-Current subscribers: 2 (2026-11-09; collected 2026-11-08 17:49:39 UTC).
+Current subscribers: 2 (2026-11-09; collected 2026-11-09 04:03:48 UTC).
 
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
@@ -130,7 +130,7 @@ Current subscribers: 2 (2026-11-09; collected 2026-11-08 17:49:39 UTC).
 | Items published | 2 | 0 |
 
 Subscriber change yesterday: +0; snapshot collected: 2026-11-08T15:20:05.744Z.
-Current subscribers: 2 (2026-11-09; collected 2026-11-08 17:49:39 UTC).
+Current subscribers: 2 (2026-11-09; collected 2026-11-09 04:03:48 UTC).
 
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).

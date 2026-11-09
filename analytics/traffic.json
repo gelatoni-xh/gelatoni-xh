@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T17:49:22.390Z",
+  "generatedAt": "2026-11-09T04:03:30.761Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -36,8 +36,8 @@
       "last30Days": {
         "startDate": "2026-10-10",
         "endDateExclusive": "2026-11-09",
-        "pageViews": 1191,
-        "visits": 639,
+        "pageViews": 1120,
+        "visits": 582,
         "sampled": true
       }
     }
@@ -212,7 +212,7 @@
     "metadata": {
       "name": "JAVIndexBot",
       "url": "https://t.me/JAVIndexBot",
-      "generatedAt": "2026-11-08T17:44:36.033Z",
+      "generatedAt": "2026-11-09T03:59:36.174Z",
       "trackingSince": "2026-11-05T01:33:42.493Z",
       "timezone": "Asia/Shanghai",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
@@ -346,10 +346,10 @@
   "channelStats": {
     "aiChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-08T17:49:37.651606+00:00",
+      "generatedAt": "2026-11-09T04:03:46.627183+00:00",
       "currentSnapshot": {
         "date": "2026-11-09",
-        "collectedAt": "2026-11-08T17:49:39.574Z",
+        "collectedAt": "2026-11-09T04:03:48.538Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
@@ -412,10 +412,10 @@
     },
     "steamChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-08T17:49:37.651606+00:00",
+      "generatedAt": "2026-11-09T04:03:46.627183+00:00",
       "currentSnapshot": {
         "date": "2026-11-09",
-        "collectedAt": "2026-11-08T17:49:39.574Z",
+        "collectedAt": "2026-11-09T04:03:48.538Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
