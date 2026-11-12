@@ -77,14 +77,14 @@ The enterprise systems used company-specific infrastructure. I describe those to
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-10**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-12 through 2026-11-10.
+Previous day: **2026-11-11**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-13 through 2026-11-11.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 49 | 63 | +14 (+28.6%) | 1240 |
-| Visits | 20 | 22 | +2 (+10%) | 686 |
+| Views | 63 | 42 | -21 (-33.3%) | 1210 |
+| Visits | 22 | 20 | -2 (-9.1%) | 689 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 
@@ -114,24 +114,24 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
-| Status | no_run | Published |
-| Items published | 0 | 9 |
+| Status | Published | Published |
+| Items published | 9 | 4 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-10T15:20:04.151Z.
-Current subscribers: 2 (2026-11-11; collected 2026-11-11 04:08:42 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/11).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-11T15:20:03.155Z.
+Current subscribers: 2 (2026-11-12; collected 2026-11-12 05:20:22 UTC).
+Yesterday's post: [view message](https://t.me/ai_product_radar_cn/13).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | 2 | — |
-| Status | no_run | Published |
-| Items published | 0 | 1 |
+| Subscribers | — | 2 |
+| Status | Published | Published |
+| Items published | 1 | 2 |
 
-Subscriber change yesterday: —; snapshot collected: 2026-11-10T15:20:05.262Z.
-Current subscribers: 2 (2026-11-11; collected 2026-11-11 04:08:42 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/8).
+Subscriber change yesterday: —; snapshot collected: 2026-11-11T15:20:03.297Z.
+Current subscribers: 2 (2026-11-12; collected 2026-11-12 05:20:22 UTC).
+Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/9).
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->

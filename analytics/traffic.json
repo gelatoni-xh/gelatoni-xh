@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T04:08:25.822Z",
+  "generatedAt": "2026-11-12T05:20:04.123Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -10,39 +10,39 @@
     "running": {
       "domain": "tasukikeifu.com",
       "previousDay": {
+        "startDate": "2026-11-11",
+        "endDateExclusive": "2026-11-12",
+        "pageViews": 42,
+        "visits": 20,
+        "sampled": false
+      },
+      "dayBeforePrevious": {
         "startDate": "2026-11-10",
         "endDateExclusive": "2026-11-11",
         "pageViews": 63,
         "visits": 22,
         "sampled": false
       },
-      "dayBeforePrevious": {
-        "startDate": "2026-11-09",
-        "endDateExclusive": "2026-11-10",
-        "pageViews": 49,
-        "visits": 20,
-        "sampled": false
-      },
       "comparison": {
         "pageViews": {
-          "difference": 14,
-          "percent": 28.571428571428573
+          "difference": -21,
+          "percent": -33.333333333333336
         },
         "visits": {
-          "difference": 2,
-          "percent": 10
+          "difference": -2,
+          "percent": -9.090909090909092
         }
       },
       "last30Days": {
-        "startDate": "2026-10-12",
-        "endDateExclusive": "2026-11-11",
-        "pageViews": 1240,
-        "visits": 686,
+        "startDate": "2026-10-13",
+        "endDateExclusive": "2026-11-12",
+        "pageViews": 1210,
+        "visits": 689,
         "sampled": true
       }
     }
   },
-  "reportDate": "2026-11-10",
+  "reportDate": "2026-11-11",
   "products": [
     {
       "key": "running",
@@ -83,16 +83,16 @@
       "name": "Remote Job Radar",
       "url": "https://t.me/GelatoniJobRadarBot",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
-      "generatedAt": "2026-11-10T16:00:59.382Z",
+      "generatedAt": "2026-11-11T16:01:06.303Z",
       "timezone": "Asia/Shanghai",
       "previousDay": {
-        "date": "2026-11-10",
+        "date": "2026-11-11",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
       },
       "dayBeforePrevious": {
-        "date": "2026-11-09",
+        "date": "2026-11-10",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
@@ -112,8 +112,8 @@
         }
       },
       "last7Days": {
-        "startDate": "2026-11-04",
-        "endDateExclusive": "2026-11-11",
+        "startDate": "2026-11-05",
+        "endDateExclusive": "2026-11-12",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0
@@ -124,12 +124,6 @@
       },
       "daily": [
         {
-          "date": "2026-10-28",
-          "newUsers": 0,
-          "activeUsers": 0,
-          "interactions": 0
-        },
-        {
           "date": "2026-10-29",
           "newUsers": 0,
           "activeUsers": 0,
@@ -206,33 +200,39 @@
           "newUsers": 0,
           "activeUsers": 0,
           "interactions": 0
+        },
+        {
+          "date": "2026-11-11",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0
         }
       ]
     },
     "metadata": {
       "name": "JAVIndexBot",
       "url": "https://t.me/JAVIndexBot",
-      "generatedAt": "2026-11-11T04:04:36.642Z",
+      "generatedAt": "2026-11-12T05:19:36.818Z",
       "trackingSince": "2026-11-05T01:33:42.493Z",
       "timezone": "Asia/Shanghai",
       "source": "Telegram Bot API / private pinned aggregate snapshot",
       "previousDay": {
-        "date": "2026-11-10",
+        "date": "2026-11-11",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0,
         "searches": 0
       },
       "dayBeforePrevious": {
-        "date": "2026-11-09",
+        "date": "2026-11-10",
         "newUsers": 0,
         "activeUsers": 0,
         "interactions": 0,
         "searches": 0
       },
       "last7Days": {
-        "startDate": "2026-11-04",
-        "endDateExclusive": "2026-11-11",
+        "startDate": "2026-11-05",
+        "endDateExclusive": "2026-11-12",
         "newUsers": 0,
         "activeUsers": null,
         "interactions": null,
@@ -243,13 +243,6 @@
       },
       "daily": [
         {
-          "date": "2026-10-28",
-          "newUsers": 0,
-          "activeUsers": null,
-          "interactions": null,
-          "searches": null
-        },
-        {
           "date": "2026-10-29",
           "newUsers": 0,
           "activeUsers": null,
@@ -335,6 +328,13 @@
         },
         {
           "date": "2026-11-10",
+          "newUsers": 0,
+          "activeUsers": 0,
+          "interactions": 0,
+          "searches": 0
+        },
+        {
+          "date": "2026-11-11",
           "newUsers": 0,
           "activeUsers": 0,
           "interactions": 0,
@@ -346,14 +346,23 @@
   "channelStats": {
     "aiChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-11T04:08:39.171678+00:00",
+      "generatedAt": "2026-11-12T05:20:19.732521+00:00",
       "currentSnapshot": {
-        "date": "2026-11-11",
-        "collectedAt": "2026-11-11T04:08:42.780Z",
+        "date": "2026-11-12",
+        "collectedAt": "2026-11-12T05:20:22.960Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
       "previousDay": {
+        "date": "2026-11-11",
+        "status": "sent",
+        "publishedItems": 4,
+        "memberCount": 2,
+        "messageId": 13,
+        "url": "https://t.me/ai_product_radar_cn/13",
+        "collectedAt": "2026-11-11T15:20:03.155Z"
+      },
+      "dayBeforePrevious": {
         "date": "2026-11-10",
         "status": "sent",
         "publishedItems": 9,
@@ -361,15 +370,6 @@
         "messageId": 11,
         "url": "https://t.me/ai_product_radar_cn/11",
         "collectedAt": "2026-11-10T15:20:04.151Z"
-      },
-      "dayBeforePrevious": {
-        "date": "2026-11-09",
-        "status": "no_run",
-        "publishedItems": 0,
-        "memberCount": 2,
-        "messageId": null,
-        "url": null,
-        "collectedAt": "2026-11-09T15:20:04.335Z"
       },
       "daily": [
         {
@@ -425,19 +425,37 @@
           "messageId": 11,
           "url": "https://t.me/ai_product_radar_cn/11",
           "collectedAt": "2026-11-10T15:20:04.151Z"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "sent",
+          "publishedItems": 4,
+          "memberCount": 2,
+          "messageId": 13,
+          "url": "https://t.me/ai_product_radar_cn/13",
+          "collectedAt": "2026-11-11T15:20:03.155Z"
         }
       ]
     },
     "steamChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-11T04:08:39.171678+00:00",
+      "generatedAt": "2026-11-12T05:20:19.732521+00:00",
       "currentSnapshot": {
-        "date": "2026-11-11",
-        "collectedAt": "2026-11-11T04:08:42.780Z",
+        "date": "2026-11-12",
+        "collectedAt": "2026-11-12T05:20:22.960Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
       "previousDay": {
+        "date": "2026-11-11",
+        "status": "sent",
+        "publishedItems": 2,
+        "memberCount": 2,
+        "messageId": 9,
+        "url": "https://t.me/steam_deals_radar_cn/9",
+        "collectedAt": "2026-11-11T15:20:03.297Z"
+      },
+      "dayBeforePrevious": {
         "date": "2026-11-10",
         "status": "sent",
         "publishedItems": 1,
@@ -445,15 +463,6 @@
         "messageId": 8,
         "url": "https://t.me/steam_deals_radar_cn/8",
         "collectedAt": "2026-11-10T15:20:05.262Z"
-      },
-      "dayBeforePrevious": {
-        "date": "2026-11-09",
-        "status": "no_run",
-        "publishedItems": 0,
-        "memberCount": 2,
-        "messageId": null,
-        "url": null,
-        "collectedAt": "2026-11-09T15:20:04.308Z"
       },
       "daily": [
         {
@@ -509,6 +518,15 @@
           "messageId": 8,
           "url": "https://t.me/steam_deals_radar_cn/8",
           "collectedAt": "2026-11-10T15:20:05.262Z"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": 2,
+          "messageId": 9,
+          "url": "https://t.me/steam_deals_radar_cn/9",
+          "collectedAt": "2026-11-11T15:20:03.297Z"
         }
       ]
     }
