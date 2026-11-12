@@ -1,5 +1,7 @@
 <p align="right"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
+<!-- Open collaboration placeholder; no visible profile content changes. -->
+
 ![Xu Huan — building clarity into complex systems](https://gelatoni-xh.github.io/gelatoni-xh/assets/header.png)
 
 <div align="center">
