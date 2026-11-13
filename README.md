@@ -79,14 +79,14 @@ The enterprise systems used company-specific infrastructure. I describe those to
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-11**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-13 through 2026-11-11.
+Previous day: **2026-11-12**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-14 through 2026-11-12.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 63 | 42 | -21 (-33.3%) | 1210 |
-| Visits | 22 | 20 | -2 (-9.1%) | 689 |
+| Views | 42 | 53 | +11 (+26.2%) | 1261 |
+| Visits | 20 | 20 | 0 (0%) | 678 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 
@@ -103,9 +103,9 @@ Registered users: 0; enabled alerts: 0.
 | Metric | Prior day | Yesterday | Daily change | Last 7 days |
 | --- | ---: | ---: | ---: | ---: |
 | New users | 0 | 0 | 0 (0%) | 0 |
-| Active users | 0 | 0 | 0 (0%) | — |
-| Interactions | 0 | 0 | 0 (0%) | — |
-| Search requests | 0 | 0 | 0 (0%) | — |
+| Active users | 0 | 0 | 0 (0%) | 0 |
+| Interactions | 0 | 0 | 0 (0%) | 0 |
+| Search requests | 0 | 0 | 0 (0%) | 0 |
 
 Registered users: 0.
 
@@ -117,23 +117,23 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
 | Status | Published | Published |
-| Items published | 9 | 4 |
+| Items published | 4 | 5 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-11T15:20:03.155Z.
-Current subscribers: 2 (2026-11-12; collected 2026-11-12 05:20:22 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/13).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-12T15:20:03.216Z.
+Current subscribers: 2 (2026-11-13; collected 2026-11-13 04:35:29 UTC).
+Yesterday's post: [view message](https://t.me/ai_product_radar_cn/14).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | — | 2 |
+| Subscribers | 2 | 2 |
 | Status | Published | Published |
-| Items published | 1 | 2 |
+| Items published | 2 | 2 |
 
-Subscriber change yesterday: —; snapshot collected: 2026-11-11T15:20:03.297Z.
-Current subscribers: 2 (2026-11-12; collected 2026-11-12 05:20:22 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/9).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-12T15:20:03.219Z.
+Current subscribers: 2 (2026-11-13; collected 2026-11-13 04:35:29 UTC).
+Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/10).
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
