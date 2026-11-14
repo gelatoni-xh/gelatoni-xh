@@ -79,14 +79,14 @@ The enterprise systems used company-specific infrastructure. I describe those to
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-12**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-14 through 2026-11-12.
+Previous day: **2026-11-13**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-15 through 2026-11-13.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 42 | 53 | +11 (+26.2%) | 1261 |
-| Visits | 20 | 20 | 0 (0%) | 678 |
+| Views | 53 | 91 | +38 (+71.7%) | 1302 |
+| Visits | 20 | 19 | -1 (-5%) | 659 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 
@@ -117,23 +117,23 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
 | Status | Published | Published |
-| Items published | 4 | 5 |
+| Items published | 5 | 6 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-12T15:20:03.216Z.
-Current subscribers: 2 (2026-11-13; collected 2026-11-13 04:35:29 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/14).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-13T15:20:03.014Z.
+Current subscribers: 2 (2026-11-14; collected 2026-11-14 04:30:13 UTC).
+Yesterday's post: [view message](https://t.me/ai_product_radar_cn/16).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | 2 | 2 |
-| Status | Published | Published |
-| Items published | 2 | 2 |
+| Subscribers | 2 | — |
+| Status | Published | no_run |
+| Items published | 2 | 0 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-12T15:20:03.219Z.
-Current subscribers: 2 (2026-11-13; collected 2026-11-13 04:35:29 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/10).
+Subscriber change yesterday: —; snapshot collected: 2026-11-13T15:20:04.100Z.
+Current subscribers: 2 (2026-11-14; collected 2026-11-14 04:30:13 UTC).
+
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
