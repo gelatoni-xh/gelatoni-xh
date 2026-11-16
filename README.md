@@ -79,14 +79,14 @@ The enterprise systems used company-specific infrastructure. I describe those to
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-14**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-16 through 2026-11-14.
+Previous day: **2026-11-15**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-17 through 2026-11-15.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 91 | 15 | -76 (-83.5%) | 1285 |
-| Visits | 19 | 13 | -6 (-31.6%) | 652 |
+| Views | 15 | 25 | +10 (+66.7%) | 1298 |
+| Visits | 13 | 20 | +7 (+53.8%) | 654 |
 
 ### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
 
@@ -116,23 +116,23 @@ Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or inco
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
-| Status | Published | Published |
-| Items published | 6 | 5 |
+| Status | Published | no_run |
+| Items published | 5 | 0 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-14T15:20:03.418Z.
-Current subscribers: 2 (2026-11-15; collected 2026-11-15 04:18:24 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/17).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-15T15:20:03.559Z.
+Current subscribers: 2 (2026-11-16; collected 2026-11-16 04:17:14 UTC).
+
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | — | 2 |
+| Subscribers | 2 | 2 |
 | Status | no_run | no_run |
 | Items published | 0 | 0 |
 
-Subscriber change yesterday: —; snapshot collected: 2026-11-14T15:20:03.416Z.
-Current subscribers: 2 (2026-11-15; collected 2026-11-15 04:18:24 UTC).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-15T15:20:03.159Z.
+Current subscribers: 2 (2026-11-16; collected 2026-11-16 04:17:14 UTC).
 
 
 Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
