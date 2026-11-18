@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1048" viewBox="0 0 900 1048" role="img" aria-labelledby="title desc">
+<title id="title">GitHub contributions by repository</title>
+<desc id="desc">Public repositories, 2026-10-20 to 2026-11-18 Asia/Shanghai. Counts combine commits, pull requests, issues, and reviews.</desc>
+<rect width="900" height="100%" fill="#ffffff"/>
+<text x="24" y="35" fill="#1f2937" font-family="Arial,sans-serif" font-size="21" font-weight="700">Last 30 days by repository</text>
+<text x="24" y="56" fill="#57606a" font-family="Arial,sans-serif" font-size="13">2026-10-20 – 2026-11-18 Asia/Shanghai · public activity</text>
+<rect x="24" y="74" width="10" height="10" rx="2" fill="#3178c6"/>
+<text x="40" y="84" fill="#374151" font-family="Arial,sans-serif" font-size="12">Commits</text>
+<rect x="109" y="74" width="10" height="10" rx="2" fill="#32a88a"/>
+<text x="125" y="84" fill="#374151" font-family="Arial,sans-serif" font-size="12">Pull requests</text>
+<rect x="236" y="74" width="10" height="10" rx="2" fill="#e8a23a"/>
+<text x="252" y="84" fill="#374151" font-family="Arial,sans-serif" font-size="12">Issues</text>
+<rect x="314" y="74" width="10" height="10" rx="2" fill="#d576a4"/>
+<text x="330" y="84" fill="#374151" font-family="Arial,sans-serif" font-size="12">Reviews</text>
+<text x="24" y="119" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/tasuki-keifu-agent</text>
+<text x="875" y="119" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">106</text>
+<rect x="24" y="128" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="128" width="473.11" height="14" fill="#3178c6"/>
+<rect x="497.11" y="128" width="248.58" height="14" fill="#32a88a"/>
+<rect x="745.70" y="128" width="128.30" height="14" fill="#e8a23a"/>
+<text x="24" y="173" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/personal-site</text>
+<text x="875" y="173" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">84</text>
+<rect x="24" y="182" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="182" width="505.19" height="14" fill="#3178c6"/>
+<rect x="529.19" y="182" width="144.34" height="14" fill="#32a88a"/>
+<rect x="673.53" y="182" width="24.06" height="14" fill="#e8a23a"/>
+<text x="24" y="227" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/tasuki-keifu</text>
+<text x="875" y="227" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">70</text>
+<rect x="24" y="236" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="236" width="392.92" height="14" fill="#3178c6"/>
+<rect x="416.92" y="236" width="152.36" height="14" fill="#32a88a"/>
+<rect x="569.28" y="236" width="16.04" height="14" fill="#e8a23a"/>
+<text x="24" y="281" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/gelatoni-xh</text>
+<text x="875" y="281" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">34</text>
+<rect x="24" y="290" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="290" width="232.55" height="14" fill="#3178c6"/>
+<rect x="256.55" y="290" width="24.06" height="14" fill="#32a88a"/>
+<rect x="280.60" y="290" width="16.04" height="14" fill="#e8a23a"/>
+<text x="24" y="335" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/telegram-job-alerts</text>
+<text x="875" y="335" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">16</text>
+<rect x="24" y="344" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="344" width="120.28" height="14" fill="#3178c6"/>
+<rect x="144.28" y="344" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="389" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/telegram-channel-matrix</text>
+<text x="875" y="389" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">12</text>
+<rect x="24" y="398" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="398" width="80.19" height="14" fill="#3178c6"/>
+<rect x="104.19" y="398" width="8.02" height="14" fill="#32a88a"/>
+<rect x="112.21" y="398" width="8.02" height="14" fill="#e8a23a"/>
+<text x="24" y="443" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/telegram-opportunity-atlas</text>
+<text x="875" y="443" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">11</text>
+<rect x="24" y="452" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="452" width="80.19" height="14" fill="#3178c6"/>
+<rect x="104.19" y="452" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="497" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/telegram-metadata</text>
+<text x="875" y="497" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">7</text>
+<rect x="24" y="506" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="506" width="48.11" height="14" fill="#3178c6"/>
+<rect x="72.11" y="506" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="551" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">adorsys/keycloak-config-cli</text>
+<text x="875" y="551" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">3</text>
+<rect x="24" y="560" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="560" width="24.06" height="14" fill="#32a88a"/>
+<text x="24" y="605" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">apache/opennlp</text>
+<text x="875" y="605" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">2</text>
+<rect x="24" y="614" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="614" width="8.02" height="14" fill="#3178c6"/>
+<rect x="32.02" y="614" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="659" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">checkstyle/checkstyle</text>
+<text x="875" y="659" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">2</text>
+<rect x="24" y="668" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="668" width="8.02" height="14" fill="#3178c6"/>
+<rect x="32.02" y="668" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="713" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">jbangdev/jbang</text>
+<text x="875" y="713" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">2</text>
+<rect x="24" y="722" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="722" width="16.04" height="14" fill="#32a88a"/>
+<text x="24" y="767" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">repowise-dev/repowise</text>
+<text x="875" y="767" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">2</text>
+<rect x="24" y="776" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="776" width="8.02" height="14" fill="#3178c6"/>
+<rect x="32.02" y="776" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="821" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">adrienverge/yamllint</text>
+<text x="875" y="821" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">1</text>
+<rect x="24" y="830" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="830" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="875" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">apache/iggy</text>
+<text x="875" y="875" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">1</text>
+<rect x="24" y="884" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="884" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="929" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">gelatoni-xh/iggy</text>
+<text x="875" y="929" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">1</text>
+<rect x="24" y="938" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="938" width="8.02" height="14" fill="#32a88a"/>
+<text x="24" y="983" fill="#1f2937" font-family="Arial,sans-serif" font-size="14" font-weight="600">pmd/pmd</text>
+<text x="875" y="983" text-anchor="end" fill="#1f2937" font-family="Arial,sans-serif" font-size="15" font-weight="700">1</text>
+<rect x="24" y="992" width="850" height="14" rx="3" fill="#f0f2f4"/>
+<rect x="24.00" y="992" width="8.02" height="14" fill="#32a88a"/>
+</svg>

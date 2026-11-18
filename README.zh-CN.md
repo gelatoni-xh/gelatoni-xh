@@ -1,78 +1,52 @@
 <p align="right"><a href="./README.md">English</a> · <strong>简体中文</strong></p>
 
-![徐涣：让复杂系统中的需求与交付更清晰](https://gelatoni-xh.github.io/gelatoni-xh/assets/header.zh-CN.png)
+# Gelatoni
 
-<div align="center">
-  <p><strong>后端工程 · 复杂业务流程 · 稳妥的系统变更</strong></p>
-  <p><a href="https://gelatoni.uk/zh/articles">✦ 技术文章</a> · <a href="https://tasukikeifu.com/zh">↗ 线上产品</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ 代码仓库</a></p>
-</div>
+我是徐涣。这里记录我维护的独立产品、开源项目，以及写下的技术文章。
 
-我是**徐涣（Gelatoni）**，有企业人事主数据系统和跨境支付产品的开发经历。我会从需求、领域边界、后端实现、测试验证一直考虑到上线。公开仓库展示的是我的独立项目；企业工作更多通过我处理过的问题和工作方式来说明，而不是公开原公司的代码。
+[技术文章](https://gelatoni.uk/zh/articles) · [线上产品](https://tasukikeifu.com/zh) · [代码仓库](https://github.com/gelatoni-xh?tab=repositories)
 
-> **欢迎与不同语言背景的开发者、创业者交流合作，也欢迎参与面向不同地区用户的产品开发与服务。** 如果你正在推进一个开源项目、商业产品或工程合作，欢迎联系我聊聊。
+## 项目
 
-
-## 我怎样推进交付
-
-![交付流程：澄清、设计、验证、上线](https://gelatoni-xh.github.io/gelatoni-xh/assets/delivery-flow.zh-CN.png)
-
-1. **澄清需求。** 找到用户流程、既有行为、数据归属和待确认决策。
-2. **控制范围。** 写明本期包含什么、后续再做什么、哪些旧链路必须保持兼容。
-3. **考虑失败路径。** 处理重试、部分完成、数据一致性、回滚和运维可见性。
-4. **对照需求验证。** 从原始需求生成用例，再检查实现、回归影响和运行状态。
-5. **留下交接依据。** 记录决策、部署步骤、已知限制与后续工作。
-
-我会在这些环节使用 AI 工具，同时明确上下文和约束。业务语义、数据边界与最终验收仍由负责变更的工程师判断。
-
-## 我能帮助解决什么问题
-
-| 需求 | 相关经历 |
+| 项目 | 入口与内容 |
 | --- | --- |
-| 演进系统，同时保持既有用户的使用方式 | HR 主数据搬迁、接口融合、任职模型改造与分阶段切流 |
-| 把宽泛的业务需求收敛为可实施范围 | 支付和计费方案中的职责边界、数据流、边缘情况与范围排除 |
-| 让变更可验证、可运维 | 从需求导出用例、回归路径、可观测性、迁移与发布检查 |
-| 独立构建产品与数据工作流 | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) 及其[线上站点](https://tasukikeifu.com/zh) |
+| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) | [线上站点](https://tasukikeifu.com/zh) · 跑步数据、搜索与赛事记录 |
+| [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 数据质量检查与可审计的数据操作 |
+| [个人站点](https://github.com/gelatoni-xh/personal-site) | [gelatoni.uk](https://gelatoni.uk) · 文章与项目笔记 |
+| [AI 产品雷达](https://t.me/ai_product_radar_cn) | 关注 AI 产品的中文 Telegram 频道 |
+| [Steam 折扣雷达](https://t.me/steam_deals_radar_cn) | 发布 Steam 折扣的中文 Telegram 频道 |
 
-## 企业交付经历
+## 文章
 
-### 蚂蚁集团：招聘与 HR 系统（2023–2025）
+近期文章和较长的笔记放在 [gelatoni.uk](https://gelatoni.uk/zh/articles)，主要写工程决策、独立产品和 AI 辅助开发。
 
-我担任后端开发工程师，工作横跨招聘流程与 HR 主数据，涉及业务规则、数据模型、服务边界，以及已有大量调用方的系统演进：
+<!-- CONTRIBUTIONS:START -->
+## 最近 30 天的仓库贡献
 
-- **校园招聘：** 参与简历自动分配规则建设，处理部门层级、规则优先级、条件交叉与冲突；还涉及面试排期模型、批量排期，以及校招与社招共用流程的适配。
-- **主数据搬迁与接口治理：** 参与涉及 1000 多个历史接口的分阶段迁移，通过兼容路由、新旧行为与数据比对、流量观察和恢复方案保护上游调用方。也参与将重叠接口朝约 200 个领域级接口收敛；这一数字是目标，不表示所有旧接口都已下线。
-- **任职计划解耦：** 参与梳理多个业务系统生成任职计划的过程与语义边界，并设计时间线计算、冲突裁决、历史变更及组织结构推导的职责划分。原始笔记同时包含方案和实施内容，因此这里不把所有设计点都写成已完成上线。
-- **架构与稳定性治理：** 参与梳理领域、应用与基础设施边界，以及服务依赖、消息、定时任务、缓存、监控和变更安全等治理工作。这是团队的长期专项，不把全部工作归为我个人独立交付。
+![各仓库贡献分段条形图](https://gelatoni-xh.github.io/gelatoni-xh/assets/repo-contributions.svg)
 
-这段经历尤其适用于已有系统的演进：先理解既有行为，再明确职责与范围，验证新链路，并规划可控发布。相关代码属于原公司，这里不公开。
+统计区间：2026-10-20 至 2026-11-18（北京时间，30 个完整自然日）。总量 = Commit + PR + Issue + Review；仅统计 GitHub 记录的公开仓库贡献。
 
-### 支付业务：范围、计费与跨系统流程
-
-在一家跨境支付公司（2026），我参与 Payment Links、计费与账单能力，以及账户间出款流程。本地提交历史能看到费用记录查询、出款费用分摊和商户账单页面等实现工作。我的方案笔记还梳理跨服务的资金与账户状态，区分现状与目标，并写清范围、安全、幂等、监控和回归检查点。
-
-**体现的能力：** 把跨服务业务流程澄清为明确的设计决策和验证点。部分文档记录的是方案，因此我不会把每个规划中的组件都写成已经上线的成果。这里不复制原公司代码和内部方案。
-
-## 文章与独立项目
-
-[文章归档](https://gelatoni.uk/zh/articles)记录了我对迁移、稳定性、产品范围、支付业务和 AI 辅助研发的思考。可以从[AI 辅助研发模式回顾](https://gelatoni.uk/zh/articles/2026-06-26-AI辅助研发模式回顾)与[稳定性专题](https://gelatoni.uk/zh/articles/2026-03-02-稳定性)开始。部分旧文涉及原公司的系统；我正在检查哪些适合继续公开，哪些需要改写为匿名案例。
-
-| 公开项目 | 可以核对的内容 |
-| --- | --- |
-| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) · [线上站点](https://tasukikeifu.com/zh) | 基于 Next.js 和 PostgreSQL 的跑步数据产品、数据导入、迁移、搜索与部署 |
-| [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 数据质量诊断、可审计操作、默认试运行与写入保护 |
-| [个人站点](https://github.com/gelatoni-xh/personal-site) · [线上站点](https://gelatoni.uk) | Markdown 发布、构建检查、Docker 部署与部署后健康检查 |
-
-## 技术栈
-
-| 领域 | 技术与经验 |
-| --- | --- |
-| 企业后端 | **Java、Spring Boot**；服务接口、领域建模与既有系统集成 |
-| 数据与异步流程 | 企业系统中的关系型数据库、SQL、RPC、消息队列、缓存与定时任务 |
-| 独立产品 | **TypeScript、Next.js、React、PostgreSQL、Prisma**；数据导入与应用流程 |
-| 交付与运维 | **Docker、GitHub Actions**；构建检查、部署、健康检查与可观测性 |
-| Agent 工作流 | [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) 中使用 **LangGraph** |
-
-企业系统使用了公司自有基础设施；这里按通用能力描述，不暗示使用了某个同类开源产品。
+| 仓库 | 总量 |
+| --- | ---: |
+| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | **106** |
+| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | **84** |
+| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | **70** |
+| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | **34** |
+| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | **16** |
+| [gelatoni-xh/telegram-channel-matrix](https://github.com/gelatoni-xh/telegram-channel-matrix) | **12** |
+| [gelatoni-xh/telegram-opportunity-atlas](https://github.com/gelatoni-xh/telegram-opportunity-atlas) | **11** |
+| [gelatoni-xh/telegram-metadata](https://github.com/gelatoni-xh/telegram-metadata) | **7** |
+| [adorsys/keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli) | **3** |
+| [apache/opennlp](https://github.com/apache/opennlp) | **2** |
+| [checkstyle/checkstyle](https://github.com/checkstyle/checkstyle) | **2** |
+| [jbangdev/jbang](https://github.com/jbangdev/jbang) | **2** |
+| [repowise-dev/repowise](https://github.com/repowise-dev/repowise) | **2** |
+| [adrienverge/yamllint](https://github.com/adrienverge/yamllint) | **1** |
+| [apache/iggy](https://github.com/apache/iggy) | **1** |
+| [gelatoni-xh/iggy](https://github.com/gelatoni-xh/iggy) | **1** |
+| [pmd/pmd](https://github.com/pmd/pmd) | **1** |
+<!-- CONTRIBUTIONS:END -->
 
 <!-- TRAFFIC:START -->
 ## 服务使用记录
@@ -112,16 +86,3 @@
 
 网站来源为 Cloudflare Web Analytics；频道记录订阅人数快照与发布回执。频道帖子浏览量无法通过 Bot API 获取。不同产品与口径不合计。每天北京时间 08:00 调度（可能延迟）。[统计口径与历史](./analytics/README.md)。
 <!-- TRAFFIC:END -->
-
-## 教育经历
-
-- **华东师范大学** · 大数据技术与工程硕士（2020–2023）
-- **华东理工大学** · 计算机科学与技术本科（2016–2020）
-
-## 正在补齐的作品集内容
-
-- **企业案例：** 匿名写明起点问题、我的准确职责、关键决策、验证方式和实际落地范围。
-- **独立产品证据：** 截图、演示过程，以及能够核实的结果数据。
-- **合作入口：** 直接联系方式和更明确的承接任务范围。
-
-现阶段可以[阅读文章](https://gelatoni.uk/zh/articles)、[体验线上产品](https://tasukikeifu.com/zh)，或[查看代码仓库](https://github.com/gelatoni-xh?tab=repositories)。

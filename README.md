@@ -1,80 +1,52 @@
 <p align="right"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
-<!-- Open collaboration placeholder; no visible profile content changes. -->
+# Gelatoni
 
-![Xu Huan — building clarity into complex systems](https://gelatoni-xh.github.io/gelatoni-xh/assets/header.png)
+I’m Xu Huan. I build independent products, maintain open-source projects, and write about software and the work behind it.
 
-<div align="center">
-  <p><strong>Backend engineering · Complex business workflows · Reliable change</strong></p>
-  <p><a href="https://gelatoni.uk/en/articles">✦ Engineering writing</a> · <a href="https://tasukikeifu.com/en">↗ Live product</a> · <a href="https://github.com/gelatoni-xh?tab=repositories">⌘ Code</a></p>
-</div>
+[Writing](https://gelatoni.uk/en/articles) · [Live product](https://tasukikeifu.com/en) · [Repositories](https://github.com/gelatoni-xh?tab=repositories)
 
-I’m **Xu Huan (Gelatoni)**, a software engineer with experience in enterprise HR data systems and cross-border payment products. I work across requirements, domain boundaries, backend implementation, testing, and rollout. My public repositories show independent work; much of my enterprise work is represented here through the problems I handled and the way I approached them, rather than employer-owned source code.
+## Projects
 
-> **Open source, product development, and engineering collaboration are welcome.** I’m open to working with developers and founders across languages and regions, and to building and supporting products for users worldwide. If you’re working on an open-source project, a commercial product, or an engineering engagement, feel free to get in touch.
-
-
-## How I work on a delivery
-
-![Delivery flow: clarify, design, verify, ship](https://gelatoni-xh.github.io/gelatoni-xh/assets/delivery-flow.png)
-
-1. **Clarify the request.** Identify the user journey, existing behavior, data ownership, and unresolved decisions.
-2. **Control the scope.** Write down what this release includes, what it leaves for later, and which existing paths must remain compatible.
-3. **Design for failure as well as success.** Account for retries, partial completion, data consistency, rollback, and operational visibility.
-4. **Verify against the requirement.** Derive cases from the original request, then check implementation, regressions, and the running service.
-5. **Leave a handoff trail.** Document decisions, deployment steps, known limits, and follow-up work.
-
-I use AI tools in parts of this workflow, with explicit context and constraints. I keep the judgment on business semantics, data boundaries, and final verification with the engineer responsible for the change.
-
-## Where I can help
-
-| Need | Relevant experience |
+| Project | Links and focus |
 | --- | --- |
-| Evolve a system without breaking existing users | HR master-data migration, API consolidation, employment-model changes, and phased cutovers |
-| Turn a broad business request into an implementable scope | Payment and billing designs that separate domain ownership, data flow, edge cases, and what is out of scope |
-| Make a change testable and operable | Validation against requirements, regression paths, observability, migration planning, and release checks |
-| Build a product and its supporting data workflows | [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) and its [live site](https://tasukikeifu.com/en) |
+| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) | [Live site](https://tasukikeifu.com/en) · Running data, search, and race records |
+| [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | Data quality checks and auditable data operations |
+| [Personal site](https://github.com/gelatoni-xh/personal-site) | [gelatoni.uk](https://gelatoni.uk) · Articles and project notes |
+| [AI Product Radar](https://t.me/ai_product_radar_cn) | Chinese Telegram channel about AI products |
+| [Steam Deals Radar](https://t.me/steam_deals_radar_cn) | Chinese Telegram channel for Steam discounts |
 
-## Enterprise delivery experience
+## Writing
 
-### Ant Group · recruitment and HR systems (2023–2025)
+Recent posts and longer notes are on [gelatoni.uk](https://gelatoni.uk/en/articles). I write about engineering decisions, independent products, and AI-assisted development.
 
-I worked as a backend engineer across recruitment workflows and HR master data. The work covered business rules, data models, service boundaries, and changes to systems with many existing consumers:
+<!-- CONTRIBUTIONS:START -->
+## Repository contributions, last 30 days
 
-- **Campus recruitment:** worked on configurable resume-assignment rules, including department hierarchy, rule priority, overlapping conditions, and conflict handling. Other work included interview scheduling model changes, batch scheduling, and adapting flows shared by campus and experienced hiring.
-- **HR master-data migration and APIs:** worked on a staged migration involving more than 1,000 legacy interfaces. Compatibility routing, old/new behavior and data comparisons, traffic observation, and recovery planning helped protect upstream callers. I also worked on consolidating overlapping APIs toward roughly 200 domain-level interfaces; that number was a target, not a claim that every old API was retired.
-- **Employment-plan decoupling:** worked on separating business-system input from master-data semantics. This involved tracing how multiple upstream systems generated employment plans and designing the boundaries for timeline calculation, conflict resolution, historical changes, and organization-structure derivation. The source notes include proposals as well as implementation work, so these design areas are not all claims of completed rollout.
-- **Architecture and reliability:** worked on clearer domain, application, and infrastructure boundaries, alongside governance of service dependencies, messaging, scheduled jobs, caching, monitoring, and change safety. These were parts of a broader team program, not a claim that I personally delivered every item in the program.
+![Stacked contribution chart by repository](https://gelatoni-xh.github.io/gelatoni-xh/assets/repo-contributions.svg)
 
-This experience is most relevant when a client needs to change an established system: understand existing behavior, define ownership and scope, verify the new path, and plan a controlled release. The source code is employer-owned and is not published here.
+Period: 2026-10-20 through 2026-11-18 (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.
 
-### Payments · scope, fees, and cross-system flows
-
-At a cross-border payments company (2026), I worked on Payment Links, fee and billing capabilities, and account-to-account payout flows. Implementation work visible in local history includes fee-record queries, payout fee allocation, and a merchant billing page. My design notes also trace money and account states across services, distinguish current behavior from proposed behavior, and specify scope, security, idempotency, monitoring, and regression cases.
-
-**What this demonstrates:** I can clarify a business flow across services and turn it into explicit decisions and verification points. Some documents describe plans, so I do not present every proposed component as a shipped result. Employer-owned code and internal designs are not reproduced here.
-
-## Writing and independent work
-
-My [writing archive](https://gelatoni.uk/en/articles) contains engineering notes on migration, stability, product scope, payments, and AI-assisted development. Two starting points are [AI-assisted development in practice](https://gelatoni.uk/en/articles/2026-06-26-AI辅助研发模式回顾) and [stability as a systems and business problem](https://gelatoni.uk/en/articles/2026-03-02-稳定性). Some older articles discuss employer systems; I am reviewing which of them should remain public and which should become anonymized case studies.
-
-| Public project | What you can inspect |
-| --- | --- |
-| [Tasuki Keifu](https://github.com/gelatoni-xh/tasuki-keifu) · [live](https://tasukikeifu.com/en) | A Next.js and PostgreSQL running-data product, data imports, migrations, search, and deployment |
-| [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | Data-quality diagnosis, auditable actions, dry-run defaults, and safeguards around writes |
-| [Personal site](https://github.com/gelatoni-xh/personal-site) · [live](https://gelatoni.uk) | Markdown publishing, build checks, Docker deployment, and a post-deploy health check |
-
-## Technology stack
-
-| Area | Technologies and experience |
-| --- | --- |
-| Enterprise backend | **Java, Spring Boot**; service APIs, domain modeling, and integration across existing systems |
-| Data and asynchronous workflows | Relational databases, SQL, RPC, message queues, caching, and scheduled jobs in enterprise systems |
-| Independent products | **TypeScript, Next.js, React, PostgreSQL, Prisma**; data imports and application workflows |
-| Delivery and operations | **Docker, GitHub Actions**; build checks, deployment, health checks, and observability |
-| Agent workflows | **LangGraph** in [Tasuki Keifu Agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) |
-
-The enterprise systems used company-specific infrastructure. I describe those tools by their general function; the table does not imply that a named open-source equivalent was used there.
+| Repository | Total |
+| --- | ---: |
+| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | **106** |
+| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | **84** |
+| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | **70** |
+| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | **34** |
+| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | **16** |
+| [gelatoni-xh/telegram-channel-matrix](https://github.com/gelatoni-xh/telegram-channel-matrix) | **12** |
+| [gelatoni-xh/telegram-opportunity-atlas](https://github.com/gelatoni-xh/telegram-opportunity-atlas) | **11** |
+| [gelatoni-xh/telegram-metadata](https://github.com/gelatoni-xh/telegram-metadata) | **7** |
+| [adorsys/keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli) | **3** |
+| [apache/opennlp](https://github.com/apache/opennlp) | **2** |
+| [checkstyle/checkstyle](https://github.com/checkstyle/checkstyle) | **2** |
+| [jbangdev/jbang](https://github.com/jbangdev/jbang) | **2** |
+| [repowise-dev/repowise](https://github.com/repowise-dev/repowise) | **2** |
+| [adrienverge/yamllint](https://github.com/adrienverge/yamllint) | **1** |
+| [apache/iggy](https://github.com/apache/iggy) | **1** |
+| [gelatoni-xh/iggy](https://github.com/gelatoni-xh/iggy) | **1** |
+| [pmd/pmd](https://github.com/pmd/pmd) | **1** |
+<!-- CONTRIBUTIONS:END -->
 
 <!-- TRAFFIC:START -->
 ## Service usage
@@ -114,16 +86,3 @@ Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/12).
 
 Websites use Cloudflare Web Analytics; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
-
-## Education
-
-- **Master's in Big Data Technology and Engineering**, East China Normal University (2020–2023)
-- **Bachelor's in Computer Science and Technology**, East China University of Science and Technology (2016–2020)
-
-## Portfolio work in progress
-
-- **Enterprise case studies:** concise, anonymized write-ups showing the starting problem, my exact role, decisions, validation, and what actually shipped.
-- **Evidence for independent products:** screenshots, walkthroughs, and measured outcomes where they can be verified.
-- **Contact and availability:** a direct route for relevant project inquiries and a clearer description of the assignments I take.
-
-For now, you can [read the writing](https://gelatoni.uk/en/articles), [try the live product](https://tasukikeifu.com/en), or [inspect the repositories](https://github.com/gelatoni-xh?tab=repositories).

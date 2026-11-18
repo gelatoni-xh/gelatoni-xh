@@ -13,6 +13,8 @@ The English and Chinese profile READMEs show Cloudflare **Web Analytics** page v
 
 The workflow runs at **00:00 UTC / 08:00 Asia/Shanghai** daily and supports manual runs. GitHub may delay scheduled jobs. In public repositories GitHub can disable scheduled workflows after 60 days without repository activity; check the Actions tab if updates stop. Failures leave committed statistics intact and appear in GitHub Actions.
 
+The same workflow also queries GitHub's contribution collection for the 30 complete Shanghai calendar days ending yesterday. It adds commits, pull requests, issues, and reviews by repository; excludes private and internal repositories and the `ZYZ666-RGB` owner; and updates the profile chart, both READMEs, [`repo-contributions.json`](./repo-contributions.json), and the daily email. The total counts contribution events, so a PR and its commits can both contribute to a repository's total. It follows GitHub's contribution eligibility rules and does not measure lines changed or hours worked. If collection fails, the workflow sends its usual failure notice and does not publish a partial report.
+
 ## Configuration
 
 - Repository secret: `CLOUDFLARE_API_TOKEN`, with **Account → Account Analytics → Read** on the relevant Cloudflare account.

@@ -16,7 +16,7 @@ def change(current, previous):
     return f'{delta:+g} ({percent})'
 
 
-def build_message(stats):
+def build_message(stats, contributions=None):
     products = stats.get('products') or [
         {'key': 'running', 'kind': 'website', 'name': '跑步数据站'},
     ]
@@ -62,6 +62,19 @@ def build_message(stats):
             current, prior = previous[key], before[key]
             delta = '—' if current is None or prior is None else change(current, prior)
             lines.append(f'  {label}：{value(prior)} → {value(current)}；日变化 {delta}；近 {period_days} 天 {value(period[key])}')
+        lines.append('')
+    if contributions is not None:
+        if contributions['endDate'] != day or contributions['timezone'] != 'Asia/Shanghai':
+            raise ValueError('Repository contribution period differs from daily report')
+        lines.extend([
+            'GitHub 公开仓库贡献（近 30 个完整自然日）',
+            f'{contributions["startDate"]} 至 {contributions["endDate"]}（北京时间）',
+            '总量 = Commit + PR + Issue + Review。',
+        ])
+        for repository in contributions['repositories']:
+            lines.append(f'  {repository["name"]}：{repository["total"]}  {repository["url"]}')
+        if not contributions['repositories']:
+            lines.append('  暂无公开贡献')
         lines.append('')
     lines.extend([
         '网站：Cloudflare Web Analytics，可能含采样估算；访问次数不等于独立用户。',
@@ -141,7 +154,8 @@ if __name__ == '__main__':
         )
     else:
         stats = json.loads(Path('analytics/traffic.json').read_text())
-        subject, body = build_message(stats)
+        contributions = json.loads(Path('analytics/repo-contributions.json').read_text())
+        subject, body = build_message(stats, contributions)
     if args.preview:
         print(subject + '\n\n' + body)
     else:
