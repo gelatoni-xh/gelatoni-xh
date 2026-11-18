@@ -44,12 +44,17 @@ jobs:
           export CHANNEL_STATS_SSH_KEY_PATH="$RUNNER_TEMP/channel-stats/key"
           export CHANNEL_STATS_KNOWN_HOSTS_PATH="$RUNNER_TEMP/channel-stats/known_hosts"
           node scripts/update-traffic-stats.mjs
+      - name: Fetch repository contributions
+        id: contributions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/update-repo-contributions.mjs
       - name: Commit statistics
         id: commit
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add analytics/traffic.json analytics/history/ README.md README.zh-CN.md
+          git add analytics/traffic.json analytics/history/ analytics/repo-contributions.json assets/repo-contributions.svg README.md README.zh-CN.md
           if ! git diff --cached --quiet; then
             git commit -m "Update daily traffic statistics"
             git push
@@ -70,6 +75,7 @@ jobs:
           MAIL_CONFIG: ${{ secrets.MAIL_CONFIG }}
           TESTS_OUTCOME: ${{ steps.tests.outcome }}
           FETCH_OUTCOME: ${{ steps.fetch.outcome }}
+          CONTRIBUTIONS_OUTCOME: ${{ steps.contributions.outcome }}
           COMMIT_OUTCOME: ${{ steps.commit.outcome }}
           REPORT_EMAIL_OUTCOME: ${{ steps.report_email.outcome }}
         run: |
@@ -81,6 +87,8 @@ jobs:
             export FAILED_STEP="Check channel statistics and email rendering"
           elif [ "$FETCH_OUTCOME" = failure ]; then
             export FAILED_STEP="Fetch Cloudflare and channel statistics"
+          elif [ "$CONTRIBUTIONS_OUTCOME" = failure ]; then
+            export FAILED_STEP="Fetch repository contributions"
           elif [ "$COMMIT_OUTCOME" = failure ]; then
             export FAILED_STEP="Commit statistics"
           elif [ "$REPORT_EMAIL_OUTCOME" = failure ]; then

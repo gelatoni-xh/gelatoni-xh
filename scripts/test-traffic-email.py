@@ -66,6 +66,17 @@ class EmailReportTest(unittest.TestCase):
         self.assertEqual(module.change(0, 0), '+0 (0%)')
         self.assertEqual(module.change(5, 0), '+5 (前天为 0)')
 
+    def test_repository_contributions_in_daily_email(self):
+        contributions = {'startDate': '2026-10-05', 'endDate': '2026-11-03',
+                         'timezone': 'Asia/Shanghai', 'repositories': [
+                             {'name': 'gelatoni-xh/example', 'url': 'https://github.com/gelatoni-xh/example', 'total': 7}]}
+        _, body = module.build_message(fixture(), contributions)
+        self.assertIn('gelatoni-xh/example：7', body)
+        self.assertIn('2026-10-05 至 2026-11-03', body)
+        contributions['endDate'] = '2026-11-02'
+        with self.assertRaises(ValueError):
+            module.build_message(fixture(), contributions)
+
     def test_failure_notice_has_step_and_actions_link_without_log_content(self):
         subject, body = module.build_failure_message(
             'Fetch Cloudflare and channel statistics', 'gelatoni-xh/gelatoni-xh', '42444370481', '2', 'schedule', 'refs/heads/main'
