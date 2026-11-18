@@ -15,13 +15,6 @@ def fixture():
             'previousDay': {'startDate': '2026-11-03', 'pageViews': 12, 'visits': 4},
             'last30Days': {'startDate': '2026-10-05', 'pageViews': 120, 'visits': 40}}
             for key in ['running']},
-        'businesses': {'jobRadar': {
-            'dayBeforePrevious': {'date': '2026-11-02', 'newUsers': 0, 'activeUsers': 6, 'interactions': 9},
-            'previousDay': {'date': '2026-11-03', 'newUsers': 2, 'activeUsers': 3, 'interactions': 9},
-            'last7Days': {'startDate': '2026-10-28', 'newUsers': 6, 'activeUsers': 7, 'interactions': 20},
-            'totals': {'registeredUsers': 10, 'enabledAlertUsers': 5},
-            'generatedAt': '2026-11-04T00:01:00Z',
-        }},
         'channelStats': {
             'aiChannel': {'currentSnapshot': {'memberCount': 105, 'collectedAt': '2026-11-04T00:01:00Z'},
                 'previousDay': {'date': '2026-11-03', 'status': 'sent', 'publishedItems': 2,
@@ -36,40 +29,38 @@ def fixture():
 
 
 class EmailReportTest(unittest.TestCase):
-    def test_combines_sites_and_telegram(self):
-        subject, body = module.build_message(fixture())
+    def test_combines_website_and_channel_reports_without_bot_metrics(self):
+        stats = fixture()
+        stats['reportDate'] = '2026-11-03'
+        stats['products'] = [
+            {'key': 'running', 'kind': 'website', 'name': 'Running'},
+            {'key': 'aiChannel', 'kind': 'telegram-channel', 'name': 'AI Product Radar', 'nameZh': 'AI产品雷达', 'url': 'https://t.me/ai_product_radar_cn'},
+            {'key': 'steamChannel', 'kind': 'telegram-channel', 'name': 'Steam Deals Radar', 'nameZh': 'Steam折扣情报局', 'url': 'https://t.me/steam_deals_radar_cn'},
+        ]
+        subject, body = module.build_message(stats)
         self.assertIn('2026-11-03', subject)
         self.assertNotIn('个人站', body)
         self.assertNotIn('gelatoni.uk', body)
-        for expected in ['running.example', 'Remote Job Radar',
-                         '2026-10-28', '2026-11-04T00:01:00Z', '前天', '+4 (+50.0%)', '+2 (前天为 0)', '-3 (-50.0%)']:
+        for expected in ['running.example', 'AI产品雷达', 'Steam折扣情报局', '前天',
+                         '105', '44', 'sent', 'no_content']:
             self.assertIn(expected, body)
+        self.assertNotIn('Remote Job Radar', body)
+        self.assertNotIn('JAVIndexBot', body)
 
     def test_multiple_products_with_unknown_history(self):
         stats = fixture()
         stats['reportDate'] = '2026-11-03'
         stats['products'] = [
             {'key': 'running', 'kind': 'website', 'name': 'Running'},
-            {'key': 'jobRadar', 'kind': 'telegram', 'name': 'Remote Job Radar'},
-            {'key': 'metadata', 'kind': 'telegram', 'name': 'JAVIndexBot'},
             {'key': 'aiChannel', 'kind': 'telegram-channel', 'name': 'AI Product Radar', 'nameZh': 'AI产品雷达', 'url': 'https://t.me/ai_product_radar_cn'},
             {'key': 'steamChannel', 'kind': 'telegram-channel', 'name': 'Steam Deals Radar', 'nameZh': 'Steam折扣情报局', 'url': 'https://t.me/steam_deals_radar_cn'},
         ]
-        import copy
-        bot = copy.deepcopy(stats['businesses']['jobRadar'])
-        bot['trackingSince'] = '2026-11-04T00:00:00Z'
-        for period in ['previousDay', 'dayBeforePrevious', 'last7Days']:
-            bot[period].update(activeUsers=None, interactions=None, searches=None)
-        del bot['totals']['enabledAlertUsers']
-        stats['businesses']['metadata'] = bot
         subject, body = module.build_message(stats)
         self.assertIn('产品使用日报', subject)
-        self.assertIn('3. JAVIndexBot', body)
-        self.assertIn('AI产品雷达', body)
+        self.assertIn('2. AI产品雷达', body)
         self.assertIn('105', body)
-        self.assertIn('查询请求：— → —', body)
         self.assertNotIn('None', body)
-        self.assertEqual(body.count('当前启用提醒'), 1)
+        self.assertNotIn('当前启用提醒', body)
 
     def test_zero_baseline(self):
         self.assertEqual(module.change(0, 0), '+0 (0%)')
@@ -77,24 +68,14 @@ class EmailReportTest(unittest.TestCase):
 
     def test_failure_notice_has_step_and_actions_link_without_log_content(self):
         subject, body = module.build_failure_message(
-            'Fetch Cloudflare and Telegram statistics', 'gelatoni-xh/gelatoni-xh', '42444370481', '2', 'schedule', 'refs/heads/main'
+            'Fetch Cloudflare and channel statistics', 'gelatoni-xh/gelatoni-xh', '42444370481', '2', 'schedule', 'refs/heads/main'
         )
         self.assertIn('失败', subject)
-        self.assertIn('Fetch Cloudflare and Telegram statistics', body)
+        self.assertIn('Fetch Cloudflare and channel statistics', body)
         self.assertIn('https://github.com/gelatoni-xh/gelatoni-xh/actions/runs/42444370481', body)
         self.assertIn('运行尝试：2', body)
         self.assertNotIn('MAIL_CONFIG', body)
         self.assertNotIn('raw SSH output', body)
-
-    def test_missing_or_stale_bot_fails(self):
-        stats = fixture()
-        stats['businesses']['jobRadar']['previousDay']['date'] = '2026-11-02'
-        with self.assertRaises(ValueError):
-            module.build_message(stats)
-        del stats['businesses']
-        with self.assertRaises(KeyError):
-            module.build_message(stats)
-
 
 if __name__ == '__main__':
     unittest.main()

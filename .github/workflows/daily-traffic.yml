@@ -21,18 +21,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check Telegram snapshot validation and email rendering
+      - name: Check channel statistics and email rendering
         id: tests
         run: |
           node --test scripts/*.test.mjs
           python3 scripts/test-traffic-email.py
-      - name: Fetch Cloudflare and Telegram statistics
+      - name: Fetch Cloudflare and channel statistics
         id: fetch
         env:
-          TELEGRAM_STATS_BOT_TOKEN: ${{ secrets.TELEGRAM_STATS_BOT_TOKEN }}
-          METADATA_STATS_BOT_TOKEN: ${{ secrets.METADATA_STATS_BOT_TOKEN }}
-          METADATA_STATS_CHAT_ID: ${{ secrets.METADATA_STATS_CHAT_ID }}
-          TELEGRAM_STATS_CHAT_ID: ${{ secrets.TELEGRAM_STATS_CHAT_ID }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CHANNEL_STATS_SSH_HOST: ${{ secrets.CHANNEL_STATS_SSH_HOST }}
@@ -82,9 +78,9 @@ jobs:
             exit 0
           fi
           if [ "$TESTS_OUTCOME" = failure ]; then
-            export FAILED_STEP="Check Telegram snapshot validation and email rendering"
+            export FAILED_STEP="Check channel statistics and email rendering"
           elif [ "$FETCH_OUTCOME" = failure ]; then
-            export FAILED_STEP="Fetch Cloudflare and Telegram statistics"
+            export FAILED_STEP="Fetch Cloudflare and channel statistics"
           elif [ "$COMMIT_OUTCOME" = failure ]; then
             export FAILED_STEP="Commit statistics"
           elif [ "$REPORT_EMAIL_OUTCOME" = failure ]; then
