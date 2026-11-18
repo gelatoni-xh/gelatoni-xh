@@ -79,63 +79,40 @@ The enterprise systems used company-specific infrastructure. I describe those to
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-16**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-18 through 2026-11-16.
+Previous day: **2026-11-17**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-19 through 2026-11-17.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 25 | 119 | +94 (+376%) | 1308 |
-| Visits | 20 | 65 | +45 (+225%) | 679 |
-
-### [Remote Job Radar](https://t.me/GelatoniJobRadarBot)
-
-| Metric | Prior day | Yesterday | Daily change | Last 7 days |
-| --- | ---: | ---: | ---: | ---: |
-| New users | 0 | 0 | 0 (0%) | 0 |
-| Active users | 0 | 0 | 0 (0%) | 0 |
-| Interactions | 0 | 0 | 0 (0%) | 0 |
-
-Registered users: 0; enabled alerts: 0.
-
-### [JAVIndexBot](https://t.me/JAVIndexBot)
-
-| Metric | Prior day | Yesterday | Daily change | Last 7 days |
-| --- | ---: | ---: | ---: | ---: |
-| New users | 0 | 0 | 0 (0%) | 0 |
-| Active users | 0 | 0 | 0 (0%) | 0 |
-| Interactions | 0 | 0 | 0 (0%) | 0 |
-| Search requests | 0 | 0 | 0 (0%) | 0 |
-
-Registered users: 0.
-
-Interaction tracking started 2026-11-05T01:33:42.493Z (UTC). Unavailable or incomplete periods are shown as “—”.
+| Views | 119 | 134 | +15 (+12.6%) | 1519 |
+| Visits | 65 | 44 | -21 (-32.3%) | 761 |
 
 ### [AI Product Radar](https://t.me/ai_product_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
-| Status | no_run | Published |
-| Items published | 0 | 2 |
+| Status | Published | Published |
+| Items published | 2 | 7 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-16T15:20:02.308Z.
-Current subscribers: 2 (2026-11-17; collected 2026-11-17 06:02:06 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/18).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-17T15:20:03.403Z.
+Current subscribers: 2 (2026-11-18; collected 2026-11-18 06:30:49 UTC).
+Yesterday's post: [view message](https://t.me/ai_product_radar_cn/19).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
-| Status | no_run | Published |
-| Items published | 0 | 2 |
+| Status | Published | Published |
+| Items published | 2 | 1 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-16T15:20:02.780Z.
-Current subscribers: 2 (2026-11-17; collected 2026-11-17 06:02:06 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/11).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-17T15:20:03.451Z.
+Current subscribers: 2 (2026-11-18; collected 2026-11-18 06:30:49 UTC).
+Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/12).
 
-Websites use Cloudflare Web Analytics; bot activity uses private Telegram aggregate snapshots; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
+Websites use Cloudflare Web Analytics; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
 
 ## Education
