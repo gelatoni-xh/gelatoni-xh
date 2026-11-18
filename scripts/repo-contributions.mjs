@@ -83,7 +83,7 @@ export function renderSvg(repositories, from, to) {
   return lines.join('\n') + '\n';
 }
 
-export function renderMarkdown(repositories, from, to, chinese) {
+export function renderMarkdown(from, to, chinese) {
   const lines = [
     '<!-- CONTRIBUTIONS:START -->',
     chinese ? '## 最近 30 天的仓库贡献' : '## Repository contributions, last 30 days',
@@ -93,12 +93,8 @@ export function renderMarkdown(repositories, from, to, chinese) {
     chinese ? `统计区间：${from} 至 ${to}（北京时间，30 个完整自然日）。总量 = Commit + PR + Issue + Review；仅统计 GitHub 记录的公开仓库贡献。` :
       `Period: ${from} through ${to} (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.`,
     '',
-    chinese ? '| 仓库 | 总量 |' : '| Repository | Total |',
-    '| --- | ---: |',
-    ...repositories.map(repo => `| [${repo.name}](${repo.url}) | **${repo.total}** |`),
+    '<!-- CONTRIBUTIONS:END -->',
   ];
-  if (!repositories.length) lines.push(chinese ? '| 暂无公开贡献 | 0 |' : '| No public contributions | 0 |');
-  lines.push('<!-- CONTRIBUTIONS:END -->');
   return lines.join('\n');
 }
 
@@ -142,7 +138,7 @@ export async function update() {
   const startDate = shanghaiDate(from);
   const endDate = shanghaiDate(to);
   const readmes = await Promise.all([['README.md', false], ['README.zh-CN.md', true]].map(async ([path, chinese]) =>
-    [path, replaceSection(await readFile(path, 'utf8'), renderMarkdown(repositories, startDate, endDate, chinese))]));
+    [path, replaceSection(await readFile(path, 'utf8'), renderMarkdown(startDate, endDate, chinese))]));
   await writeFile('analytics/repo-contributions.json', JSON.stringify({
     generatedAt: new Date().toISOString(), timezone: 'Asia/Shanghai',
     startDate, endDate, repositories,

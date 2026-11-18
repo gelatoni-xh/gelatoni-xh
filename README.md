@@ -27,25 +27,6 @@ Recent posts and longer notes are on [gelatoni.uk](https://gelatoni.uk/en/articl
 
 Period: 2026-10-20 through 2026-11-18 (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.
 
-| Repository | Total |
-| --- | ---: |
-| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | **106** |
-| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | **84** |
-| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | **70** |
-| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | **34** |
-| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | **16** |
-| [gelatoni-xh/telegram-channel-matrix](https://github.com/gelatoni-xh/telegram-channel-matrix) | **12** |
-| [gelatoni-xh/telegram-opportunity-atlas](https://github.com/gelatoni-xh/telegram-opportunity-atlas) | **11** |
-| [gelatoni-xh/telegram-metadata](https://github.com/gelatoni-xh/telegram-metadata) | **7** |
-| [adorsys/keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli) | **3** |
-| [apache/opennlp](https://github.com/apache/opennlp) | **2** |
-| [checkstyle/checkstyle](https://github.com/checkstyle/checkstyle) | **2** |
-| [jbangdev/jbang](https://github.com/jbangdev/jbang) | **2** |
-| [repowise-dev/repowise](https://github.com/repowise-dev/repowise) | **2** |
-| [adrienverge/yamllint](https://github.com/adrienverge/yamllint) | **1** |
-| [apache/iggy](https://github.com/apache/iggy) | **1** |
-| [gelatoni-xh/iggy](https://github.com/gelatoni-xh/iggy) | **1** |
-| [pmd/pmd](https://github.com/pmd/pmd) | **1** |
 <!-- CONTRIBUTIONS:END -->
 
 <!-- TRAFFIC:START -->

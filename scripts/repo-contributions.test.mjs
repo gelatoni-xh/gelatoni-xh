@@ -19,10 +19,12 @@ test('adds four contribution types by public repository and sorts totals', () =>
   assert.equal(repos[0].commits, 2);
 });
 
-test('renders an escaped chart and a linked table', () => {
+test('renders an escaped chart and a chart-only README section', () => {
   const repos = [{ name: 'owner/a&b', url: 'https://github.com/owner/a-b', commits: 2, pullRequests: 1, issues: 0, reviews: 0, total: 3 }];
   assert.match(renderSvg(repos, '2026-10-20', '2026-11-19'), /owner\/a&amp;b/);
-  assert.match(renderMarkdown(repos, '2026-10-20', '2026-11-19', true), /\[owner\/a&b\]\(https:\/\/github.com\/owner\/a-b\)/);
+  const markdown = renderMarkdown('2026-10-20', '2026-11-19', true);
+  assert.match(markdown, /repo-contributions\.svg/);
+  assert.doesNotMatch(markdown, /\| 仓库 \| 总量 \|/);
   assert.match(replaceSection('before\n<!-- TRAFFIC:START -->', 'chart'), /before\nchart\n\n<!-- TRAFFIC:START -->/);
   assert.equal(replaceSection('a <!-- CONTRIBUTIONS:START -->old<!-- CONTRIBUTIONS:END --> z', '<!-- CONTRIBUTIONS:START -->new<!-- CONTRIBUTIONS:END -->'), 'a <!-- CONTRIBUTIONS:START -->new<!-- CONTRIBUTIONS:END --> z');
 });
