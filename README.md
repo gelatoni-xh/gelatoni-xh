@@ -32,14 +32,14 @@ Period: 2026-10-20 through 2026-11-18 (30 complete Asia/Shanghai days). Total = 
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-17**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-19 through 2026-11-17.
+Previous day: **2026-11-18**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-20 through 2026-11-18.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 119 | 134 | +15 (+12.6%) | 1519 |
-| Visits | 65 | 44 | -21 (-32.3%) | 761 |
+| Views | 134 | 143 | +9 (+6.7%) | 1660 |
+| Visits | 44 | 30 | -14 (-31.8%) | 801 |
 
 ### [AI Product Radar](https://t.me/ai_product_radar_cn)
 
@@ -47,11 +47,11 @@ Previous day: **2026-11-17**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
 | Status | Published | Published |
-| Items published | 2 | 7 |
+| Items published | 7 | 8 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-17T15:20:03.403Z.
-Current subscribers: 2 (2026-11-18; collected 2026-11-18 06:30:49 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/19).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-18T15:20:02.251Z.
+Current subscribers: 2 (2026-11-19; collected 2026-11-19 05:29:12 UTC).
+Yesterday's post: [view message](https://t.me/ai_product_radar_cn/20).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
@@ -59,11 +59,11 @@ Yesterday's post: [view message](https://t.me/ai_product_radar_cn/19).
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
 | Status | Published | Published |
-| Items published | 2 | 1 |
+| Items published | 1 | 1 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-17T15:20:03.451Z.
-Current subscribers: 2 (2026-11-18; collected 2026-11-18 06:30:49 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/12).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-18T15:20:02.262Z.
+Current subscribers: 2 (2026-11-19; collected 2026-11-19 05:29:12 UTC).
+Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/13).
 
 Websites use Cloudflare Web Analytics; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
