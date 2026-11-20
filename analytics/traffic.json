@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T05:28:56.274Z",
+  "generatedAt": "2026-11-20T05:16:34.875Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -10,39 +10,39 @@
     "running": {
       "domain": "tasukikeifu.com",
       "previousDay": {
+        "startDate": "2026-11-19",
+        "endDateExclusive": "2026-11-20",
+        "pageViews": 162,
+        "visits": 49,
+        "sampled": false
+      },
+      "dayBeforePrevious": {
         "startDate": "2026-11-18",
         "endDateExclusive": "2026-11-19",
         "pageViews": 143,
         "visits": 30,
         "sampled": false
       },
-      "dayBeforePrevious": {
-        "startDate": "2026-11-17",
-        "endDateExclusive": "2026-11-18",
-        "pageViews": 134,
-        "visits": 44,
-        "sampled": false
-      },
       "comparison": {
         "pageViews": {
-          "difference": 9,
-          "percent": 6.7164179104477615
+          "difference": 19,
+          "percent": 13.286713286713287
         },
         "visits": {
-          "difference": -14,
-          "percent": -31.818181818181817
+          "difference": 19,
+          "percent": 63.333333333333336
         }
       },
       "last30Days": {
-        "startDate": "2026-10-20",
-        "endDateExclusive": "2026-11-19",
-        "pageViews": 1660,
-        "visits": 801,
+        "startDate": "2026-10-21",
+        "endDateExclusive": "2026-11-20",
+        "pageViews": 1799,
+        "visits": 850,
         "sampled": true
       }
     }
   },
-  "reportDate": "2026-11-18",
+  "reportDate": "2026-11-19",
   "products": [
     {
       "key": "running",
@@ -69,14 +69,23 @@
   "channelStats": {
     "aiChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-19T05:29:10.104176+00:00",
+      "generatedAt": "2026-11-20T05:16:50.961674+00:00",
       "currentSnapshot": {
-        "date": "2026-11-19",
-        "collectedAt": "2026-11-19T05:29:12.856Z",
+        "date": "2026-11-20",
+        "collectedAt": "2026-11-20T05:16:54.046Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
       "previousDay": {
+        "date": "2026-11-19",
+        "status": "sent",
+        "publishedItems": 8,
+        "memberCount": 2,
+        "messageId": 22,
+        "url": "https://t.me/ai_product_radar_cn/22",
+        "collectedAt": "2026-11-19T15:20:02.582Z"
+      },
+      "dayBeforePrevious": {
         "date": "2026-11-18",
         "status": "sent",
         "publishedItems": 8,
@@ -84,15 +93,6 @@
         "messageId": 20,
         "url": "https://t.me/ai_product_radar_cn/20",
         "collectedAt": "2026-11-18T15:20:02.251Z"
-      },
-      "dayBeforePrevious": {
-        "date": "2026-11-17",
-        "status": "sent",
-        "publishedItems": 7,
-        "memberCount": 2,
-        "messageId": 19,
-        "url": "https://t.me/ai_product_radar_cn/19",
-        "collectedAt": "2026-11-17T15:20:03.403Z"
       },
       "daily": [
         {
@@ -220,19 +220,37 @@
           "messageId": 20,
           "url": "https://t.me/ai_product_radar_cn/20",
           "collectedAt": "2026-11-18T15:20:02.251Z"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "sent",
+          "publishedItems": 8,
+          "memberCount": 2,
+          "messageId": 22,
+          "url": "https://t.me/ai_product_radar_cn/22",
+          "collectedAt": "2026-11-19T15:20:02.582Z"
         }
       ]
     },
     "steamChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-19T05:29:10.104176+00:00",
+      "generatedAt": "2026-11-20T05:16:50.961674+00:00",
       "currentSnapshot": {
-        "date": "2026-11-19",
-        "collectedAt": "2026-11-19T05:29:12.856Z",
+        "date": "2026-11-20",
+        "collectedAt": "2026-11-20T05:16:54.046Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
       "previousDay": {
+        "date": "2026-11-19",
+        "status": "sent",
+        "publishedItems": 2,
+        "memberCount": null,
+        "messageId": 14,
+        "url": "https://t.me/steam_deals_radar_cn/14",
+        "collectedAt": "2026-11-19T15:20:02.764Z"
+      },
+      "dayBeforePrevious": {
         "date": "2026-11-18",
         "status": "sent",
         "publishedItems": 1,
@@ -240,15 +258,6 @@
         "messageId": 13,
         "url": "https://t.me/steam_deals_radar_cn/13",
         "collectedAt": "2026-11-18T15:20:02.262Z"
-      },
-      "dayBeforePrevious": {
-        "date": "2026-11-17",
-        "status": "sent",
-        "publishedItems": 1,
-        "memberCount": 2,
-        "messageId": 12,
-        "url": "https://t.me/steam_deals_radar_cn/12",
-        "collectedAt": "2026-11-17T15:20:03.451Z"
       },
       "daily": [
         {
@@ -376,6 +385,15 @@
           "messageId": 13,
           "url": "https://t.me/steam_deals_radar_cn/13",
           "collectedAt": "2026-11-18T15:20:02.262Z"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": null,
+          "messageId": 14,
+          "url": "https://t.me/steam_deals_radar_cn/14",
+          "collectedAt": "2026-11-19T15:20:02.764Z"
         }
       ]
     }

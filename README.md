@@ -25,21 +25,21 @@ Recent posts and longer notes are on [gelatoni.uk](https://gelatoni.uk/en/articl
 
 ![Stacked contribution chart by repository](https://gelatoni-xh.github.io/gelatoni-xh/assets/repo-contributions.svg)
 
-Period: 2026-10-20 through 2026-11-18 (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.
+Period: 2026-10-21 through 2026-11-19 (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.
 
 <!-- CONTRIBUTIONS:END -->
 
 <!-- TRAFFIC:START -->
 ## Service usage
 
-Previous day: **2026-11-18**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-20 through 2026-11-18.
+Previous day: **2026-11-19**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10-21 through 2026-11-19.
 
 ### [Tasuki Keifu](https://tasukikeifu.com)
 
 | Metric | Prior day | Yesterday | Daily change | Last 30 days |
 | --- | ---: | ---: | ---: | ---: |
-| Views | 134 | 143 | +9 (+6.7%) | 1660 |
-| Visits | 44 | 30 | -14 (-31.8%) | 801 |
+| Views | 143 | 162 | +19 (+13.3%) | 1799 |
+| Visits | 30 | 49 | +19 (+63.3%) | 850 |
 
 ### [AI Product Radar](https://t.me/ai_product_radar_cn)
 
@@ -47,23 +47,23 @@ Previous day: **2026-11-18**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 | --- | ---: | ---: |
 | Subscribers | 2 | 2 |
 | Status | Published | Published |
-| Items published | 7 | 8 |
+| Items published | 8 | 8 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-18T15:20:02.251Z.
-Current subscribers: 2 (2026-11-19; collected 2026-11-19 05:29:12 UTC).
-Yesterday's post: [view message](https://t.me/ai_product_radar_cn/20).
+Subscriber change yesterday: +0; snapshot collected: 2026-11-19T15:20:02.582Z.
+Current subscribers: 2 (2026-11-20; collected 2026-11-20 05:16:54 UTC).
+Yesterday's post: [view message](https://t.me/ai_product_radar_cn/22).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
 
 | Metric | Prior day | Yesterday |
 | --- | ---: | ---: |
-| Subscribers | 2 | 2 |
+| Subscribers | 2 | — |
 | Status | Published | Published |
-| Items published | 1 | 1 |
+| Items published | 1 | 2 |
 
-Subscriber change yesterday: +0; snapshot collected: 2026-11-18T15:20:02.262Z.
-Current subscribers: 2 (2026-11-19; collected 2026-11-19 05:29:12 UTC).
-Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/13).
+Subscriber change yesterday: —; snapshot collected: 2026-11-19T15:20:02.764Z.
+Current subscribers: 2 (2026-11-20; collected 2026-11-20 05:16:54 UTC).
+Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/14).
 
 Websites use Cloudflare Web Analytics; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
 <!-- TRAFFIC:END -->
