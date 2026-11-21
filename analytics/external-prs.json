@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-11-21T11:29:20.166Z",
+  "timezone": "Asia/Shanghai",
+  "items": [
+    {
+      "repository": "CurvineIO/curvine",
+      "number": 2329,
+      "title": "fix(fs): keep mkdir and touch status off stdout (#2318)",
+      "url": "https://github.com/CurvineIO/curvine/pull/2329",
+      "mergedAt": "2026-11-21T04:32:26Z"
+    },
+    {
+      "repository": "adorsys/keycloak-config-cli",
+      "number": 1746,
+      "title": "fix: use configured client for user profile updates",
+      "url": "https://github.com/adorsys/keycloak-config-cli/pull/1746",
+      "mergedAt": "2026-11-20T11:55:46Z"
+    },
+    {
+      "repository": "adorsys/keycloak-config-cli",
+      "number": 1745,
+      "title": "Fix workflow restart and cancel field mapping",
+      "url": "https://github.com/adorsys/keycloak-config-cli/pull/1745",
+      "mergedAt": "2026-11-20T11:48:41Z"
+    },
+    {
+      "repository": "adorsys/keycloak-config-cli",
+      "number": 1744,
+      "title": "fix: remove private keys from normalization baselines",
+      "url": "https://github.com/adorsys/keycloak-config-cli/pull/1744",
+      "mergedAt": "2026-11-20T10:43:09Z"
+    },
+    {
+      "repository": "apache/opennlp",
+      "number": 1584,
+      "title": "GH-1581: Return unmodifiable EOS characters",
+      "url": "https://github.com/apache/opennlp/pull/1584",
+      "mergedAt": "2026-11-18T12:00:48Z"
+    },
+    {
+      "repository": "repowise-dev/repowise",
+      "number": 5388,
+      "title": "fix(init): include hotspots in the generation plan",
+      "url": "https://github.com/repowise-dev/repowise/pull/5388",
+      "mergedAt": "2026-11-13T06:21:50Z"
+    },
+    {
+      "repository": "checkstyle/checkstyle",
+      "number": 22495,
+      "title": "Issue #21417: Replace suppression XML concatenations with text blocks",
+      "url": "https://github.com/checkstyle/checkstyle/pull/22495",
+      "mergedAt": "2026-11-08T05:11:15Z"
+    }
+  ]
+}
