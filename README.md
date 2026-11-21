@@ -57,7 +57,7 @@ Previous day: **2026-11-20**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 | Items published | 8 | 8 |
 
 Subscriber change yesterday: +0; snapshot collected: 2026-11-20T15:20:02.574Z.
-Current subscribers: 2 (2026-11-21; collected 2026-11-21 11:38:15 UTC).
+Current subscribers: 2 (2026-11-21; collected 2026-11-21 11:52:21 UTC).
 Yesterday's post: [view message](https://t.me/ai_product_radar_cn/24).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
@@ -69,7 +69,7 @@ Yesterday's post: [view message](https://t.me/ai_product_radar_cn/24).
 | Items published | 2 | 3 |
 
 Subscriber change yesterday: —; snapshot collected: 2026-11-20T15:20:02.576Z.
-Current subscribers: 2 (2026-11-21; collected 2026-11-21 11:38:15 UTC).
+Current subscribers: 2 (2026-11-21; collected 2026-11-21 11:52:21 UTC).
 Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/15).
 
 Websites use Cloudflare Web Analytics; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).
