@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-11-20T05:16:55.279Z",
+  "generatedAt": "2026-11-21T05:09:11.334Z",
   "timezone": "Asia/Shanghai",
-  "startDate": "2026-10-21",
-  "endDate": "2026-11-19",
+  "startDate": "2026-10-22",
+  "endDate": "2026-11-20",
   "repositories": [
     {
       "name": "gelatoni-xh/tasuki-keifu-agent",
       "url": "https://github.com/gelatoni-xh/tasuki-keifu-agent",
-      "commits": 65,
-      "pullRequests": 34,
-      "issues": 18,
+      "commits": 68,
+      "pullRequests": 36,
+      "issues": 19,
       "reviews": 0,
-      "total": 117
+      "total": 123
     },
     {
       "name": "gelatoni-xh/personal-site",
       "url": "https://github.com/gelatoni-xh/personal-site",
-      "commits": 66,
-      "pullRequests": 19,
+      "commits": 70,
+      "pullRequests": 21,
       "issues": 4,
       "reviews": 0,
-      "total": 89
+      "total": 95
     },
     {
       "name": "gelatoni-xh/tasuki-keifu",
@@ -68,6 +68,15 @@
       "total": 11
     },
     {
+      "name": "adorsys/keycloak-config-cli",
+      "url": "https://github.com/adorsys/keycloak-config-cli",
+      "commits": 4,
+      "pullRequests": 3,
+      "issues": 0,
+      "reviews": 0,
+      "total": 7
+    },
+    {
       "name": "gelatoni-xh/telegram-metadata",
       "url": "https://github.com/gelatoni-xh/telegram-metadata",
       "commits": 6,
@@ -75,15 +84,6 @@
       "issues": 0,
       "reviews": 0,
       "total": 7
-    },
-    {
-      "name": "adorsys/keycloak-config-cli",
-      "url": "https://github.com/adorsys/keycloak-config-cli",
-      "commits": 0,
-      "pullRequests": 3,
-      "issues": 0,
-      "reviews": 0,
-      "total": 3
     },
     {
       "name": "repowise-dev/repowise",
@@ -133,6 +133,15 @@
     {
       "name": "apache/iggy",
       "url": "https://github.com/apache/iggy",
+      "commits": 0,
+      "pullRequests": 1,
+      "issues": 0,
+      "reviews": 0,
+      "total": 1
+    },
+    {
+      "name": "CurvineIO/curvine",
+      "url": "https://github.com/CurvineIO/curvine",
       "commits": 0,
       "pullRequests": 1,
       "issues": 0,

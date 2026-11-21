@@ -1,0 +1,721 @@
+{
+  "generatedAt": "2026-11-21T05:08:57.507Z",
+  "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
+  "timezone": "Asia/Shanghai",
+  "metrics": {
+    "pageViews": "Browser page load events; may be estimated through adaptive sampling",
+    "visits": "Page views initiated from a different website (referrer hostname differs); not unique users or GA4 sessions"
+  },
+  "sites": {
+    "running": {
+      "domain": "tasukikeifu.com",
+      "previousDay": {
+        "startDate": "2026-11-20",
+        "endDateExclusive": "2026-11-21",
+        "pageViews": 91,
+        "visits": 19,
+        "sampled": false
+      },
+      "dayBeforePrevious": {
+        "startDate": "2026-11-19",
+        "endDateExclusive": "2026-11-20",
+        "pageViews": 162,
+        "visits": 49,
+        "sampled": false
+      },
+      "comparison": {
+        "pageViews": {
+          "difference": -71,
+          "percent": -43.82716049382716
+        },
+        "visits": {
+          "difference": -30,
+          "percent": -61.224489795918366
+        }
+      },
+      "last30Days": {
+        "startDate": "2026-10-22",
+        "endDateExclusive": "2026-11-21",
+        "pageViews": 1869,
+        "visits": 880,
+        "sampled": true
+      }
+    }
+  },
+  "reportDate": "2026-11-20",
+  "products": [
+    {
+      "key": "running",
+      "kind": "website",
+      "name": "Tasuki Keifu",
+      "nameZh": "跑步数据站",
+      "url": "https://tasukikeifu.com"
+    },
+    {
+      "key": "aiChannel",
+      "kind": "telegram-channel",
+      "name": "AI Product Radar",
+      "nameZh": "AI产品雷达",
+      "url": "https://t.me/ai_product_radar_cn"
+    },
+    {
+      "key": "steamChannel",
+      "kind": "telegram-channel",
+      "name": "Steam Deals Radar",
+      "nameZh": "Steam折扣情报局",
+      "url": "https://t.me/steam_deals_radar_cn"
+    }
+  ],
+  "channelStats": {
+    "aiChannel": {
+      "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
+      "generatedAt": "2026-11-21T05:09:08.105272+00:00",
+      "currentSnapshot": {
+        "date": "2026-11-21",
+        "collectedAt": "2026-11-21T05:09:10.066Z",
+        "memberCount": 2
+      },
+      "trackingSince": "2026-11-07",
+      "previousDay": {
+        "date": "2026-11-20",
+        "status": "sent",
+        "publishedItems": 8,
+        "memberCount": 2,
+        "messageId": 24,
+        "url": "https://t.me/ai_product_radar_cn/24",
+        "collectedAt": "2026-11-20T15:20:02.574Z"
+      },
+      "dayBeforePrevious": {
+        "date": "2026-11-19",
+        "status": "sent",
+        "publishedItems": 8,
+        "memberCount": 2,
+        "messageId": 22,
+        "url": "https://t.me/ai_product_radar_cn/22",
+        "collectedAt": "2026-11-19T15:20:02.582Z"
+      },
+      "daily": [
+        {
+          "date": "2026-11-05",
+          "status": "sent",
+          "publishedItems": 4,
+          "memberCount": null,
+          "messageId": 5,
+          "url": "https://t.me/ai_product_radar_cn/5",
+          "collectedAt": null
+        },
+        {
+          "date": "2026-11-06",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": null,
+          "messageId": 6,
+          "url": "https://t.me/ai_product_radar_cn/6",
+          "collectedAt": null
+        },
+        {
+          "date": "2026-11-07",
+          "status": "sent",
+          "publishedItems": 9,
+          "memberCount": 2,
+          "messageId": 8,
+          "url": "https://t.me/ai_product_radar_cn/8",
+          "collectedAt": "2026-11-07T15:20:03.764Z"
+        },
+        {
+          "date": "2026-11-08",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-08T15:20:05.750Z"
+        },
+        {
+          "date": "2026-11-09",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-09T15:20:04.335Z"
+        },
+        {
+          "date": "2026-11-10",
+          "status": "sent",
+          "publishedItems": 9,
+          "memberCount": 2,
+          "messageId": 11,
+          "url": "https://t.me/ai_product_radar_cn/11",
+          "collectedAt": "2026-11-10T15:20:04.151Z"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "sent",
+          "publishedItems": 4,
+          "memberCount": 2,
+          "messageId": 13,
+          "url": "https://t.me/ai_product_radar_cn/13",
+          "collectedAt": "2026-11-11T15:20:03.155Z"
+        },
+        {
+          "date": "2026-11-12",
+          "status": "sent",
+          "publishedItems": 5,
+          "memberCount": 2,
+          "messageId": 14,
+          "url": "https://t.me/ai_product_radar_cn/14",
+          "collectedAt": "2026-11-12T15:20:03.216Z"
+        },
+        {
+          "date": "2026-11-13",
+          "status": "sent",
+          "publishedItems": 6,
+          "memberCount": 2,
+          "messageId": 16,
+          "url": "https://t.me/ai_product_radar_cn/16",
+          "collectedAt": "2026-11-13T15:20:03.014Z"
+        },
+        {
+          "date": "2026-11-14",
+          "status": "sent",
+          "publishedItems": 5,
+          "memberCount": 2,
+          "messageId": 17,
+          "url": "https://t.me/ai_product_radar_cn/17",
+          "collectedAt": "2026-11-14T15:20:03.418Z"
+        },
+        {
+          "date": "2026-11-15",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-15T15:20:03.559Z"
+        },
+        {
+          "date": "2026-11-16",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": 2,
+          "messageId": 18,
+          "url": "https://t.me/ai_product_radar_cn/18",
+          "collectedAt": "2026-11-16T15:20:02.308Z"
+        },
+        {
+          "date": "2026-11-17",
+          "status": "sent",
+          "publishedItems": 7,
+          "memberCount": 2,
+          "messageId": 19,
+          "url": "https://t.me/ai_product_radar_cn/19",
+          "collectedAt": "2026-11-17T15:20:03.403Z"
+        },
+        {
+          "date": "2026-11-18",
+          "status": "sent",
+          "publishedItems": 8,
+          "memberCount": 2,
+          "messageId": 20,
+          "url": "https://t.me/ai_product_radar_cn/20",
+          "collectedAt": "2026-11-18T15:20:02.251Z"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "sent",
+          "publishedItems": 8,
+          "memberCount": 2,
+          "messageId": 22,
+          "url": "https://t.me/ai_product_radar_cn/22",
+          "collectedAt": "2026-11-19T15:20:02.582Z"
+        },
+        {
+          "date": "2026-11-20",
+          "status": "sent",
+          "publishedItems": 8,
+          "memberCount": 2,
+          "messageId": 24,
+          "url": "https://t.me/ai_product_radar_cn/24",
+          "collectedAt": "2026-11-20T15:20:02.574Z"
+        }
+      ]
+    },
+    "steamChannel": {
+      "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
+      "generatedAt": "2026-11-21T05:09:08.105272+00:00",
+      "currentSnapshot": {
+        "date": "2026-11-21",
+        "collectedAt": "2026-11-21T05:09:10.066Z",
+        "memberCount": 2
+      },
+      "trackingSince": "2026-11-07",
+      "previousDay": {
+        "date": "2026-11-20",
+        "status": "sent",
+        "publishedItems": 3,
+        "memberCount": 2,
+        "messageId": 15,
+        "url": "https://t.me/steam_deals_radar_cn/15",
+        "collectedAt": "2026-11-20T15:20:02.576Z"
+      },
+      "dayBeforePrevious": {
+        "date": "2026-11-19",
+        "status": "sent",
+        "publishedItems": 2,
+        "memberCount": null,
+        "messageId": 14,
+        "url": "https://t.me/steam_deals_radar_cn/14",
+        "collectedAt": "2026-11-19T15:20:02.764Z"
+      },
+      "daily": [
+        {
+          "date": "2026-11-05",
+          "status": "sent",
+          "publishedItems": 5,
+          "memberCount": null,
+          "messageId": 5,
+          "url": "https://t.me/steam_deals_radar_cn/5",
+          "collectedAt": null
+        },
+        {
+          "date": "2026-11-06",
+          "status": "sent",
+          "publishedItems": 1,
+          "memberCount": null,
+          "messageId": 6,
+          "url": "https://t.me/steam_deals_radar_cn/6",
+          "collectedAt": null
+        },
+        {
+          "date": "2026-11-07",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": 2,
+          "messageId": 7,
+          "url": "https://t.me/steam_deals_radar_cn/7",
+          "collectedAt": "2026-11-07T15:20:03.762Z"
+        },
+        {
+          "date": "2026-11-08",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-08T15:20:05.744Z"
+        },
+        {
+          "date": "2026-11-09",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-09T15:20:04.308Z"
+        },
+        {
+          "date": "2026-11-10",
+          "status": "sent",
+          "publishedItems": 1,
+          "memberCount": null,
+          "messageId": 8,
+          "url": "https://t.me/steam_deals_radar_cn/8",
+          "collectedAt": "2026-11-10T15:20:05.262Z"
+        },
+        {
+          "date": "2026-11-11",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": 2,
+          "messageId": 9,
+          "url": "https://t.me/steam_deals_radar_cn/9",
+          "collectedAt": "2026-11-11T15:20:03.297Z"
+        },
+        {
+          "date": "2026-11-12",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": 2,
+          "messageId": 10,
+          "url": "https://t.me/steam_deals_radar_cn/10",
+          "collectedAt": "2026-11-12T15:20:03.219Z"
+        },
+        {
+          "date": "2026-11-13",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": null,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-13T15:20:04.100Z"
+        },
+        {
+          "date": "2026-11-14",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-14T15:20:03.416Z"
+        },
+        {
+          "date": "2026-11-15",
+          "status": "no_run",
+          "publishedItems": 0,
+          "memberCount": 2,
+          "messageId": null,
+          "url": null,
+          "collectedAt": "2026-11-15T15:20:03.159Z"
+        },
+        {
+          "date": "2026-11-16",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": 2,
+          "messageId": 11,
+          "url": "https://t.me/steam_deals_radar_cn/11",
+          "collectedAt": "2026-11-16T15:20:02.780Z"
+        },
+        {
+          "date": "2026-11-17",
+          "status": "sent",
+          "publishedItems": 1,
+          "memberCount": 2,
+          "messageId": 12,
+          "url": "https://t.me/steam_deals_radar_cn/12",
+          "collectedAt": "2026-11-17T15:20:03.451Z"
+        },
+        {
+          "date": "2026-11-18",
+          "status": "sent",
+          "publishedItems": 1,
+          "memberCount": 2,
+          "messageId": 13,
+          "url": "https://t.me/steam_deals_radar_cn/13",
+          "collectedAt": "2026-11-18T15:20:02.262Z"
+        },
+        {
+          "date": "2026-11-19",
+          "status": "sent",
+          "publishedItems": 2,
+          "memberCount": null,
+          "messageId": 14,
+          "url": "https://t.me/steam_deals_radar_cn/14",
+          "collectedAt": "2026-11-19T15:20:02.764Z"
+        },
+        {
+          "date": "2026-11-20",
+          "status": "sent",
+          "publishedItems": 3,
+          "memberCount": 2,
+          "messageId": 15,
+          "url": "https://t.me/steam_deals_radar_cn/15",
+          "collectedAt": "2026-11-20T15:20:02.576Z"
+        }
+      ]
+    }
+  },
+  "daily": [
+    {
+      "date": "2026-10-22",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "sites": {
+        "running": {
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "sites": {
+        "running": {
+          "pageViews": 0,
+          "visits": 0,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "sites": {
+        "running": {
+          "pageViews": 60,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "sites": {
+        "running": {
+          "pageViews": 10,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "sites": {
+        "running": {
+          "pageViews": 30,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "sites": {
+        "running": {
+          "pageViews": 30,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "sites": {
+        "running": {
+          "pageViews": 20,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "sites": {
+        "running": {
+          "pageViews": 90,
+          "visits": 60,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "sites": {
+        "running": {
+          "pageViews": 60,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "sites": {
+        "running": {
+          "pageViews": 50,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "sites": {
+        "running": {
+          "pageViews": 150,
+          "visits": 40,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "sites": {
+        "running": {
+          "pageViews": 50,
+          "visits": 20,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "sites": {
+        "running": {
+          "pageViews": 70,
+          "visits": 70,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "sites": {
+        "running": {
+          "pageViews": 120,
+          "visits": 80,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "sites": {
+        "running": {
+          "pageViews": 40,
+          "visits": 10,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "sites": {
+        "running": {
+          "pageViews": 60,
+          "visits": 50,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-11",
+      "sites": {
+        "running": {
+          "pageViews": 80,
+          "visits": 40,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-12",
+      "sites": {
+        "running": {
+          "pageViews": 80,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-13",
+      "sites": {
+        "running": {
+          "pageViews": 80,
+          "visits": 30,
+          "sampled": true
+        }
+      }
+    },
+    {
+      "date": "2026-11-14",
+      "sites": {
+        "running": {
+          "pageViews": 15,
+          "visits": 13,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-15",
+      "sites": {
+        "running": {
+          "pageViews": 25,
+          "visits": 20,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-16",
+      "sites": {
+        "running": {
+          "pageViews": 119,
+          "visits": 65,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "sites": {
+        "running": {
+          "pageViews": 134,
+          "visits": 44,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "sites": {
+        "running": {
+          "pageViews": 143,
+          "visits": 30,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-19",
+      "sites": {
+        "running": {
+          "pageViews": 162,
+          "visits": 49,
+          "sampled": false
+        }
+      }
+    },
+    {
+      "date": "2026-11-20",
+      "sites": {
+        "running": {
+          "pageViews": 91,
+          "visits": 19,
+          "sampled": false
+        }
+      }
+    }
+  ]
+}
