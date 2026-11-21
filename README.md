@@ -64,7 +64,7 @@ Recent posts and longer notes are on [gelatoni.uk](https://gelatoni.uk/en/articl
 <!-- EXTERNAL-PRS:START -->
 ## Recently merged external PRs
 
-[CurvineIO/curvine#2329](https://github.com/CurvineIO/curvine/pull/2329), [adorsys/keycloak-config-cli#1746](https://github.com/adorsys/keycloak-config-cli/pull/1746), [adorsys/keycloak-config-cli#1745](https://github.com/adorsys/keycloak-config-cli/pull/1745), [adorsys/keycloak-config-cli#1744](https://github.com/adorsys/keycloak-config-cli/pull/1744), [apache/opennlp#1584](https://github.com/apache/opennlp/pull/1584), [repowise-dev/repowise#5388](https://github.com/repowise-dev/repowise/pull/5388), [checkstyle/checkstyle#22495](https://github.com/checkstyle/checkstyle/pull/22495)
+[jbangdev/jbang#2709](https://github.com/jbangdev/jbang/pull/2709), [repowise-dev/repowise#5863](https://github.com/repowise-dev/repowise/pull/5863), [CurvineIO/curvine#2329](https://github.com/CurvineIO/curvine/pull/2329), [adorsys/keycloak-config-cli#1746](https://github.com/adorsys/keycloak-config-cli/pull/1746), [adorsys/keycloak-config-cli#1745](https://github.com/adorsys/keycloak-config-cli/pull/1745), [adorsys/keycloak-config-cli#1744](https://github.com/adorsys/keycloak-config-cli/pull/1744), [apache/opennlp#1584](https://github.com/apache/opennlp/pull/1584), [repowise-dev/repowise#5388](https://github.com/repowise-dev/repowise/pull/5388), [checkstyle/checkstyle#22495](https://github.com/checkstyle/checkstyle/pull/22495)
 
 <!-- EXTERNAL-PRS:END -->
 
@@ -89,7 +89,7 @@ Previous day: **2026-11-20**, 00:00–24:00 Asia/Shanghai. Last 30 days: 2026-10
 | Items published | 8 | 8 |
 
 Subscriber change yesterday: +0; snapshot collected: 2026-11-20T15:20:02.574Z.
-Current subscribers: 2 (2026-11-21; collected 2026-11-21 12:08:39 UTC).
+Current subscribers: 2 (2026-11-21; collected 2026-11-21 13:56:38 UTC).
 Yesterday's post: [view message](https://t.me/ai_product_radar_cn/24).
 
 ### [Steam Deals Radar](https://t.me/steam_deals_radar_cn)
@@ -101,7 +101,7 @@ Yesterday's post: [view message](https://t.me/ai_product_radar_cn/24).
 | Items published | 2 | 3 |
 
 Subscriber change yesterday: —; snapshot collected: 2026-11-20T15:20:02.576Z.
-Current subscribers: 2 (2026-11-21; collected 2026-11-21 12:08:39 UTC).
+Current subscribers: 2 (2026-11-21; collected 2026-11-21 13:56:38 UTC).
 Yesterday's post: [view message](https://t.me/steam_deals_radar_cn/15).
 
 Websites use Cloudflare Web Analytics; channel metrics include subscriber snapshots and publication receipts. Channel post views are not available through the Bot API. Products and metric types are not added together. Scheduled at 08:00 Asia/Shanghai (may be delayed). [Definitions and history](./analytics/README.md).

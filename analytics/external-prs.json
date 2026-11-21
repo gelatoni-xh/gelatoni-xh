@@ -1,7 +1,21 @@
 {
-  "generatedAt": "2026-11-21T12:08:41.724Z",
+  "generatedAt": "2026-11-21T13:56:40.474Z",
   "timezone": "Asia/Shanghai",
   "items": [
+    {
+      "repository": "jbangdev/jbang",
+      "number": 2709,
+      "title": "fix: separate merged fatjar service providers",
+      "url": "https://github.com/jbangdev/jbang/pull/2709",
+      "mergedAt": "2026-11-21T12:58:02Z"
+    },
+    {
+      "repository": "repowise-dev/repowise",
+      "number": 5863,
+      "title": "fix(health): share change analysis file size limit",
+      "url": "https://github.com/repowise-dev/repowise/pull/5863",
+      "mergedAt": "2026-11-21T12:13:57Z"
+    },
     {
       "repository": "CurvineIO/curvine",
       "number": 2329,

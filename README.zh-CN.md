@@ -64,7 +64,7 @@
 <!-- EXTERNAL-PRS:START -->
 ## 已合并的外部 PR
 
-[CurvineIO/curvine#2329](https://github.com/CurvineIO/curvine/pull/2329), [adorsys/keycloak-config-cli#1746](https://github.com/adorsys/keycloak-config-cli/pull/1746), [adorsys/keycloak-config-cli#1745](https://github.com/adorsys/keycloak-config-cli/pull/1745), [adorsys/keycloak-config-cli#1744](https://github.com/adorsys/keycloak-config-cli/pull/1744), [apache/opennlp#1584](https://github.com/apache/opennlp/pull/1584), [repowise-dev/repowise#5388](https://github.com/repowise-dev/repowise/pull/5388), [checkstyle/checkstyle#22495](https://github.com/checkstyle/checkstyle/pull/22495)
+[jbangdev/jbang#2709](https://github.com/jbangdev/jbang/pull/2709), [repowise-dev/repowise#5863](https://github.com/repowise-dev/repowise/pull/5863), [CurvineIO/curvine#2329](https://github.com/CurvineIO/curvine/pull/2329), [adorsys/keycloak-config-cli#1746](https://github.com/adorsys/keycloak-config-cli/pull/1746), [adorsys/keycloak-config-cli#1745](https://github.com/adorsys/keycloak-config-cli/pull/1745), [adorsys/keycloak-config-cli#1744](https://github.com/adorsys/keycloak-config-cli/pull/1744), [apache/opennlp#1584](https://github.com/apache/opennlp/pull/1584), [repowise-dev/repowise#5388](https://github.com/repowise-dev/repowise/pull/5388), [checkstyle/checkstyle#22495](https://github.com/checkstyle/checkstyle/pull/22495)
 
 <!-- EXTERNAL-PRS:END -->
 
@@ -89,7 +89,7 @@
 | 发布条数 | 8 | 8 |
 
 昨日订阅人数变化：+0；快照采集时间：2026-11-20T15:20:02.574Z。
-当前订阅人数：2（2026-11-21；采集于 2026-11-21 12:08:39 UTC）。
+当前订阅人数：2（2026-11-21；采集于 2026-11-21 13:56:38 UTC）。
 昨日消息：[查看发布](https://t.me/ai_product_radar_cn/24)。
 
 ### [Steam折扣情报局](https://t.me/steam_deals_radar_cn)
@@ -101,7 +101,7 @@
 | 发布条数 | 2 | 3 |
 
 昨日订阅人数变化：—；快照采集时间：2026-11-20T15:20:02.576Z。
-当前订阅人数：2（2026-11-21；采集于 2026-11-21 12:08:39 UTC）。
+当前订阅人数：2（2026-11-21；采集于 2026-11-21 13:56:38 UTC）。
 昨日消息：[查看发布](https://t.me/steam_deals_radar_cn/15)。
 
 网站来源为 Cloudflare Web Analytics；频道记录订阅人数快照与发布回执。频道帖子浏览量无法通过 Bot API 获取。不同产品与口径不合计。每天北京时间 08:00 调度（可能延迟）。[统计口径与历史](./analytics/README.md)。

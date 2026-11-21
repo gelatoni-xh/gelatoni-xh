@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T12:08:21.568Z",
+  "generatedAt": "2026-11-21T13:56:22.791Z",
   "source": "Cloudflare Web Analytics / rumPageloadEventsAdaptiveGroups",
   "timezone": "Asia/Shanghai",
   "metrics": {
@@ -69,10 +69,10 @@
   "channelStats": {
     "aiChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-21T12:08:37.678403+00:00",
+      "generatedAt": "2026-11-21T13:56:36.076061+00:00",
       "currentSnapshot": {
         "date": "2026-11-21",
-        "collectedAt": "2026-11-21T12:08:39.925Z",
+        "collectedAt": "2026-11-21T13:56:38.346Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
@@ -243,10 +243,10 @@
     },
     "steamChannel": {
       "source": "Telegram Bot API getChatMemberCount + channel publication ledger",
-      "generatedAt": "2026-11-21T12:08:37.678403+00:00",
+      "generatedAt": "2026-11-21T13:56:36.076061+00:00",
       "currentSnapshot": {
         "date": "2026-11-21",
-        "collectedAt": "2026-11-21T12:08:39.925Z",
+        "collectedAt": "2026-11-21T13:56:38.346Z",
         "memberCount": 2
       },
       "trackingSince": "2026-11-07",
