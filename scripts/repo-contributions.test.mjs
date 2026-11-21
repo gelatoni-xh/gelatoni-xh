@@ -19,12 +19,28 @@ test('adds four contribution types by public repository and sorts totals', () =>
   assert.equal(repos[0].commits, 2);
 });
 
-test('renders an escaped chart and a chart-only README section', () => {
+test('renders an escaped chart and compact README table', () => {
   const repos = [{ name: 'owner/a&b', url: 'https://github.com/owner/a-b', commits: 2, pullRequests: 1, issues: 0, reviews: 0, total: 3 }];
   assert.match(renderSvg(repos, '2026-10-20', '2026-11-19'), /owner\/a&amp;b/);
-  const markdown = renderMarkdown('2026-10-20', '2026-11-19', true);
-  assert.match(markdown, /repo-contributions\.svg/);
-  assert.doesNotMatch(markdown, /\| 仓库 \| 总量 \|/);
+  const markdown = renderMarkdown('2026-10-20', '2026-11-19', true, repos);
+  assert.doesNotMatch(markdown, /repo-contributions\.svg|<details>/);
+  assert.match(markdown, /\| 仓库 \| Commit \| PR \| Issue \| Review \|/);
+  assert.match(markdown, /\| 2 \| 1 \| 0 \| 0 \|/);
   assert.match(replaceSection('before\n<!-- TRAFFIC:START -->', 'chart'), /before\nchart\n\n<!-- TRAFFIC:START -->/);
   assert.equal(replaceSection('a <!-- CONTRIBUTIONS:START -->old<!-- CONTRIBUTIONS:END --> z', '<!-- CONTRIBUTIONS:START -->new<!-- CONTRIBUTIONS:END -->'), 'a <!-- CONTRIBUTIONS:START -->new<!-- CONTRIBUTIONS:END --> z');
+});
+
+test('shows five repositories with a complete table in the disclosure', () => {
+  const repos = Array.from({ length: 7 }, (_, i) => ({
+    name: `owner/repo${i}`, url: `https://github.com/owner/repo${i}`,
+    commits: 7 - i, pullRequests: 0, issues: 0, reviews: 0,
+  }));
+  for (const chinese of [true, false]) {
+    const markdown = renderMarkdown('2026-10-20', '2026-11-19', chinese, repos);
+    const [visible, collapsed] = markdown.split('<details>');
+    assert.equal((visible.match(/\| \[/g) ?? []).length, 5);
+    assert.equal((collapsed.match(/\| \[/g) ?? []).length, 7);
+    assert.match(collapsed, /<summary>.*<\/summary>\n\n\|/);
+  }
+  assert.match(renderMarkdown('2026-10-20', '2026-11-19', false, []), /No public contributions/);
 });

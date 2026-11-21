@@ -83,18 +83,30 @@ export function renderSvg(repositories, from, to) {
   return lines.join('\n') + '\n';
 }
 
-export function renderMarkdown(from, to, chinese) {
+export function renderMarkdown(from, to, chinese, repositories) {
+  const table = entries => [
+    `| ${chinese ? '仓库' : 'Repository'} | Commit | PR | Issue | Review |`,
+    '| --- | ---: | ---: | ---: | ---: |',
+    ...entries.map(repo => `| [${repo.name}](${repo.url}) | ${repo.commits} | ${repo.pullRequests} | ${repo.issues} | ${repo.reviews} |`),
+  ].join('\n');
   const lines = [
     '<!-- CONTRIBUTIONS:START -->',
-    chinese ? '## 最近 30 天的仓库贡献' : '## Repository contributions, last 30 days',
+    chinese ? '## 近 30 天贡献' : '## Contributions, last 30 days',
     '',
-    `![${chinese ? '各仓库贡献分段条形图' : 'Stacked contribution chart by repository'}](https://gelatoni-xh.github.io/gelatoni-xh/assets/repo-contributions.svg)`,
+    chinese ? `${from} 至 ${to} · 北京时间 · 公开仓库` :
+      `${from} through ${to} · Asia/Shanghai · public repositories`,
     '',
-    chinese ? `统计区间：${from} 至 ${to}（北京时间，30 个完整自然日）。总量 = Commit + PR + Issue + Review；仅统计 GitHub 记录的公开仓库贡献。` :
-      `Period: ${from} through ${to} (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.`,
-    '',
-    '<!-- CONTRIBUTIONS:END -->',
   ];
+  if (repositories.length) {
+    lines.push(table(repositories.slice(0, 5)), '');
+    if (repositories.length > 5) {
+      lines.push('<details>', `<summary>${chinese ? '展开全部' : 'Show all'}</summary>`, '',
+        table(repositories), '', '</details>', '');
+    }
+  } else {
+    lines.push(chinese ? '此期间暂无公开仓库贡献。' : 'No public contributions in this period.', '');
+  }
+  lines.push('<!-- CONTRIBUTIONS:END -->');
   return lines.join('\n');
 }
 
@@ -138,7 +150,7 @@ export async function update() {
   const startDate = shanghaiDate(from);
   const endDate = shanghaiDate(to);
   const readmes = await Promise.all([['README.md', false], ['README.zh-CN.md', true]].map(async ([path, chinese]) =>
-    [path, replaceSection(await readFile(path, 'utf8'), renderMarkdown(startDate, endDate, chinese))]));
+    [path, replaceSection(await readFile(path, 'utf8'), renderMarkdown(startDate, endDate, chinese, repositories))]));
   await writeFile('analytics/repo-contributions.json', JSON.stringify({
     generatedAt: new Date().toISOString(), timezone: 'Asia/Shanghai',
     startDate, endDate, repositories,

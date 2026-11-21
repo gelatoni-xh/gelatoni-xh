@@ -21,11 +21,43 @@
 近期文章和较长的笔记放在 [gelatoni.uk](https://gelatoni.uk/zh/articles)，主要写工程决策、独立产品和 AI 辅助开发。
 
 <!-- CONTRIBUTIONS:START -->
-## 最近 30 天的仓库贡献
+## 近 30 天贡献
 
-![各仓库贡献分段条形图](https://gelatoni-xh.github.io/gelatoni-xh/assets/repo-contributions.svg)
+2026-10-22 至 2026-11-20 · 北京时间 · 公开仓库
 
-统计区间：2026-10-22 至 2026-11-20（北京时间，30 个完整自然日）。总量 = Commit + PR + Issue + Review；仅统计 GitHub 记录的公开仓库贡献。
+| 仓库 | Commit | PR | Issue | Review |
+| --- | ---: | ---: | ---: | ---: |
+| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 68 | 36 | 19 | 0 |
+| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | 70 | 21 | 4 | 0 |
+| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | 53 | 22 | 5 | 0 |
+| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | 32 | 4 | 3 | 0 |
+| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | 15 | 1 | 0 | 0 |
+
+<details>
+<summary>展开全部</summary>
+
+| 仓库 | Commit | PR | Issue | Review |
+| --- | ---: | ---: | ---: | ---: |
+| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 68 | 36 | 19 | 0 |
+| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | 70 | 21 | 4 | 0 |
+| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | 53 | 22 | 5 | 0 |
+| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | 32 | 4 | 3 | 0 |
+| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | 15 | 1 | 0 | 0 |
+| [gelatoni-xh/telegram-channel-matrix](https://github.com/gelatoni-xh/telegram-channel-matrix) | 10 | 1 | 1 | 0 |
+| [gelatoni-xh/telegram-opportunity-atlas](https://github.com/gelatoni-xh/telegram-opportunity-atlas) | 10 | 1 | 0 | 0 |
+| [adorsys/keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli) | 4 | 3 | 0 | 0 |
+| [gelatoni-xh/telegram-metadata](https://github.com/gelatoni-xh/telegram-metadata) | 6 | 1 | 0 | 0 |
+| [repowise-dev/repowise](https://github.com/repowise-dev/repowise) | 1 | 2 | 0 | 0 |
+| [apache/opennlp](https://github.com/apache/opennlp) | 1 | 1 | 0 | 0 |
+| [checkstyle/checkstyle](https://github.com/checkstyle/checkstyle) | 1 | 1 | 0 | 0 |
+| [jbangdev/jbang](https://github.com/jbangdev/jbang) | 0 | 2 | 0 | 0 |
+| [adrienverge/yamllint](https://github.com/adrienverge/yamllint) | 0 | 1 | 0 | 0 |
+| [apache/iggy](https://github.com/apache/iggy) | 0 | 1 | 0 | 0 |
+| [CurvineIO/curvine](https://github.com/CurvineIO/curvine) | 0 | 1 | 0 | 0 |
+| [gelatoni-xh/iggy](https://github.com/gelatoni-xh/iggy) | 0 | 1 | 0 | 0 |
+| [pmd/pmd](https://github.com/pmd/pmd) | 0 | 1 | 0 | 0 |
+
+</details>
 
 <!-- CONTRIBUTIONS:END -->
 

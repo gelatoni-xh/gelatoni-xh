@@ -21,11 +21,43 @@ I’m Xu Huan. I build independent products, maintain open-source projects, and 
 Recent posts and longer notes are on [gelatoni.uk](https://gelatoni.uk/en/articles). I write about engineering decisions, independent products, and AI-assisted development.
 
 <!-- CONTRIBUTIONS:START -->
-## Repository contributions, last 30 days
+## Contributions, last 30 days
 
-![Stacked contribution chart by repository](https://gelatoni-xh.github.io/gelatoni-xh/assets/repo-contributions.svg)
+2026-10-22 through 2026-11-20 · Asia/Shanghai · public repositories
 
-Period: 2026-10-22 through 2026-11-20 (30 complete Asia/Shanghai days). Total = commits + pull requests + issues + reviews; public repository contributions recorded by GitHub only.
+| Repository | Commit | PR | Issue | Review |
+| --- | ---: | ---: | ---: | ---: |
+| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 68 | 36 | 19 | 0 |
+| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | 70 | 21 | 4 | 0 |
+| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | 53 | 22 | 5 | 0 |
+| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | 32 | 4 | 3 | 0 |
+| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | 15 | 1 | 0 | 0 |
+
+<details>
+<summary>Show all</summary>
+
+| Repository | Commit | PR | Issue | Review |
+| --- | ---: | ---: | ---: | ---: |
+| [gelatoni-xh/tasuki-keifu-agent](https://github.com/gelatoni-xh/tasuki-keifu-agent) | 68 | 36 | 19 | 0 |
+| [gelatoni-xh/personal-site](https://github.com/gelatoni-xh/personal-site) | 70 | 21 | 4 | 0 |
+| [gelatoni-xh/tasuki-keifu](https://github.com/gelatoni-xh/tasuki-keifu) | 53 | 22 | 5 | 0 |
+| [gelatoni-xh/gelatoni-xh](https://github.com/gelatoni-xh/gelatoni-xh) | 32 | 4 | 3 | 0 |
+| [gelatoni-xh/telegram-job-alerts](https://github.com/gelatoni-xh/telegram-job-alerts) | 15 | 1 | 0 | 0 |
+| [gelatoni-xh/telegram-channel-matrix](https://github.com/gelatoni-xh/telegram-channel-matrix) | 10 | 1 | 1 | 0 |
+| [gelatoni-xh/telegram-opportunity-atlas](https://github.com/gelatoni-xh/telegram-opportunity-atlas) | 10 | 1 | 0 | 0 |
+| [adorsys/keycloak-config-cli](https://github.com/adorsys/keycloak-config-cli) | 4 | 3 | 0 | 0 |
+| [gelatoni-xh/telegram-metadata](https://github.com/gelatoni-xh/telegram-metadata) | 6 | 1 | 0 | 0 |
+| [repowise-dev/repowise](https://github.com/repowise-dev/repowise) | 1 | 2 | 0 | 0 |
+| [apache/opennlp](https://github.com/apache/opennlp) | 1 | 1 | 0 | 0 |
+| [checkstyle/checkstyle](https://github.com/checkstyle/checkstyle) | 1 | 1 | 0 | 0 |
+| [jbangdev/jbang](https://github.com/jbangdev/jbang) | 0 | 2 | 0 | 0 |
+| [adrienverge/yamllint](https://github.com/adrienverge/yamllint) | 0 | 1 | 0 | 0 |
+| [apache/iggy](https://github.com/apache/iggy) | 0 | 1 | 0 | 0 |
+| [CurvineIO/curvine](https://github.com/CurvineIO/curvine) | 0 | 1 | 0 | 0 |
+| [gelatoni-xh/iggy](https://github.com/gelatoni-xh/iggy) | 0 | 1 | 0 | 0 |
+| [pmd/pmd](https://github.com/pmd/pmd) | 0 | 1 | 0 | 0 |
+
+</details>
 
 <!-- CONTRIBUTIONS:END -->
 
