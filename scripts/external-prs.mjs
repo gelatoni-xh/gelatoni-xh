@@ -5,7 +5,6 @@ const dataPath = 'analytics/external-prs.json';
 const begin = '<!-- EXTERNAL-PRS:START -->';
 const end = '<!-- EXTERNAL-PRS:END -->';
 const dayMs = 86_400_000;
-const shanghaiOffset = 8 * 3_600_000;
 
 const query = `query ExternalPullRequests($search: String!, $after: String) {
   search(query: $search, type: ISSUE, first: 100, after: $after) {
@@ -18,8 +17,6 @@ const query = `query ExternalPullRequests($search: String!, $after: String) {
     }
   }
 }`;
-
-const shanghaiDate = value => new Date(new Date(value).getTime() + shanghaiOffset).toISOString().slice(0, 10);
 
 function validateItem(item) {
   return item && Number.isSafeInteger(item.number) && item.number > 0 &&
@@ -38,13 +35,6 @@ export function mergeItems(existing, incoming) {
 }
 
 export function renderMarkdown(items, chinese = false) {
-  const groups = new Map();
-  for (const item of items) {
-    const date = shanghaiDate(item.mergedAt);
-    const group = groups.get(date) ?? [];
-    group.push(item);
-    groups.set(date, group);
-  }
   const lines = [
     begin,
     chinese ? '## 已合并的外部 PR' : '## Recently merged external PRs',
@@ -53,12 +43,9 @@ export function renderMarkdown(items, chinese = false) {
   if (!items.length) {
     lines.push(chinese ? '暂时没有已合并的外部 PR。' : 'No merged external PRs yet.');
   } else {
-    for (const [date, group] of groups) {
-      lines.push(`### ${date}`, '');
-      lines.push(group.map(item => `[${item.repository}#${item.number}](${item.url})：${item.title}`).join(chinese ? '、' : ', '), '');
-    }
+    lines.push(items.map(item => `[${item.repository}#${item.number}](${item.url})`).join(', '));
   }
-  lines.push(end);
+  lines.push('', end);
   return lines.join('\n');
 }
 

@@ -17,13 +17,14 @@ test('merges external PR records by URL and sorts newest first', () => {
   ]);
 });
 
-test('renders date groups and comma-style PR links', () => {
+test('renders only comma-separated PR links in both languages', () => {
   const markdown = renderMarkdown([
     item('https://github.com/a/1', '2026-11-21T10:00:00Z', 'New PR', 'a/repo', 2),
     item('https://github.com/b/2', '2026-11-21T09:00:00Z', 'Another PR', 'b/repo', 3),
   ], true);
   assert.match(markdown, /## 已合并的外部 PR/);
-  assert.match(markdown, /\[a\/repo#2\].*、.*\[b\/repo#3\]/);
+  assert.match(markdown, /\[a\/repo#2\].*, .*\[b\/repo#3\]/);
+  assert.doesNotMatch(markdown, /2026-11-21|New PR|Another PR|### /);
   assert.match(renderMarkdown([
     item('https://github.com/a/1', '2026-11-21T10:00:00Z', 'New PR', 'a/repo', 2),
     item('https://github.com/b/2', '2026-11-21T09:00:00Z', 'Another PR', 'b/repo', 3),

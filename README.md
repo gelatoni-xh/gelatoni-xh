@@ -32,25 +32,7 @@ Period: 2026-10-22 through 2026-11-20 (30 complete Asia/Shanghai days). Total = 
 <!-- EXTERNAL-PRS:START -->
 ## Recently merged external PRs
 
-### 2026-11-21
-
-[CurvineIO/curvine#2329](https://github.com/CurvineIO/curvine/pull/2329)：fix(fs): keep mkdir and touch status off stdout (#2318)
-
-### 2026-11-20
-
-[adorsys/keycloak-config-cli#1746](https://github.com/adorsys/keycloak-config-cli/pull/1746)：fix: use configured client for user profile updates, [adorsys/keycloak-config-cli#1745](https://github.com/adorsys/keycloak-config-cli/pull/1745)：Fix workflow restart and cancel field mapping, [adorsys/keycloak-config-cli#1744](https://github.com/adorsys/keycloak-config-cli/pull/1744)：fix: remove private keys from normalization baselines
-
-### 2026-11-18
-
-[apache/opennlp#1584](https://github.com/apache/opennlp/pull/1584)：GH-1581: Return unmodifiable EOS characters
-
-### 2026-11-13
-
-[repowise-dev/repowise#5388](https://github.com/repowise-dev/repowise/pull/5388)：fix(init): include hotspots in the generation plan
-
-### 2026-11-08
-
-[checkstyle/checkstyle#22495](https://github.com/checkstyle/checkstyle/pull/22495)：Issue #21417: Replace suppression XML concatenations with text blocks
+[CurvineIO/curvine#2329](https://github.com/CurvineIO/curvine/pull/2329), [adorsys/keycloak-config-cli#1746](https://github.com/adorsys/keycloak-config-cli/pull/1746), [adorsys/keycloak-config-cli#1745](https://github.com/adorsys/keycloak-config-cli/pull/1745), [adorsys/keycloak-config-cli#1744](https://github.com/adorsys/keycloak-config-cli/pull/1744), [apache/opennlp#1584](https://github.com/apache/opennlp/pull/1584), [repowise-dev/repowise#5388](https://github.com/repowise-dev/repowise/pull/5388), [checkstyle/checkstyle#22495](https://github.com/checkstyle/checkstyle/pull/22495)
 
 <!-- EXTERNAL-PRS:END -->
 
